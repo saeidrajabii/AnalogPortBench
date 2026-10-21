@@ -1,0 +1,43 @@
+* Loop-gain testbench, unity-gain follower (from tb_Opamp_2stg_stb).
+* ngspice has no stb: Middlebrook double injection at the output -> inn feedback point,
+*   Tv = -v(driver)/v(receiver), Ti = i(driver)/i(receiver), T = (Tv*Ti - 1)/(Tv + Ti + 2).
+* DUT: .subckt dut iref inp inn out.
+$HEADER
+.param VDD=$VDD Iref=$IREF
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12
+.temp 27
+
+$DUT
+
+VSUP vdd 0 dc {VDD}
+.param VCM=$VCM CL=$CL
+IREF vdd niref dc {Iref}
+VCMS nin 0 dc {VCM}
+XDUT niref nin nfb nout dut
+Vprb_b prb_n1 nout 0
+Vprb_inj prb_n1 prb_n2 0 ac 1
+Vprb_a prb_n2 nfb 0
+Iprb_inj 0 prb_n1 0 ac 0
+CL nout 0 {CL}
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+op
+print all > op_nodes.txt
+$OPPRINT
+ac dec 50 10 10G
+let lg_tv = -v(prb_n1)/v(prb_n2)
+alter Vprb_inj acmag=0
+alter Iprb_inj acmag=1
+ac dec 50 10 10G
+let lg_ti = i(Vprb_b)/i(Vprb_a)
+let tv = ac1.lg_tv
+let loopgain = (tv*lg_ti - 1)/(tv + lg_ti + 2)
+let lg_db = db(loopgain)
+let lg_ph = 180/pi*cph(loopgain)
+wrdata stb.txt lg_db lg_ph
+.endc
+.end

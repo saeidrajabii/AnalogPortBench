@@ -1,0 +1,41 @@
+{
+ "task": "T3__ota_tele_ws__hard_1_fast",
+ "tier": "T3",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/profiles/hard_1_fast.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "MNr: element type 'M' not allowed"
+ ],
+ "notes": [],
+ "errors": [
+  "ota_ol_ac: SimError: ngspice failed in <repo>/build/eval/ota_tele_ws/claude/clB/T3__ota_tele_ws__hard_1_fast/claude-opus@low_s1/ota_ol_ac (rc=1):\nError on line:",
+  "opamp_tran: SimError: ngspice failed in <repo>/build/eval/ota_tele_ws/claude/clB/T3__ota_tele_ws__hard_1_fast/claude-opus@low_s1/opamp_tran (rc=1):\nError on line:",
+  "ota_swing_dc: SimError: ngspice failed in <repo>/build/eval/ota_tele_ws/claude/clB/T3__ota_tele_ws__hard_1_fast/claude-opus@low_s1/ota_swing_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

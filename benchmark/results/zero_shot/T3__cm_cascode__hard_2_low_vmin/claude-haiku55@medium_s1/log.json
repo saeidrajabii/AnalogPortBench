@@ -1,0 +1,37 @@
+{
+ "task": "T3__cm_cascode__hard_2_low_vmin",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_2_low_vmin.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 15.947,
+  "iout_vdd_uA": 16.038,
+  "iout_err_pct": -20.26,
+  "rout_kohm": 3043.2,
+  "vmin_V": null,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V"
+ ]
+}

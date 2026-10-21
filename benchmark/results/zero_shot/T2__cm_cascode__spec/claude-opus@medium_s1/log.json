@@ -1,0 +1,38 @@
+{
+ "task": "T2__cm_cascode__spec",
+ "tier": "T2",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "MN3: element type 'M' not allowed",
+  "MN1: element type 'M' not allowed",
+  "MN2: element type 'M' not allowed",
+  "MN0: element type 'M' not allowed"
+ ],
+ "notes": [],
+ "errors": [
+  "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_cascode/claude/clB/T2__cm_cascode__spec/claude-opus@medium_s1/mirror_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

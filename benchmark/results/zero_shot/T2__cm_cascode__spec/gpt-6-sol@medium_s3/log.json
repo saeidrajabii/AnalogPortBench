@@ -1,0 +1,33 @@
+{
+ "task": "T2__cm_cascode__spec",
+ "tier": "T2",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/spec.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [
+  "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_cascode/claude/gptB/T2__cm_cascode__spec/gpt-6-sol@medium_s3/mirror_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

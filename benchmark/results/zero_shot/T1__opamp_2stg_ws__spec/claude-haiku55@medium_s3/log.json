@@ -1,0 +1,44 @@
+{
+ "task": "T1__opamp_2stg_ws__spec",
+ "tier": "T1",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-haiku55@medium_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 66.28,
+  "ugf_Hz": 75433881.20060581,
+  "pm_deg": 41.2,
+  "gm_dB": 12.2,
+  "power_uW": 294.17,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 19.47,
+  "rise_overshoot_pct": 17.23,
+  "rise_slew_V_per_us": 49.9,
+  "fall_settle_ns": 22.11,
+  "fall_overshoot_pct": 27.69,
+  "fall_slew_V_per_us": 41.0,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "pm_deg",
+  "rise_settle_ns"
+ ]
+}

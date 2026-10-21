@@ -1,0 +1,21 @@
+## Simulation results (design attempt 2 of 3)
+Your netlist was simulated with the testbenches described in the task (VDD = 1.2 V, TT corner, 27 °C).
+
+| Metric | Requirement | Your design | Met |
+|---|---|---|---|
+| dc_gain_dB | ≥ 71.92 | -57.04 | no |
+| ugf_Hz | ≥ 7.096e+07 | not measurable | no |
+| pm_deg | ≥ 55 | not measurable | no |
+| gm_dB | ≥ 10 | not measurable | no |
+| power_uW | ≤ 430.5 | 414.6 | yes |
+| rise_settle_ns | ≤ 10.77 | 23.25 | no |
+| fall_settle_ns | ≤ 24.62 | 4.88 | yes |
+| n_triode | ≤ 0 | 3 | no |
+
+Transistors out of saturation at the DC operating point (drain-source voltage magnitude below Vdsat):
+- XMNINP: |Vds| = 0.012 V, Vdsat = 0.188 V
+- XMNINN: |Vds| = 0.006 V, Vdsat = 0.391 V
+- XMPOUT: |Vds| = 0.037 V, Vdsat = 0.418 V
+
+Revise the design so that it meets every specification. Reply in the same format: exactly one ```spice
+code block containing the complete netlist.

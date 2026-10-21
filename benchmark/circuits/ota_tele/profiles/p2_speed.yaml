@@ -1,0 +1,58 @@
+# Spec profile for the spec-variation study (see profiles/README.md).
+profile: p2_speed
+description: 'Fast: high unity-gain frequency and short settling; modest gain and
+  swing are enough.'
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 45.0
+    rule: fixed
+  ugf_Hz:
+    op: '>='
+    limit: 60000000.0
+    rule: fixed
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: fixed
+  power_uW:
+    op: <=
+    limit: 267.2
+    rule: fixed
+  swing_V:
+    op: '>='
+    limit: 0.3
+    rule: fixed
+  rise_settle_ns:
+    op: <=
+    limit: 12.0
+    rule: fixed
+  fall_settle_ns:
+    op: <=
+    limit: 12.0
+    rule: fixed
+  n_triode:
+    op: <=
+    limit: 0
+    rule: fixed

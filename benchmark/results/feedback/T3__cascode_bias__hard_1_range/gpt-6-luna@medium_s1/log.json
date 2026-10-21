@@ -1,0 +1,583 @@
+{
+ "task": "T3__cascode_bias__hard_1_range",
+ "tier": "T3",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/profiles/hard_1_range.yaml",
+ "vdd": 1.2,
+ "model": "gpt-6-luna@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "gpt-6-luna",
+  "effort": null,
+  "max_attempts": 3,
+  "access": "OpenAI API"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "1c21faf0ff7f40c6b3a2aa35ec224f5e4564b614b54a2355c0340c2319b3be82",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "vb1_V": 0.5279,
+     "vb2_V": 0.5279,
+     "vb3_V": 0.4965,
+     "vb4_V": 0.4965,
+     "mismatch_0v9_nA": -989.6,
+     "match_lo_V": 0.16,
+     "match_hi_V": 0.9,
+     "match_width_V": 0.74,
+     "isink_err_pct": 3.12,
+     "isource_err_pct": -1.84,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.114,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xnref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb3",
+       "id_uA": 20.0,
+       "vgs_V": 0.496,
+       "vds_V": 0.496,
+       "vdsat_V": 0.09,
+       "margin_V": 0.407
+      },
+      {
+       "device": "m.xdut.xnmir.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb1",
+       "id_uA": 20.05,
+       "vgs_V": 0.496,
+       "vds_V": 0.528,
+       "vdsat_V": 0.09,
+       "margin_V": 0.438
+      },
+      {
+       "device": "m.xdut.xpmref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb1",
+       "id_uA": 20.05,
+       "vgs_V": 0.672,
+       "vds_V": 0.672,
+       "vdsat_V": 0.186,
+       "margin_V": 0.486
+      },
+      {
+       "device": "m.xdut.xnsink.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 20.623,
+       "vgs_V": 0.496,
+       "vds_V": 0.9,
+       "vdsat_V": 0.09,
+       "margin_V": 0.81
+      },
+      {
+       "device": "m.xdut.xpsource.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 19.633,
+       "vgs_V": 0.672,
+       "vds_V": 0.3,
+       "vdsat_V": 0.186,
+       "margin_V": 0.114
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cascode_bias/profiles/hard_1_range.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": -989.6,
+      "op": "abs<=",
+      "limit": 60,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": 0.74,
+      "op": ">=",
+      "limit": 0.97,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": 3.12,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": -1.84,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t1"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {},
+    "errors": [
+     "cascode_bias_dc: SimError: ngspice failed in <repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t2/cascode_bias_dc (rc=1):\nError on line:"
+    ],
+    "warnings": [],
+    "spec": "<repo>/benchmark/circuits/cascode_bias/profiles/hard_1_range.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": null,
+      "op": "abs<=",
+      "limit": 60,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": null,
+      "op": ">=",
+      "limit": 0.97,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": null,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": null,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": null,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t2"
+   },
+   "valid": false,
+   "counted_as": "syntax retry 1"
+  },
+  {
+   "turn": 3,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias",
+    "netlist": "turn3_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "vb1_V": 0.5982,
+     "vb2_V": 0.5982,
+     "vb3_V": 0.4965,
+     "vb4_V": 0.4965,
+     "mismatch_0v9_nA": -788.3,
+     "match_lo_V": 0.2,
+     "match_hi_V": 0.94,
+     "match_width_V": 0.74,
+     "isink_err_pct": 3.12,
+     "isource_err_pct": -0.82,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.16,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xnref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb3",
+       "id_uA": 20.0,
+       "vgs_V": 0.496,
+       "vds_V": 0.496,
+       "vdsat_V": 0.09,
+       "margin_V": 0.407
+      },
+      {
+       "device": "m.xdut.xnmir.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb1",
+       "id_uA": 20.16,
+       "vgs_V": 0.496,
+       "vds_V": 0.598,
+       "vdsat_V": 0.09,
+       "margin_V": 0.509
+      },
+      {
+       "device": "m.xdut.xpmref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb1",
+       "id_uA": 20.16,
+       "vgs_V": 0.602,
+       "vds_V": 0.602,
+       "vdsat_V": 0.14,
+       "margin_V": 0.462
+      },
+      {
+       "device": "m.xdut.xnsink.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 20.623,
+       "vgs_V": 0.496,
+       "vds_V": 0.9,
+       "vdsat_V": 0.09,
+       "margin_V": 0.81
+      },
+      {
+       "device": "m.xdut.xpsource.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 19.835,
+       "vgs_V": 0.602,
+       "vds_V": 0.3,
+       "vdsat_V": 0.14,
+       "margin_V": 0.16
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cascode_bias/profiles/hard_1_range.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": -788.3,
+      "op": "abs<=",
+      "limit": 60,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": 0.74,
+      "op": ">=",
+      "limit": 0.97,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": 3.12,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": -0.82,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t3"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": false
+  },
+  {
+   "turn": 4,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias",
+    "netlist": "turn4_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {},
+    "errors": [
+     "cascode_bias_dc: SimError: ngspice failed in <repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t4/cascode_bias_dc (rc=1):\nError on line:"
+    ],
+    "warnings": [],
+    "spec": "<repo>/benchmark/circuits/cascode_bias/profiles/hard_1_range.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": null,
+      "op": "abs<=",
+      "limit": 60,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": null,
+      "op": ">=",
+      "limit": 0.97,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": null,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": null,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": null,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t4"
+   },
+   "valid": false,
+   "counted_as": "syntax retry 2"
+  },
+  {
+   "turn": 5,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias",
+    "netlist": "turn5_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "vb1_V": 0.6547,
+     "vb2_V": 0.6547,
+     "vb3_V": 0.4589,
+     "vb4_V": 0.4589,
+     "mismatch_0v9_nA": -759.6,
+     "match_lo_V": 0.31,
+     "match_hi_V": 0.95,
+     "match_width_V": 0.64,
+     "isink_err_pct": 4.27,
+     "isource_err_pct": 0.46,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.193,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xnref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb3",
+       "id_uA": 20.0,
+       "vgs_V": 0.459,
+       "vds_V": 0.459,
+       "vdsat_V": 0.07,
+       "margin_V": 0.389
+      },
+      {
+       "device": "m.xdut.xnsink.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 20.853,
+       "vgs_V": 0.459,
+       "vds_V": 0.9,
+       "vdsat_V": 0.07,
+       "margin_V": 0.83
+      },
+      {
+       "device": "m.xdut.xnmir.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb1",
+       "id_uA": 20.383,
+       "vgs_V": 0.459,
+       "vds_V": 0.655,
+       "vdsat_V": 0.07,
+       "margin_V": 0.584
+      },
+      {
+       "device": "m.xdut.xpref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb1",
+       "id_uA": 20.383,
+       "vgs_V": 0.545,
+       "vds_V": 0.545,
+       "vdsat_V": 0.107,
+       "margin_V": 0.439
+      },
+      {
+       "device": "m.xdut.xpsource.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 20.093,
+       "vgs_V": 0.545,
+       "vds_V": 0.3,
+       "vdsat_V": 0.107,
+       "margin_V": 0.193
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cascode_bias/profiles/hard_1_range.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": -759.6,
+      "op": "abs<=",
+      "limit": 60,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": 0.64,
+      "op": ">=",
+      "limit": 0.97,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": 4.27,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": 0.46,
+      "op": "abs<=",
+      "limit": 0.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias/v2iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6-luna@medium_t5"
+   },
+   "valid": true,
+   "counted_as": "design attempt 3",
+   "pass": false
+  }
+ ],
+ "design_attempts": 3,
+ "syntax_retries_used": 2,
+ "passed": false,
+ "passed_at_attempt": null
+}

@@ -1,0 +1,46 @@
+{
+ "task": "T3__opamp_2stg_ws__hard_2_settle",
+ "tier": "T3",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/profiles/hard_2_settle.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 30.39,
+  "ugf_Hz": 83166275.70446771,
+  "pm_deg": 56.3,
+  "gm_dB": 17.8,
+  "power_uW": 340.86,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 6.65,
+  "rise_overshoot_pct": 0.15,
+  "rise_slew_V_per_us": null,
+  "fall_settle_ns": 12.29,
+  "fall_overshoot_pct": 13.4,
+  "fall_slew_V_per_us": null,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "pm_deg",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

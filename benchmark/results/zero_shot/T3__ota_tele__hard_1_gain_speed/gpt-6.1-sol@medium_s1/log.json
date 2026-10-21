@@ -1,0 +1,50 @@
+{
+ "task": "T3__ota_tele__hard_1_gain_speed",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_1_gain_speed.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@medium_s1",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 70.96,
+  "ugf_Hz": 28670593.9309622,
+  "pm_deg": 49.5,
+  "gm_dB": 12.8,
+  "power_uW": 182.74,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 43.16,
+  "rise_overshoot_pct": 14.56,
+  "rise_slew_V_per_us": 16.5,
+  "fall_settle_ns": 36.86,
+  "fall_overshoot_pct": 10.19,
+  "fall_slew_V_per_us": 18.3,
+  "swing_V": 0.823,
+  "swing_lo_V": 0.146,
+  "swing_hi_V": 0.969,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

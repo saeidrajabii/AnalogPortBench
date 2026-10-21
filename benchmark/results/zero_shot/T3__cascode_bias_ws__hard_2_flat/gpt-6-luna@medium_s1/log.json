@@ -1,0 +1,44 @@
+{
+ "task": "T3__cascode_bias_ws__hard_2_flat",
+ "tier": "T3",
+ "circuit": "cascode_bias_ws",
+ "spec": "circuits/cascode_bias_ws/profiles/hard_2_flat.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@medium_s1",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.8065,
+  "vb2_V": 0.6817,
+  "vb3_V": 0.4674,
+  "vb4_V": 0.5567,
+  "mismatch_0v9_nA": -2806.3,
+  "match_lo_V": 0.43,
+  "match_hi_V": 0.68,
+  "match_width_V": 0.25,
+  "isink_err_pct": 5.8,
+  "isource_err_pct": -8.23,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isink_err_pct",
+  "isource_err_pct",
+  "n_triode"
+ ]
+}

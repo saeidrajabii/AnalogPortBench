@@ -1,0 +1,39 @@
+{
+ "task": "T2__ota_5t__spec",
+ "tier": "T2",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/spec.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s3",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 28.37,
+  "f3db_Hz": 461991.29446910735,
+  "ugb_Hz": 12079114.38128311,
+  "pm_deg": 86.4,
+  "vout_dc_V": 0.7341,
+  "power_uW": 43.6,
+  "input_current_uA": 0.0,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "n_triode"
+ ]
+}

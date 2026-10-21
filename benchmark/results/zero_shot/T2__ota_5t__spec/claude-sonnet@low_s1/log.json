@@ -1,0 +1,38 @@
+{
+ "task": "T2__ota_5t__spec",
+ "tier": "T2",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s1",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 24.95,
+  "f3db_Hz": 902658.9317050598,
+  "ugb_Hz": 15933385.856892386,
+  "pm_deg": 88.9,
+  "vout_dc_V": 0.7779,
+  "power_uW": 34.94,
+  "input_current_uA": 0.0,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz"
+ ]
+}

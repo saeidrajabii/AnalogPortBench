@@ -1,0 +1,33 @@
+{
+ "task": "T1__cm_cascode__spec",
+ "tier": "T1",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6.1-sol@low_s1",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 19.138,
+  "iout_vdd_uA": 19.165,
+  "iout_err_pct": -4.31,
+  "rout_kohm": 35778.2,
+  "vmin_V": 0.16,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

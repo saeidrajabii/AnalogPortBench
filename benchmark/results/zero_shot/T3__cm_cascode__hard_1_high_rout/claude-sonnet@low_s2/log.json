@@ -1,0 +1,38 @@
+{
+ "task": "T3__cm_cascode__hard_1_high_rout",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s2",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [
+  "replaced non-ASCII characters '\u2248' (U+2248)"
+ ],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 0.102,
+  "iout_vdd_uA": 0.103,
+  "iout_err_pct": -99.49,
+  "rout_kohm": 2403846.2,
+  "vmin_V": null,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "vmin_V"
+ ]
+}

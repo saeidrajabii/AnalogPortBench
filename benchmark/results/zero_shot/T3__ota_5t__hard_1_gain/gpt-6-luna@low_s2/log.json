@@ -1,0 +1,42 @@
+{
+ "task": "T3__ota_5t__hard_1_gain",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_1_gain.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s2",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "draws 2.4743 uA from the input source (> 1 uA)"
+ ],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": -Infinity,
+  "f3db_Hz": NaN,
+  "ugb_Hz": null,
+  "pm_deg": null,
+  "vout_dc_V": 0.0,
+  "power_uW": 32.27,
+  "input_current_uA": 2.4743,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "n_triode"
+ ]
+}

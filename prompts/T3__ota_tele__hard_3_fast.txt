@@ -1,0 +1,91 @@
+Port the analog circuit below from a TSMC 0.18 µm CMOS process to the SkyWater SKY130 process.
+The ported circuit will be simulated in ngspice and must meet the specifications listed below.
+You may change device sizes, biasing and circuit topology, as long as the interface and test conditions are kept.
+
+## Source design (TSMC 0.18 µm)
+Transistor models: tsmc18dN (NMOS) and tsmc18dP (PMOS), BSIM3. Supply VDD = 1.8 V on the global
+node `vdd`; ground is node `0`.
+
+```spice
+.subckt dut iref inp inn out
+MB1 iref iref 0 0 tsmc18dN w=6.66u l=0.36u m=1
+MB2 vcn vcn nb2 0 tsmc18dN w=1.5u l=0.36u m=1
+MB3 nb2 nb2 0 0 tsmc18dN w=6.66u l=0.36u m=1
+MB4 vcn vcpref vdd vdd tsmc18dP w=12.195u l=0.36u m=1
+MB5 vcpref vcpref vdd vdd tsmc18dP w=12.195u l=0.36u m=1
+MB6 vcpref iref 0 0 tsmc18dN w=6.66u l=0.36u m=1
+MB7 vcp vcp vdd vdd tsmc18dP w=1.2u l=0.36u m=1
+MB8 vcp iref 0 0 tsmc18dN w=6.66u l=0.36u m=1
+MT tail iref 0 0 tsmc18dN w=6.66u l=0.36u m=2
+M1 x1 inp tail 0 tsmc18dN w=10u l=0.36u m=1
+M2 x2 inn tail 0 tsmc18dN w=10u l=0.36u m=1
+M3 d1 vcn x1 0 tsmc18dN w=10u l=0.5u m=1
+M4 out vcn x2 0 tsmc18dN w=10u l=0.5u m=1
+M5 d1 vcp y1 vdd tsmc18dP w=12.195u l=0.5u m=1
+M6 out vcp y2 vdd tsmc18dP w=12.195u l=0.5u m=1
+M7 y1 d1 vdd vdd tsmc18dP w=12.195u l=0.5u m=1
+M8 y2 d1 vdd vdd tsmc18dP w=12.195u l=0.5u m=1
+.ends dut
+```
+
+## Target technology (SKY130)
+- Use only the transistors sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt.
+- They are subcircuits. Instantiate them with an X prefix and the terminals in the order drain gate source
+  bulk, followed by the parameters W, L, nf and m, each written as name=value and separated by spaces.
+- W is the total gate width and L the gate length, both in micrometres, written as plain numbers without
+  unit suffixes. Minimum L: 0.15 µm for nfet_01v8_lvt, 0.35 µm for pfet_01v8_lvt. Minimum W: 0.42 µm.
+- Always use nf=1. For a wider transistor, increase W, or use m=k to connect k identical transistors in parallel.
+- Sky130 W and L are plain numbers in µm; R and C values keep their SI suffixes (e.g. 2p, 10k).
+  The m parameter means the same in both netlists.
+- Resistors and capacitors may be ideal SPICE R and C elements.
+- Supply: VDD = 1.2 V on the global node `vdd`; ground is node `0`. Both are available inside every
+  subcircuit without being ports.
+- The ideal reference current must be mirrored: it may not flow directly into the source of a transistor.
+  No element may connect `inp` directly to `out`.
+- The testbench includes the model library and provides all sources and analyses. Do not add
+  `.lib`, `.include`, `.option`, sources or analysis statements.
+
+## Netlist format example
+This example only illustrates the syntax; it is not a suggested design.
+
+```spice
+.subckt example a b c
+XM1 a b 0 0 sky130_fd_pr__nfet_01v8_lvt W=2 L=0.5 nf=1 m=1
+XM2 a c vdd vdd sky130_fd_pr__pfet_01v8_lvt W=4 L=0.5 nf=1 m=2
+.ends example
+```
+
+## Interface
+The netlist must define the subcircuit `.subckt dut iref inp inn out`, with exactly these ports in this order.
+- `iref`: an ideal bias reference current flows into this node from `vdd`.
+- `inp`, `inn`: non-inverting and inverting inputs.
+- `out`: output.
+
+## Test conditions (TT corner, 27 °C)
+- An ideal 20 µA current source from `vdd` drives `iref`.
+- Unity-gain follower: `out` is connected to `inn`; `inp` is held at VCM = 0.6 V DC.
+- Loop gain: the feedback loop is broken at the `out`-to-`inn` connection (Middlebrook double injection), AC analysis from 10 Hz to 10 GHz.
+- Load: 1 pF from `out` to ground.
+- Step response: unity-gain follower (`out` connected to `inn`), `inp` is a pulse between 0.5 V and 0.7 V (10 ps edges, 100 ns period), transient analysis for 200 ns.
+- Output swing: open loop, `inn` held at VCM, `inp` swept from VCM - 30 mV to VCM + 30 mV in 5 µV steps (DC analysis).
+
+## Specifications
+The requirements below are for this port at VDD = 1.2 V; they are not all derived from the source design's performance.
+| Metric | Definition | Requirement | Source design (180 nm, VDD 1.8 V) |
+|---|---|---|---|
+| dc_gain_dB | loop-gain magnitude at 10 Hz, in dB | ≥ 46.5 | 69.84 |
+| ugf_Hz | frequency where the loop-gain magnitude is 1, in Hz | ≥ 1.04e+08 | 5.57e+07 |
+| pm_deg | 180° plus the phase at the unity-gain frequency, in degrees | ≥ 60 | 80.9 |
+| gm_dB | minus the loop gain in dB at the frequency where the loop-gain phase is -180° | ≥ 10 | 37.2 |
+| power_uW | VDD times the total supply current at the DC operating point (bias circuitry included), in µW | ≤ 155 | 222.7 |
+| rise_settle_ns | time from the rising input edge until `out` stays within 1 % of the step of its final value, in ns | ≤ 7 | 12.78 |
+| fall_settle_ns | time from the falling input edge until `out` stays within 1 % of the step of its final value, in ns | ≤ 19 | 12.95 |
+| swing_V | output voltage range over which the open-loop small-signal gain (`inn` held at VCM, `inp` swept by +-30 mV around VCM) stays within 6 dB of its peak, in V | ≥ 0.48 | 0.536 |
+| n_triode | number of transistors whose drain-source voltage magnitude is below their Vdsat at the DC operating point | ≤ 0 | 0 |
+
+## Output format
+Reply with exactly one ```spice code block containing the complete netlist: every .subckt the
+design needs, including `dut`. You may add a short explanation outside the code block.
+If you conclude that the specifications cannot all be met in SKY130 at this supply, add a line outside the
+code block that starts with `INFEASIBLE:` followed by the reason, state the smallest change to the
+specifications that would make them achievable, and still give your best design.

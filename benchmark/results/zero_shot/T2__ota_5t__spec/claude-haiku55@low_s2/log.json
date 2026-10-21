@@ -1,0 +1,37 @@
+{
+ "task": "T2__ota_5t__spec",
+ "tier": "T2",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s2",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 30.37,
+  "f3db_Hz": 548754.8990091874,
+  "ugb_Hz": 18129465.23672623,
+  "pm_deg": 88.7,
+  "vout_dc_V": 0.5707,
+  "power_uW": 66.91,
+  "input_current_uA": 0.0,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB"
+ ]
+}

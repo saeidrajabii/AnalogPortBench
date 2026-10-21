@@ -1,0 +1,49 @@
+{
+ "task": "T2__ota_tele__p2_speed",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p2_speed.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s1",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 29.94,
+  "ugf_Hz": 46213383.210050315,
+  "pm_deg": 88.7,
+  "gm_dB": null,
+  "power_uW": 64.48,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.81,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 26.7,
+  "fall_settle_ns": 31.01,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 9.7,
+  "swing_V": 0.785,
+  "swing_lo_V": 0.186,
+  "swing_hi_V": 0.97,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "gm_dB",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

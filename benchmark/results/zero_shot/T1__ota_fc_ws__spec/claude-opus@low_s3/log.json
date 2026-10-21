@@ -1,0 +1,48 @@
+{
+ "task": "T1__ota_fc_ws__spec",
+ "tier": "T1",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-opus@low_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 32.66,
+  "f3db_Hz": 1367896.6036592303,
+  "ugb_Hz": 58759012.5166884,
+  "pm_deg": 84.2,
+  "vout_dc_V": 1.2199,
+  "power_uW": 308.44,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 12.95,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 24.5,
+  "fall_settle_ns": 15.68,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 17.2,
+  "swing_V": 0.702,
+  "swing_lo_V": 0.343,
+  "swing_hi_V": 1.045,
+  "n_triode": 6
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "swing_V",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "task": "T3__ota_tele_ws__hard_3_gain",
+ "tier": "T3",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/profiles/hard_3_gain.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@medium_s3",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "draws 2.5542 uA from the input source (> 1 uA)"
+ ],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": -40.84,
+  "f3db_Hz": 421.1869520723368,
+  "ugb_Hz": null,
+  "pm_deg": null,
+  "vout_dc_V": 0.4761,
+  "power_uW": 72.11,
+  "input_current_uA": 2.5542,
+  "rise_settle_ns": 0.0,
+  "rise_overshoot_pct": 0.49,
+  "rise_slew_V_per_us": null,
+  "fall_settle_ns": 0.0,
+  "fall_overshoot_pct": 0.47,
+  "fall_slew_V_per_us": null,
+  "swing_V": 0.0,
+  "swing_lo_V": 0.04,
+  "swing_hi_V": 0.04,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "swing_V"
+ ]
+}

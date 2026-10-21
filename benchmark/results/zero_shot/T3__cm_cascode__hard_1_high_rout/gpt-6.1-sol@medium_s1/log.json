@@ -1,0 +1,33 @@
+{
+ "task": "T3__cm_cascode__hard_1_high_rout",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@medium_s1",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.0,
+  "iout_vdd_uA": 20.0,
+  "iout_err_pct": 0.0,
+  "rout_kohm": 20000000.1,
+  "vmin_V": 0.059,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

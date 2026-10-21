@@ -1,0 +1,36 @@
+# Hard spec point for ota_5t at VDD = 1.2 V (hand-designed golden: benchmark/golden/ota_5t_hard_2_lowpower.sp, NMOS-input
+# 5T without the cascode bias generator). Limits as tight as the golden allows with >= 5 % margin at TT and a pass at all
+# five corners (tt ff ss sf fs). 24 uW of the power is VDD * Iref, spent before any amplifier current.
+# Fails: the naive port (sky130_naive_keepL.sp) and the 1.2 V golden ota_5t_1v2.sp (power 53 uW).
+profile: hard_2_lowpower
+description: 'Spec UGB at the lowest power: UGB >= 16.16 MHz and PM >= 60 deg at power <= 37 uW (1.2 V, VCM = 0.5 V); DC gain >= 30 dB accepted.'
+circuit: ota_5t
+dut_ports: iref inp inn out
+testbenches:
+  ota_ol_ac:
+    IREF_uA: 20
+    VCM: 0.5
+    CL: 1p
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = 0.5 V, Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 30.0
+    rule: '>= 30 dB (relaxed from 31.47 dB, traded for power)'
+  ugb_Hz:
+    op: '>='
+    limit: 16160000.0
+    rule: '>= 16.16 MHz (spec.yaml; golden TT 17.0 MHz)'
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: '>= 60 deg'
+  power_uW:
+    op: '<='
+    limit: 37.0
+    rule: golden TT / 0.95
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: no transistor out of saturation

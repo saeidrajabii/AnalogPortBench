@@ -1,0 +1,921 @@
+{
+ "task": "T1__ota_tele_ws__spec",
+ "tier": "T1",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/spec.yaml",
+ "vdd": 1.8,
+ "model": "claude-opus@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "max_attempts": 3,
+  "access": "command-line client, tools disabled"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "5161c1bfa13ee185b7b539f1d378b762d33406871b7c99fd6b2d84e79f7ea66c",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "ota_tele_ws",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.8,
+    "corner": "tt",
+    "metrics": {
+     "dc_gain_dB": 55.15,
+     "f3db_Hz": 136277.56554575937,
+     "ugb_Hz": 75215301.20017694,
+     "pm_deg": 74.1,
+     "vout_dc_V": 1.1229,
+     "power_uW": 242.93,
+     "input_current_uA": 0.0,
+     "rise_settle_ns": 7.44,
+     "rise_overshoot_pct": 0.0,
+     "rise_slew_V_per_us": 40.2,
+     "fall_settle_ns": 6.85,
+     "fall_overshoot_pct": 0.12,
+     "fall_slew_V_per_us": 37.9,
+     "swing_V": 0.478,
+     "swing_lo_V": 0.669,
+     "swing_hi_V": 1.147,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.092,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xmr.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "niref",
+       "id_uA": 20.0,
+       "vgs_V": 0.605,
+       "vds_V": 0.605,
+       "vdsat_V": 0.127,
+       "margin_V": 0.478
+      },
+      {
+       "device": "m.xdut.xmt.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.tail",
+       "id_uA": 74.949,
+       "vgs_V": 0.605,
+       "vds_V": 0.257,
+       "vdsat_V": 0.127,
+       "margin_V": 0.129
+      },
+      {
+       "device": "m.xdut.xms1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vb2",
+       "id_uA": 10.165,
+       "vgs_V": 0.605,
+       "vds_V": 0.715,
+       "vdsat_V": 0.127,
+       "margin_V": 0.588
+      },
+      {
+       "device": "m.xdut.xms2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vpe",
+       "id_uA": 10.837,
+       "vgs_V": 0.605,
+       "vds_V": 1.184,
+       "vdsat_V": 0.127,
+       "margin_V": 1.057
+      },
+      {
+       "device": "m.xdut.xms3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vxr",
+       "id_uA": 18.83,
+       "vgs_V": 0.605,
+       "vds_V": 0.275,
+       "vdsat_V": 0.127,
+       "margin_V": 0.148
+      },
+      {
+       "device": "m.xdut.xmpd.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vb2",
+       "id_uA": 10.165,
+       "vgs_V": 0.678,
+       "vds_V": 0.677,
+       "vdsat_V": 0.195,
+       "margin_V": 0.482
+      },
+      {
+       "device": "m.xdut.xmpe.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vpe",
+       "id_uA": 10.837,
+       "vgs_V": 0.615,
+       "vds_V": 0.614,
+       "vdsat_V": 0.21,
+       "margin_V": 0.404
+      },
+      {
+       "device": "m.xdut.xmpx.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vb5",
+       "id_uA": 10.75,
+       "vgs_V": 0.615,
+       "vds_V": 0.592,
+       "vdsat_V": 0.21,
+       "margin_V": 0.382
+      },
+      {
+       "device": "m.xdut.xmn8.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vdd",
+       "id_uA": 8.08,
+       "vgs_V": 0.625,
+       "vds_V": 1.525,
+       "vdsat_V": 0.115,
+       "margin_V": 1.41
+      },
+      {
+       "device": "m.xdut.xmn11.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vb5",
+       "id_uA": 10.75,
+       "vgs_V": 0.663,
+       "vds_V": 0.663,
+       "vdsat_V": 0.096,
+       "margin_V": 0.567
+      },
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n1",
+       "id_uA": 37.475,
+       "vgs_V": 0.643,
+       "vds_V": 0.298,
+       "vdsat_V": 0.129,
+       "margin_V": 0.168
+      },
+      {
+       "device": "m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n2",
+       "id_uA": 37.475,
+       "vgs_V": 0.643,
+       "vds_V": 0.298,
+       "vdsat_V": 0.129,
+       "margin_V": 0.168
+      },
+      {
+       "device": "m.xdut.xm0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.d1",
+       "id_uA": 37.475,
+       "vgs_V": 0.651,
+       "vds_V": 0.568,
+       "vdsat_V": 0.09,
+       "margin_V": 0.478
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 37.475,
+       "vgs_V": 0.651,
+       "vds_V": 0.568,
+       "vdsat_V": 0.09,
+       "margin_V": 0.478
+      },
+      {
+       "device": "m.xdut.xp1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.d1",
+       "id_uA": 37.475,
+       "vgs_V": 0.699,
+       "vds_V": 0.291,
+       "vdsat_V": 0.199,
+       "margin_V": 0.092
+      },
+      {
+       "device": "m.xdut.xp3.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 37.475,
+       "vgs_V": 0.699,
+       "vds_V": 0.291,
+       "vdsat_V": 0.199,
+       "margin_V": 0.092
+      },
+      {
+       "device": "m.xdut.xp0.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.p1",
+       "id_uA": 37.475,
+       "vgs_V": 0.677,
+       "vds_V": 0.385,
+       "vdsat_V": 0.204,
+       "margin_V": 0.18
+      },
+      {
+       "device": "m.xdut.xp2.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.p2",
+       "id_uA": 37.475,
+       "vgs_V": 0.677,
+       "vds_V": 0.385,
+       "vdsat_V": 0.204,
+       "margin_V": 0.18
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/ota_tele_ws/spec.yaml",
+    "checks": [
+     {
+      "metric": "dc_gain_dB",
+      "value": 55.15,
+      "op": ">=",
+      "limit": 62.54,
+      "source": 65.54,
+      "pass": false
+     },
+     {
+      "metric": "ugb_Hz",
+      "value": 75215301.20017694,
+      "op": ">=",
+      "limit": 46700000.0,
+      "source": 58370000.0,
+      "pass": true
+     },
+     {
+      "metric": "pm_deg",
+      "value": 74.1,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 82.9,
+      "pass": true
+     },
+     {
+      "metric": "power_uW",
+      "value": 242.93,
+      "op": "<=",
+      "limit": 320.1,
+      "source": 266.8,
+      "pass": true
+     },
+     {
+      "metric": "rise_settle_ns",
+      "value": 7.44,
+      "op": "<=",
+      "limit": 19.09,
+      "source": 12.73,
+      "pass": true
+     },
+     {
+      "metric": "fall_settle_ns",
+      "value": 6.85,
+      "op": "<=",
+      "limit": 18.75,
+      "source": 12.5,
+      "pass": true
+     },
+     {
+      "metric": "swing_V",
+      "value": 0.478,
+      "op": ">=",
+      "limit": 0.5128,
+      "source": 0.641,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": 0,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/ota_tele_ws/v2iter/clC/T1__ota_tele_ws__spec/claude-opus@medium_t1"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "ota_tele_ws",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.8,
+    "corner": "tt",
+    "metrics": {
+     "dc_gain_dB": 60.73,
+     "f3db_Hz": 59104.7918913797,
+     "ugb_Hz": 62414019.186512694,
+     "pm_deg": 68.7,
+     "vout_dc_V": 1.1807,
+     "power_uW": 210.01,
+     "input_current_uA": 0.0,
+     "rise_settle_ns": 8.06,
+     "rise_overshoot_pct": 0.0,
+     "rise_slew_V_per_us": 35.7,
+     "fall_settle_ns": 10.73,
+     "fall_overshoot_pct": 2.23,
+     "fall_slew_V_per_us": 31.9,
+     "swing_V": 0.507,
+     "swing_lo_V": 0.684,
+     "swing_hi_V": 1.191,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.137,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xmr.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "niref",
+       "id_uA": 20.0,
+       "vgs_V": 0.605,
+       "vds_V": 0.605,
+       "vdsat_V": 0.127,
+       "margin_V": 0.478
+      },
+      {
+       "device": "m.xdut.xmt.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.tail",
+       "id_uA": 56.474,
+       "vgs_V": 0.605,
+       "vds_V": 0.274,
+       "vdsat_V": 0.127,
+       "margin_V": 0.146
+      },
+      {
+       "device": "m.xdut.xms1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vb2",
+       "id_uA": 10.265,
+       "vgs_V": 0.605,
+       "vds_V": 0.783,
+       "vdsat_V": 0.127,
+       "margin_V": 0.656
+      },
+      {
+       "device": "m.xdut.xms2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vpe",
+       "id_uA": 10.837,
+       "vgs_V": 0.605,
+       "vds_V": 1.184,
+       "vdsat_V": 0.127,
+       "margin_V": 1.057
+      },
+      {
+       "device": "m.xdut.xms3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vxr",
+       "id_uA": 18.919,
+       "vgs_V": 0.605,
+       "vds_V": 0.293,
+       "vdsat_V": 0.127,
+       "margin_V": 0.166
+      },
+      {
+       "device": "m.xdut.xmpd.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vb2",
+       "id_uA": 10.265,
+       "vgs_V": 0.708,
+       "vds_V": 0.708,
+       "vdsat_V": 0.173,
+       "margin_V": 0.535
+      },
+      {
+       "device": "m.xdut.xmpe.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vpe",
+       "id_uA": 10.837,
+       "vgs_V": 0.615,
+       "vds_V": 0.614,
+       "vdsat_V": 0.21,
+       "margin_V": 0.404
+      },
+      {
+       "device": "m.xdut.xmpx.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vb5",
+       "id_uA": 10.917,
+       "vgs_V": 0.615,
+       "vds_V": 0.635,
+       "vdsat_V": 0.21,
+       "margin_V": 0.424
+      },
+      {
+       "device": "m.xdut.xmn8.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vdd",
+       "id_uA": 8.002,
+       "vgs_V": 0.606,
+       "vds_V": 1.506,
+       "vdsat_V": 0.101,
+       "margin_V": 1.405
+      },
+      {
+       "device": "m.xdut.xmn11.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vb5",
+       "id_uA": 10.917,
+       "vgs_V": 0.63,
+       "vds_V": 0.63,
+       "vdsat_V": 0.1,
+       "margin_V": 0.531
+      },
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n1",
+       "id_uA": 28.237,
+       "vgs_V": 0.626,
+       "vds_V": 0.268,
+       "vdsat_V": 0.117,
+       "margin_V": 0.151
+      },
+      {
+       "device": "m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n2",
+       "id_uA": 28.237,
+       "vgs_V": 0.626,
+       "vds_V": 0.268,
+       "vdsat_V": 0.117,
+       "margin_V": 0.151
+      },
+      {
+       "device": "m.xdut.xm0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.d1",
+       "id_uA": 28.237,
+       "vgs_V": 0.623,
+       "vds_V": 0.639,
+       "vdsat_V": 0.095,
+       "margin_V": 0.545
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 28.237,
+       "vgs_V": 0.623,
+       "vds_V": 0.639,
+       "vdsat_V": 0.095,
+       "margin_V": 0.545
+      },
+      {
+       "device": "m.xdut.xp1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.d1",
+       "id_uA": 28.237,
+       "vgs_V": 0.708,
+       "vds_V": 0.31,
+       "vdsat_V": 0.173,
+       "margin_V": 0.137
+      },
+      {
+       "device": "m.xdut.xp3.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 28.237,
+       "vgs_V": 0.708,
+       "vds_V": 0.31,
+       "vdsat_V": 0.173,
+       "margin_V": 0.137
+      },
+      {
+       "device": "m.xdut.xp0.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.p1",
+       "id_uA": 28.237,
+       "vgs_V": 0.619,
+       "vds_V": 0.308,
+       "vdsat_V": 0.162,
+       "margin_V": 0.146
+      },
+      {
+       "device": "m.xdut.xp2.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.p2",
+       "id_uA": 28.237,
+       "vgs_V": 0.619,
+       "vds_V": 0.308,
+       "vdsat_V": 0.162,
+       "margin_V": 0.146
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/ota_tele_ws/spec.yaml",
+    "checks": [
+     {
+      "metric": "dc_gain_dB",
+      "value": 60.73,
+      "op": ">=",
+      "limit": 62.54,
+      "source": 65.54,
+      "pass": false
+     },
+     {
+      "metric": "ugb_Hz",
+      "value": 62414019.186512694,
+      "op": ">=",
+      "limit": 46700000.0,
+      "source": 58370000.0,
+      "pass": true
+     },
+     {
+      "metric": "pm_deg",
+      "value": 68.7,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 82.9,
+      "pass": true
+     },
+     {
+      "metric": "power_uW",
+      "value": 210.01,
+      "op": "<=",
+      "limit": 320.1,
+      "source": 266.8,
+      "pass": true
+     },
+     {
+      "metric": "rise_settle_ns",
+      "value": 8.06,
+      "op": "<=",
+      "limit": 19.09,
+      "source": 12.73,
+      "pass": true
+     },
+     {
+      "metric": "fall_settle_ns",
+      "value": 10.73,
+      "op": "<=",
+      "limit": 18.75,
+      "source": 12.5,
+      "pass": true
+     },
+     {
+      "metric": "swing_V",
+      "value": 0.507,
+      "op": ">=",
+      "limit": 0.5128,
+      "source": 0.641,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": 0,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/ota_tele_ws/v2iter/clC/T1__ota_tele_ws__spec/claude-opus@medium_t2"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": false
+  },
+  {
+   "turn": 3,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "ota_tele_ws",
+    "netlist": "turn3_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.8,
+    "corner": "tt",
+    "metrics": {
+     "dc_gain_dB": 61.98,
+     "f3db_Hz": 44920.4793390701,
+     "ugb_Hz": 56015055.5808,
+     "pm_deg": 60.3,
+     "vout_dc_V": 1.1972,
+     "power_uW": 193.67,
+     "input_current_uA": 0.0,
+     "rise_settle_ns": 7.74,
+     "rise_overshoot_pct": 0.7,
+     "rise_slew_V_per_us": 31.6,
+     "fall_settle_ns": 13.68,
+     "fall_overshoot_pct": 8.75,
+     "fall_slew_V_per_us": 25.6,
+     "swing_V": 0.483,
+     "swing_lo_V": 0.693,
+     "swing_hi_V": 1.177,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.106,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xmr.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "niref",
+       "id_uA": 20.0,
+       "vgs_V": 0.605,
+       "vds_V": 0.605,
+       "vdsat_V": 0.127,
+       "margin_V": 0.478
+      },
+      {
+       "device": "m.xdut.xmt.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.tail",
+       "id_uA": 47.33,
+       "vgs_V": 0.605,
+       "vds_V": 0.296,
+       "vdsat_V": 0.127,
+       "margin_V": 0.169
+      },
+      {
+       "device": "m.xdut.xms1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vb2",
+       "id_uA": 10.239,
+       "vgs_V": 0.605,
+       "vds_V": 0.765,
+       "vdsat_V": 0.127,
+       "margin_V": 0.638
+      },
+      {
+       "device": "m.xdut.xms2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vpe",
+       "id_uA": 10.837,
+       "vgs_V": 0.605,
+       "vds_V": 1.184,
+       "vdsat_V": 0.127,
+       "margin_V": 1.057
+      },
+      {
+       "device": "m.xdut.xms3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vxr",
+       "id_uA": 19.01,
+       "vgs_V": 0.605,
+       "vds_V": 0.314,
+       "vdsat_V": 0.127,
+       "margin_V": 0.187
+      },
+      {
+       "device": "m.xdut.xmpd.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vb2",
+       "id_uA": 10.239,
+       "vgs_V": 0.727,
+       "vds_V": 0.727,
+       "vdsat_V": 0.189,
+       "margin_V": 0.538
+      },
+      {
+       "device": "m.xdut.xmpe.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vpe",
+       "id_uA": 10.837,
+       "vgs_V": 0.615,
+       "vds_V": 0.614,
+       "vdsat_V": 0.21,
+       "margin_V": 0.404
+      },
+      {
+       "device": "m.xdut.xmpx.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.vb5",
+       "id_uA": 10.958,
+       "vgs_V": 0.615,
+       "vds_V": 0.645,
+       "vdsat_V": 0.21,
+       "margin_V": 0.435
+      },
+      {
+       "device": "m.xdut.xmn8.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vdd",
+       "id_uA": 8.052,
+       "vgs_V": 0.585,
+       "vds_V": 1.485,
+       "vdsat_V": 0.095,
+       "margin_V": 1.39
+      },
+      {
+       "device": "m.xdut.xmn11.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.vb5",
+       "id_uA": 10.958,
+       "vgs_V": 0.62,
+       "vds_V": 0.62,
+       "vdsat_V": 0.099,
+       "margin_V": 0.521
+      },
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n1",
+       "id_uA": 23.665,
+       "vgs_V": 0.603,
+       "vds_V": 0.245,
+       "vdsat_V": 0.107,
+       "margin_V": 0.137
+      },
+      {
+       "device": "m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n2",
+       "id_uA": 23.665,
+       "vgs_V": 0.603,
+       "vds_V": 0.245,
+       "vdsat_V": 0.107,
+       "margin_V": 0.137
+      },
+      {
+       "device": "m.xdut.xm0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.d1",
+       "id_uA": 23.665,
+       "vgs_V": 0.612,
+       "vds_V": 0.656,
+       "vdsat_V": 0.094,
+       "margin_V": 0.562
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 23.665,
+       "vgs_V": 0.612,
+       "vds_V": 0.656,
+       "vdsat_V": 0.094,
+       "margin_V": 0.562
+      },
+      {
+       "device": "m.xdut.xp1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.d1",
+       "id_uA": 23.665,
+       "vgs_V": 0.725,
+       "vds_V": 0.294,
+       "vdsat_V": 0.188,
+       "margin_V": 0.106
+      },
+      {
+       "device": "m.xdut.xp3.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 23.665,
+       "vgs_V": 0.725,
+       "vds_V": 0.294,
+       "vdsat_V": 0.188,
+       "margin_V": 0.106
+      },
+      {
+       "device": "m.xdut.xp0.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.p1",
+       "id_uA": 23.665,
+       "vgs_V": 0.603,
+       "vds_V": 0.309,
+       "vdsat_V": 0.151,
+       "margin_V": 0.158
+      },
+      {
+       "device": "m.xdut.xp2.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.p2",
+       "id_uA": 23.665,
+       "vgs_V": 0.603,
+       "vds_V": 0.309,
+       "vdsat_V": 0.151,
+       "margin_V": 0.158
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/ota_tele_ws/spec.yaml",
+    "checks": [
+     {
+      "metric": "dc_gain_dB",
+      "value": 61.98,
+      "op": ">=",
+      "limit": 62.54,
+      "source": 65.54,
+      "pass": false
+     },
+     {
+      "metric": "ugb_Hz",
+      "value": 56015055.5808,
+      "op": ">=",
+      "limit": 46700000.0,
+      "source": 58370000.0,
+      "pass": true
+     },
+     {
+      "metric": "pm_deg",
+      "value": 60.3,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 82.9,
+      "pass": true
+     },
+     {
+      "metric": "power_uW",
+      "value": 193.67,
+      "op": "<=",
+      "limit": 320.1,
+      "source": 266.8,
+      "pass": true
+     },
+     {
+      "metric": "rise_settle_ns",
+      "value": 7.74,
+      "op": "<=",
+      "limit": 19.09,
+      "source": 12.73,
+      "pass": true
+     },
+     {
+      "metric": "fall_settle_ns",
+      "value": 13.68,
+      "op": "<=",
+      "limit": 18.75,
+      "source": 12.5,
+      "pass": true
+     },
+     {
+      "metric": "swing_V",
+      "value": 0.483,
+      "op": ">=",
+      "limit": 0.5128,
+      "source": 0.641,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": 0,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/ota_tele_ws/v2iter/clC/T1__ota_tele_ws__spec/claude-opus@medium_t3"
+   },
+   "valid": true,
+   "counted_as": "design attempt 3",
+   "pass": false
+  }
+ ],
+ "design_attempts": 3,
+ "syntax_retries_used": 0,
+ "passed": false,
+ "passed_at_attempt": null
+}

@@ -1,0 +1,52 @@
+{
+ "task": "T2__ota_fc_ws__spec_1v2",
+ "tier": "T2",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/spec_1v2.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "MBN1: element type 'M' not allowed",
+  "MT: element type 'M' not allowed",
+  "MIP: element type 'M' not allowed",
+  "MIN: element type 'M' not allowed",
+  "MPC1: element type 'M' not allowed",
+  "MPL1: element type 'M' not allowed",
+  "MPL2: element type 'M' not allowed",
+  "MP5: element type 'M' not allowed",
+  "MN6: element type 'M' not allowed",
+  "MN7: element type 'M' not allowed",
+  "MN9: element type 'M' not allowed",
+  "MN8: element type 'M' not allowed"
+ ],
+ "notes": [],
+ "errors": [
+  "ota_ol_ac: SimError: ngspice failed in <repo>/build/eval/ota_fc_ws/claude/clB/T2__ota_fc_ws__spec_1v2/claude-haiku55@low_s3/ota_ol_ac (rc=1):\nError on line:",
+  "opamp_tran: SimError: ngspice failed in <repo>/build/eval/ota_fc_ws/claude/clB/T2__ota_fc_ws__spec_1v2/claude-haiku55@low_s3/opamp_tran (rc=1):\nError on line:",
+  "ota_swing_dc: SimError: ngspice failed in <repo>/build/eval/ota_fc_ws/claude/clB/T2__ota_fc_ws__spec_1v2/claude-haiku55@low_s3/ota_swing_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

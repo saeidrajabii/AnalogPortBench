@@ -1,0 +1,448 @@
+{
+ "task": "T3__cm_simple__hard_1_low_vmin",
+ "tier": "T3",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+ "vdd": 1.2,
+ "model": "gpt-6-sol@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "gpt-6-sol",
+  "effort": null,
+  "max_attempts": 3,
+  "access": "OpenAI API"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "22975aadb49fcd7e6e01320009d12fcb8343d8031b435ef2e93730e18f6adee8",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {},
+    "errors": [
+     "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t1/mirror_dc (rc=1):\nError on line:"
+    ],
+    "warnings": [],
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": null,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "rout_kohm",
+      "value": null,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": null,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": null,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t1"
+   },
+   "valid": false,
+   "counted_as": "syntax retry 1"
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 21.338,
+     "iout_vdd_uA": 22.207,
+     "iout_err_pct": 6.69,
+     "rout_kohm": 344.8,
+     "vmin_V": 0.151,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.379,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.441,
+       "vds_V": 0.441,
+       "vdsat_V": 0.062,
+       "margin_V": 0.379
+      },
+      {
+       "device": "m.xdut.xout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 21.338,
+       "vgs_V": 0.441,
+       "vds_V": 0.9,
+       "vdsat_V": 0.062,
+       "margin_V": 0.838
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": 6.69,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 344.8,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.151,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t2"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 3,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn3_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {},
+    "errors": [
+     "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t3/mirror_dc (rc=1):\nError on line:"
+    ],
+    "warnings": [],
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": null,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "rout_kohm",
+      "value": null,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": null,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": null,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t3"
+   },
+   "valid": false,
+   "counted_as": "syntax retry 2"
+  },
+  {
+   "turn": 4,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn4_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 22.48,
+     "iout_vdd_uA": 23.799,
+     "iout_err_pct": 12.4,
+     "rout_kohm": 227.2,
+     "vmin_V": 0.141,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.3,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.34,
+       "vds_V": 0.34,
+       "vdsat_V": 0.04,
+       "margin_V": 0.3
+      },
+      {
+       "device": "m.xdut.xout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 22.48,
+       "vgs_V": 0.34,
+       "vds_V": 0.9,
+       "vdsat_V": 0.04,
+       "margin_V": 0.86
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": 12.4,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 227.2,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.141,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t4"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": false
+  },
+  {
+   "turn": 5,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn5_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 18.34,
+     "iout_vdd_uA": 18.904,
+     "iout_err_pct": -8.3,
+     "rout_kohm": 1483.2,
+     "vmin_V": 0.048,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.38,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.209,
+       "vgs_V": 0.442,
+       "vds_V": 0.442,
+       "vdsat_V": 0.062,
+       "margin_V": 0.38
+      },
+      {
+       "device": "m.xdut.xout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 18.322,
+       "vgs_V": 0.442,
+       "vds_V": 0.9,
+       "vdsat_V": 0.062,
+       "margin_V": 0.838
+      },
+      {
+       "device": "m.xdut.xboost.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nin",
+       "id_uA": 0.209,
+       "vgs_V": 0.48,
+       "vds_V": 0.758,
+       "vdsat_V": 0.119,
+       "margin_V": 0.639
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": -8.3,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 1483.2,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.048,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": true,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_t5"
+   },
+   "valid": true,
+   "counted_as": "design attempt 3",
+   "pass": true
+  }
+ ],
+ "design_attempts": 3,
+ "syntax_retries_used": 2,
+ "passed": true,
+ "passed_at_attempt": 3
+}

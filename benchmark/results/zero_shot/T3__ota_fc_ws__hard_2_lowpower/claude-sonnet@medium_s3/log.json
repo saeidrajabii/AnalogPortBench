@@ -1,0 +1,50 @@
+{
+ "task": "T3__ota_fc_ws__hard_2_lowpower",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_2_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": -0.95,
+  "f3db_Hz": 16.66653333033383,
+  "ugb_Hz": null,
+  "pm_deg": null,
+  "vout_dc_V": 0.0053,
+  "power_uW": 24.08,
+  "input_current_uA": 0.1821,
+  "rise_settle_ns": 0.0,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": null,
+  "fall_settle_ns": 0.0,
+  "fall_overshoot_pct": 0.01,
+  "fall_slew_V_per_us": null,
+  "swing_V": 0.0,
+  "swing_lo_V": 0.156,
+  "swing_hi_V": 0.156,
+  "n_triode": 5
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "swing_V",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "task": "T3__cm_simple__hard_1_low_vmin",
+ "tier": "T3",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+ "vdd": 1.2,
+ "model": "claude-opus@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "max_attempts": 3,
+  "access": "command-line client, tools disabled"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "22975aadb49fcd7e6e01320009d12fcb8343d8031b435ef2e93730e18f6adee8",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 20.979,
+     "iout_vdd_uA": 20.934,
+     "iout_err_pct": 4.9,
+     "rout_kohm": null,
+     "vmin_V": 0.002,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.309,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.443,
+       "vds_V": 0.904,
+       "vdsat_V": 0.05,
+       "margin_V": 0.854
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 20.979,
+       "vgs_V": 0.443,
+       "vds_V": 0.9,
+       "vdsat_V": 0.05,
+       "margin_V": 0.85
+      },
+      {
+       "device": "m.xdut.xma1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.d1",
+       "id_uA": 0.02,
+       "vgs_V": 0.296,
+       "vds_V": 0.849,
+       "vdsat_V": 0.044,
+       "margin_V": 0.805
+      },
+      {
+       "device": "m.xdut.xma2.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.g",
+       "id_uA": 0.021,
+       "vgs_V": 0.3,
+       "vds_V": 0.757,
+       "vdsat_V": 0.044,
+       "margin_V": 0.712
+      },
+      {
+       "device": "m.xdut.xmn3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.d1",
+       "id_uA": 0.02,
+       "vgs_V": 0.351,
+       "vds_V": 0.351,
+       "vdsat_V": 0.041,
+       "margin_V": 0.309
+      },
+      {
+       "device": "m.xdut.xmn4.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.g",
+       "id_uA": 0.021,
+       "vgs_V": 0.351,
+       "vds_V": 0.443,
+       "vdsat_V": 0.041,
+       "margin_V": 0.402
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": 4.9,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rout_kohm",
+      "value": null,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.002,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/clC/T3__cm_simple__hard_1_low_vmin/claude-opus@medium_t1"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_simple",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 20.43,
+     "iout_vdd_uA": 20.537,
+     "iout_err_pct": 2.15,
+     "rout_kohm": 2754.8,
+     "vmin_V": 0.002,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.309,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.443,
+       "vds_V": 0.904,
+       "vdsat_V": 0.05,
+       "margin_V": 0.854
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 19.98,
+       "vgs_V": 0.443,
+       "vds_V": 0.9,
+       "vdsat_V": 0.05,
+       "margin_V": 0.85
+      },
+      {
+       "device": "m.xdut.xma1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.d1",
+       "id_uA": 0.02,
+       "vgs_V": 0.296,
+       "vds_V": 0.849,
+       "vdsat_V": 0.044,
+       "margin_V": 0.805
+      },
+      {
+       "device": "m.xdut.xma2.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.g",
+       "id_uA": 0.021,
+       "vgs_V": 0.3,
+       "vds_V": 0.757,
+       "vdsat_V": 0.044,
+       "margin_V": 0.712
+      },
+      {
+       "device": "m.xdut.xmn3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.d1",
+       "id_uA": 0.02,
+       "vgs_V": 0.351,
+       "vds_V": 0.351,
+       "vdsat_V": 0.041,
+       "margin_V": 0.309
+      },
+      {
+       "device": "m.xdut.xmn4.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.g",
+       "id_uA": 0.021,
+       "vgs_V": 0.351,
+       "vds_V": 0.443,
+       "vdsat_V": 0.041,
+       "margin_V": 0.402
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": 2.15,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 2754.8,
+      "op": ">=",
+      "limit": 1000.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.002,
+      "op": "<=",
+      "limit": 0.058,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": true,
+    "out_dir": "<repo>/build/eval/cm_simple/v2iter/clC/T3__cm_simple__hard_1_low_vmin/claude-opus@medium_t2"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": true
+  }
+ ],
+ "design_attempts": 2,
+ "syntax_retries_used": 0,
+ "passed": true,
+ "passed_at_attempt": 2
+}

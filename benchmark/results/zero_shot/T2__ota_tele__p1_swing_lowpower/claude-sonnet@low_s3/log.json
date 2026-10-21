@@ -1,0 +1,47 @@
+{
+ "task": "T2__ota_tele__p1_swing_lowpower",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 41.25,
+  "ugf_Hz": 30485429.64552333,
+  "pm_deg": 87.1,
+  "gm_dB": 45.2,
+  "power_uW": 98.99,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 17.84,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 17.1,
+  "fall_settle_ns": 41.19,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 7.4,
+  "swing_V": 0.252,
+  "swing_lo_V": 0.58,
+  "swing_hi_V": 0.833,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "swing_V",
+  "n_triode"
+ ]
+}

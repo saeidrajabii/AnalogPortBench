@@ -1,0 +1,57 @@
+profile: hard_5_allround_power
+description: 'Hard point H5: every p0_as_source limit (PM raised to 60 deg) at reduced power.'
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+golden: benchmark/golden/ota_tele_hard_5_allround_power.sp
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 66.84
+    rule: hard point; golden TT 80.17 (+19.9 %), worst corner 78.11
+  ugf_Hz:
+    op: '>='
+    limit: 44560000.0
+    rule: hard point; golden TT 51770000.0 (+16.2 %), worst corner 50570000.0
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed for every hard point
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: fixed for every hard point
+  power_uW:
+    op: <=
+    limit: 147.0
+    rule: hard point; golden TT 139.12 (+5.4 %), worst corner 144.2
+  rise_settle_ns:
+    op: <=
+    limit: 19.17
+    rule: hard point; golden TT 15.76 (+17.8 %), worst corner 16.19
+  fall_settle_ns:
+    op: <=
+    limit: 19.42
+    rule: hard point; golden TT 17.39 (+10.5 %), worst corner 18.91
+  swing_V:
+    op: '>='
+    limit: 0.4288
+    rule: hard point; golden TT 0.834 (+94.5 %), worst corner 0.794
+  n_triode:
+    op: <=
+    limit: 0
+    rule: fixed for every hard point

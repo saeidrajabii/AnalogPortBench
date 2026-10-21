@@ -1,0 +1,57 @@
+profile: hard_3_fast
+description: 'Hard point H3: very fast (bandwidth > 100 MHz into 1 pF, fast rising edge).'
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+golden: benchmark/golden/ota_tele_hard_3_fast.sp
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 46.5
+    rule: hard point; golden TT 49.0 (+5.4 %), worst corner 47.74
+  ugf_Hz:
+    op: '>='
+    limit: 104000000.0
+    rule: hard point; golden TT 111920000.0 (+7.6 %), worst corner 104460000.0
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed for every hard point
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: fixed for every hard point
+  power_uW:
+    op: <=
+    limit: 155.0
+    rule: hard point; golden TT 145.09 (+6.4 %), worst corner 148.81
+  rise_settle_ns:
+    op: <=
+    limit: 7.0
+    rule: hard point; golden TT 5.97 (+14.7 %), worst corner 6.83
+  fall_settle_ns:
+    op: <=
+    limit: 19.0
+    rule: hard point; golden TT 12.81 (+32.6 %), worst corner 18.26
+  swing_V:
+    op: '>='
+    limit: 0.48
+    rule: hard point; golden TT 0.505 (+5.2 %), worst corner 0.491
+  n_triode:
+    op: <=
+    limit: 0
+    rule: fixed for every hard point

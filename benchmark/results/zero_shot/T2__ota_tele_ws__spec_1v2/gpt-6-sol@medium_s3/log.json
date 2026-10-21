@@ -1,0 +1,49 @@
+{
+ "task": "T2__ota_tele_ws__spec_1v2",
+ "tier": "T2",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/spec_1v2.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 38.86,
+  "f3db_Hz": 288221.26575690083,
+  "ugb_Hz": 23845813.356102698,
+  "pm_deg": 69.9,
+  "vout_dc_V": 0.0726,
+  "power_uW": 165.36,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 19.04,
+  "rise_overshoot_pct": 9.87,
+  "rise_slew_V_per_us": 37.4,
+  "fall_settle_ns": 32.63,
+  "fall_overshoot_pct": 22.37,
+  "fall_slew_V_per_us": 23.4,
+  "swing_V": 0.709,
+  "swing_lo_V": 0.183,
+  "swing_hi_V": 0.892,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

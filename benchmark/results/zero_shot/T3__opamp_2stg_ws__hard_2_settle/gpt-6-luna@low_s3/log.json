@@ -1,0 +1,46 @@
+{
+ "task": "T3__opamp_2stg_ws__hard_2_settle",
+ "tier": "T3",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/profiles/hard_2_settle.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s3",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 48.07,
+  "ugf_Hz": 160064880.20604208,
+  "pm_deg": 90.1,
+  "gm_dB": 17.8,
+  "power_uW": 552.87,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 6.06,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 83.3,
+  "fall_settle_ns": 6.56,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 51.4,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

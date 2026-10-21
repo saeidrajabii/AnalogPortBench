@@ -1,0 +1,32 @@
+# Hard spec point for cascode_bias_ws at VDD = 1.2 V (hand-designed golden: benchmark/golden/cascode_bias_ws_hard_3_precision.sp).
+# Limits set as tight as the golden allows with >= 5 % margin at TT and a pass at tt ff ss sf fs.
+profile: hard_3_precision
+description: 'Precision: both hard_1 (current accuracy 0.25 %) and hard_2 (mismatch 36 nA) at once, range >= 0.94 V at 1.2 V.'
+circuit: cascode_bias_ws
+dut_ports: iin out vb1 vb2 vb3 vb4
+testbenches:
+  cascode_bias_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA
+limits:
+  mismatch_0v9_nA:
+    op: abs<=
+    limit: 36
+    rule: '|mismatch| <= 36 nA at Vo = 0.9 V'
+  match_width_V:
+    op: '>='
+    limit: 0.94
+    rule: '>= 0.94 V (spec.yaml 1.144 V is not reachable at 1.2 V; physical limit ~1.04 V)'
+  isink_err_pct:
+    op: abs<=
+    limit: 0.25
+    rule: '|Isink - Iref| <= 0.25 % at Vo = 0.9 V'
+  isource_err_pct:
+    op: abs<=
+    limit: 0.25
+    rule: '|Isource - Iref| <= 0.25 % at Vo = 0.9 V'
+  n_triode:
+    op: <=
+    limit: 0
+    rule: no transistor out of saturation

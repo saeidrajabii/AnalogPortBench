@@ -1,0 +1,44 @@
+{
+ "task": "T3__opamp_2stg__hard_2_settle",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_2_settle.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 49.54,
+  "ugf_Hz": 92521547.82384333,
+  "pm_deg": 64.4,
+  "gm_dB": 19.5,
+  "power_uW": 266.24,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 9.82,
+  "rise_overshoot_pct": 2.48,
+  "rise_slew_V_per_us": 41.4,
+  "fall_settle_ns": 8.85,
+  "fall_overshoot_pct": 4.49,
+  "fall_slew_V_per_us": 48.8,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

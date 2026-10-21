@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele__hard_3_fast",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s1",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 34.19,
+  "ugf_Hz": 71483650.92258736,
+  "pm_deg": 83.2,
+  "gm_dB": 37.8,
+  "power_uW": 90.16,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 7.39,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 39.4,
+  "fall_settle_ns": 16.77,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 17.3,
+  "swing_V": 0.67,
+  "swing_lo_V": 0.24,
+  "swing_hi_V": 0.91,
+  "n_triode": 6
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "rise_settle_ns",
+  "n_triode"
+ ]
+}

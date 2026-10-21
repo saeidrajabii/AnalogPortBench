@@ -1,0 +1,58 @@
+{
+ "task": "T3__ota_tele__hard_3_fast",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s2",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "MB1: element type 'M' not allowed",
+  "MB2: element type 'M' not allowed",
+  "MB3: element type 'M' not allowed",
+  "MB4: element type 'M' not allowed",
+  "MB5: element type 'M' not allowed",
+  "MB6: element type 'M' not allowed",
+  "MB7: element type 'M' not allowed",
+  "MB8: element type 'M' not allowed",
+  "MT: element type 'M' not allowed",
+  "M1: element type 'M' not allowed",
+  "M2: element type 'M' not allowed",
+  "M3: element type 'M' not allowed",
+  "M4: element type 'M' not allowed",
+  "M5: element type 'M' not allowed",
+  "M6: element type 'M' not allowed",
+  "M7: element type 'M' not allowed",
+  "M8: element type 'M' not allowed"
+ ],
+ "notes": [],
+ "errors": [
+  "opamp_loop: SimError: ngspice failed in <repo>/build/eval/ota_tele/claude/clB/T3__ota_tele__hard_3_fast/claude-haiku55@low_s2/opamp_loop (rc=1):\nError on line:",
+  "opamp_tran: SimError: ngspice failed in <repo>/build/eval/ota_tele/claude/clB/T3__ota_tele__hard_3_fast/claude-haiku55@low_s2/opamp_tran (rc=1):\nError on line:",
+  "ota_swing_dc: SimError: ngspice failed in <repo>/build/eval/ota_tele/claude/clB/T3__ota_tele__hard_3_fast/claude-haiku55@low_s2/ota_swing_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "task": "T3__cascode_bias_ws__hard_2_flat",
+ "tier": "T3",
+ "circuit": "cascode_bias_ws",
+ "spec": "circuits/cascode_bias_ws/profiles/hard_2_flat.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s2",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.6714,
+  "vb2_V": 0.2651,
+  "vb3_V": 0.8177,
+  "vb4_V": 0.5962,
+  "mismatch_0v9_nA": -1870.9,
+  "match_lo_V": 0.16,
+  "match_hi_V": 0.79,
+  "match_width_V": 0.63,
+  "isink_err_pct": -6.68,
+  "isource_err_pct": -16.04,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isink_err_pct",
+  "isource_err_pct",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "task": "T3__cascode_bias__hard_2_precision",
+ "tier": "T3",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/profiles/hard_2_precision.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@low_s1",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [
+  "cascode_bias_dc: SimError: ngspice failed in <repo>/build/eval/cascode_bias/claude/gptB/T3__cascode_bias__hard_2_precision/gpt-6-sol@low_s1/cascode_bias_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isink_err_pct",
+  "isource_err_pct",
+  "n_triode"
+ ]
+}

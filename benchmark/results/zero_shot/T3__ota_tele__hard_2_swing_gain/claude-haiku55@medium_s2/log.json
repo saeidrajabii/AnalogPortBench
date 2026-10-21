@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele__hard_2_swing_gain",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_2_swing_gain.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s2",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 47.27,
+  "ugf_Hz": 14827420.35166877,
+  "pm_deg": 86.8,
+  "gm_dB": 28.4,
+  "power_uW": 69.73,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 47.13,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 3.6,
+  "fall_settle_ns": 45.84,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 4.8,
+  "swing_V": 0.456,
+  "swing_lo_V": 0.311,
+  "swing_hi_V": 0.767,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "swing_V",
+  "n_triode"
+ ]
+}

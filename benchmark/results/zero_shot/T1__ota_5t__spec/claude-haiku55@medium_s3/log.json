@@ -1,0 +1,41 @@
+{
+ "task": "T1__ota_5t__spec",
+ "tier": "T1",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-haiku55@medium_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "MREF: element type 'M' not allowed",
+  "MTAIL: element type 'M' not allowed",
+  "MN1: element type 'M' not allowed",
+  "MN2: element type 'M' not allowed",
+  "MP1: element type 'M' not allowed",
+  "MP2: element type 'M' not allowed"
+ ],
+ "notes": [],
+ "errors": [
+  "ota_ol_ac: SimError: ngspice failed in <repo>/build/eval/ota_5t/claude/clB/T1__ota_5t__spec/claude-haiku55@medium_s3/ota_ol_ac (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "power_uW",
+  "n_triode"
+ ]
+}

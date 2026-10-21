@@ -1,0 +1,47 @@
+{
+ "task": "T1__opamp_2stg_ws__spec",
+ "tier": "T1",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6-luna@medium_s3",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": -116.94,
+  "ugf_Hz": null,
+  "pm_deg": null,
+  "gm_dB": null,
+  "power_uW": 135.2,
+  "input_current_uA": 0.9623,
+  "rise_settle_ns": 29.73,
+  "rise_overshoot_pct": 7.76,
+  "rise_slew_V_per_us": null,
+  "fall_settle_ns": 5.47,
+  "fall_overshoot_pct": 5.62,
+  "fall_slew_V_per_us": null,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "rise_settle_ns",
+  "n_triode"
+ ]
+}

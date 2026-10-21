@@ -1,0 +1,37 @@
+{
+ "task": "T3__cm_cascode__hard_2_low_vmin",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_2_low_vmin.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s1",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.072,
+  "iout_vdd_uA": 20.117,
+  "iout_err_pct": 0.36,
+  "rout_kohm": 6248.0,
+  "vmin_V": 0.115,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V"
+ ]
+}

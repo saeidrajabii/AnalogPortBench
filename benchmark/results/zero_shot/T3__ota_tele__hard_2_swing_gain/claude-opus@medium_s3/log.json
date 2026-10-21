@@ -1,0 +1,47 @@
+{
+ "task": "T3__ota_tele__hard_2_swing_gain",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_2_swing_gain.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 65.81,
+  "ugf_Hz": 19519355.692097843,
+  "pm_deg": 55.0,
+  "gm_dB": 16.8,
+  "power_uW": 82.55,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 40.89,
+  "rise_overshoot_pct": 5.97,
+  "rise_slew_V_per_us": 10.5,
+  "fall_settle_ns": 48.28,
+  "fall_overshoot_pct": 9.8,
+  "fall_slew_V_per_us": 9.5,
+  "swing_V": 0.675,
+  "swing_lo_V": 0.169,
+  "swing_hi_V": 0.844,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "pm_deg",
+  "fall_settle_ns",
+  "swing_V"
+ ]
+}

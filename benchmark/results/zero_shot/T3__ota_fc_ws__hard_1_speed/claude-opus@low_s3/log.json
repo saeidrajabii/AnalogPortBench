@@ -1,0 +1,49 @@
+{
+ "task": "T3__ota_fc_ws__hard_1_speed",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.86,
+  "f3db_Hz": 588197.0845956256,
+  "ugb_Hz": 65030302.945561446,
+  "pm_deg": 82.2,
+  "vout_dc_V": 0.6075,
+  "power_uW": 178.81,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 8.94,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 34.5,
+  "fall_settle_ns": 26.88,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 11.2,
+  "swing_V": 0.483,
+  "swing_lo_V": 0.23,
+  "swing_hi_V": 0.714,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "ugb_Hz",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

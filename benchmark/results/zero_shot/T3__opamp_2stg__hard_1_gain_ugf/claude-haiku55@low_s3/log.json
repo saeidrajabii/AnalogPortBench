@@ -1,0 +1,44 @@
+{
+ "task": "T3__opamp_2stg__hard_1_gain_ugf",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 42.84,
+  "ugf_Hz": 76000537.11465444,
+  "pm_deg": 55.4,
+  "gm_dB": 12.4,
+  "power_uW": 267.42,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.0,
+  "rise_overshoot_pct": 4.19,
+  "rise_slew_V_per_us": 47.5,
+  "fall_settle_ns": 12.71,
+  "fall_overshoot_pct": 8.73,
+  "fall_slew_V_per_us": 44.2,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg"
+ ]
+}

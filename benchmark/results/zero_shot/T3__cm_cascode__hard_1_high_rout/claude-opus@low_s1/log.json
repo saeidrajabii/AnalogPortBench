@@ -1,0 +1,36 @@
+{
+ "task": "T3__cm_cascode__hard_1_high_rout",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 2,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "MN1: element type 'M' not allowed",
+  "MN3: element type 'M' not allowed"
+ ],
+ "notes": [],
+ "errors": [
+  "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_cascode/claude/clB/T3__cm_cascode__hard_1_high_rout/claude-opus@low_s1/mirror_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

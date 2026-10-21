@@ -1,0 +1,33 @@
+{
+ "task": "T1__cm_cascode__spec",
+ "tier": "T1",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6-luna@medium_s2",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.003,
+  "iout_vdd_uA": 20.043,
+  "iout_err_pct": 0.02,
+  "rout_kohm": 20120.7,
+  "vmin_V": 0.231,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

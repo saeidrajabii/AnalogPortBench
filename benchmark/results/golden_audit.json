@@ -1,0 +1,2164 @@
+{
+ "cascode_bias_1v2": {
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.91,
+    "sf"
+   ],
+   "match_width_V": [
+    0.5,
+    "tt"
+   ],
+   "isink_err_pct": [
+    0.979,
+    "ff"
+   ],
+   "isource_err_pct": [
+    0.976,
+    "sf"
+   ]
+  },
+  "min_sat_margin_V": 0.074,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 8800.0,
+  "errors": {},
+  "issues": []
+ },
+ "cascode_bias_1v8": {
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.9716,
+    "fs"
+   ],
+   "match_width_V": [
+    0.4792,
+    "fs"
+   ],
+   "isink_err_pct": [
+    0.997,
+    "ff"
+   ],
+   "isource_err_pct": [
+    0.983,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.054,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 1920.0,
+  "errors": {},
+  "issues": []
+ },
+ "cascode_bias_hard_1_range": {
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/profiles/hard_1_range.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.1233,
+    "sf"
+   ],
+   "match_width_V": [
+    0.0515,
+    "tt"
+   ],
+   "isink_err_pct": [
+    0.15,
+    "ff"
+   ],
+   "isource_err_pct": [
+    0.375,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.066,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 224000.0,
+  "errors": {},
+  "issues": []
+ },
+ "cascode_bias_hard_2_precision": {
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/profiles/hard_2_precision.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.1227,
+    "sf"
+   ],
+   "match_width_V": [
+    0.0426,
+    "ff"
+   ],
+   "isink_err_pct": [
+    0.1667,
+    "tt"
+   ],
+   "isource_err_pct": [
+    0.3333,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.066,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 70400.0,
+  "errors": {},
+  "issues": [
+   "thin margin: match_width_V +4.3% at ff"
+  ]
+ },
+ "cascode_bias_ws_1v2": {
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.8054,
+    "sf"
+   ],
+   "match_width_V": [
+    0.2456,
+    "ff"
+   ],
+   "isink_err_pct": [
+    0.774,
+    "ss"
+   ],
+   "isource_err_pct": [
+    0.686,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.064,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 15792.0,
+  "errors": {},
+  "issues": []
+ },
+ "cascode_bias_ws_1v8": {
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.9723,
+    "sf"
+   ],
+   "match_width_V": [
+    0.2413,
+    "ff"
+   ],
+   "isink_err_pct": [
+    0.844,
+    "ss"
+   ],
+   "isource_err_pct": [
+    0.832,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.072,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 3096.0,
+  "errors": {},
+  "issues": []
+ },
+ "cascode_bias_ws_hard_1_accuracy": {
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_1_accuracy.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.143,
+    "sf"
+   ],
+   "match_width_V": [
+    0.0538,
+    "fs"
+   ],
+   "isink_err_pct": [
+    0.1636,
+    "fs"
+   ],
+   "isource_err_pct": [
+    0.8182,
+    "sf"
+   ]
+  },
+  "min_sat_margin_V": 0.065,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 70792.0,
+  "errors": {},
+  "issues": []
+ },
+ "cascode_bias_ws_hard_2_flat": {
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_2_flat.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.0361,
+    "ff"
+   ],
+   "match_width_V": [
+    0.0421,
+    "ff"
+   ],
+   "isink_err_pct": [
+    0.36,
+    "ss"
+   ],
+   "isource_err_pct": [
+    0.328,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.064,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 116992.0,
+  "errors": {},
+  "issues": [
+   "thin margin: mismatch_0v9_nA +3.6% at ff"
+  ]
+ },
+ "cascode_bias_ws_hard_3_precision": {
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_3_precision.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "mismatch_0v9_nA": [
+    0.0333,
+    "ff"
+   ],
+   "match_width_V": [
+    0.0532,
+    "tt"
+   ],
+   "isink_err_pct": [
+    0.04,
+    "fs"
+   ],
+   "isource_err_pct": [
+    0.68,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.078,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 115192.0,
+  "errors": {},
+  "issues": [
+   "thin margin: mismatch_0v9_nA +3.3% at ff"
+  ]
+ },
+ "cm_cascode_1v2": {
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.997,
+    "tt"
+   ],
+   "rout_kohm": [
+    7.5905,
+    "ff"
+   ],
+   "vmin_V": [
+    0.6705,
+    "tt"
+   ]
+  },
+  "min_sat_margin_V": 0.136,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 640.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_cascode_1v8": {
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.997,
+    "tt"
+   ],
+   "rout_kohm": [
+    7.5905,
+    "ff"
+   ],
+   "vmin_V": [
+    0.6705,
+    "tt"
+   ]
+  },
+  "min_sat_margin_V": 0.136,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 640.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_cascode_hard_1_high_rout": {
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    1.0,
+    "tt"
+   ],
+   "rout_kohm": [
+    0.25,
+    "fs"
+   ],
+   "vmin_V": [
+    0.0938,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.066,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 576.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_cascode_hard_2_low_vmin": {
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_2_low_vmin.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.25,
+    "tt"
+   ],
+   "rout_kohm": [
+    0.2932,
+    "fs"
+   ],
+   "vmin_V": [
+    0.0706,
+    "tt"
+   ]
+  },
+  "min_sat_margin_V": 0.104,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 8000.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_simple_1v2": {
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.765,
+    "sf"
+   ],
+   "rout_kohm": [
+    5.0593,
+    "ff"
+   ],
+   "vmin_V": [
+    0.6295,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.4,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 320.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_simple_1v8": {
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.765,
+    "sf"
+   ],
+   "rout_kohm": [
+    5.0593,
+    "ff"
+   ],
+   "vmin_V": [
+    0.6295,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.4,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 320.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_simple_hard_1_low_vmin": {
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.182,
+    "ss"
+   ],
+   "rout_kohm": [
+    16.9695,
+    "fs"
+   ],
+   "vmin_V": [
+    0.069,
+    "tt"
+   ]
+  },
+  "min_sat_margin_V": 0.104,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 8320.0,
+  "errors": {},
+  "issues": []
+ },
+ "cm_simple_hard_2_accurate": {
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_2_accurate.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "iout_err_pct": [
+    0.0769,
+    "ff"
+   ],
+   "rout_kohm": [
+    0.0941,
+    "fs"
+   ],
+   "vmin_V": [
+    0.1364,
+    "tt"
+   ]
+  },
+  "min_sat_margin_V": 0.099,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 2000.0,
+  "errors": {},
+  "issues": []
+ },
+ "opamp_2stg_1v2": {
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/spec.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0655,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.2114,
+    "ss"
+   ],
+   "pm_deg": [
+    0.2436,
+    "ss"
+   ],
+   "gm_dB": [
+    0.3,
+    "fs"
+   ],
+   "power_uW": [
+    0.234,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.1985,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.648,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.084,
+  "max_overshoot_pct": 3.9,
+  "gate_area_um2": 700.0,
+  "errors": {},
+  "issues": []
+ },
+ "opamp_2stg_1v8": {
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.07,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.1446,
+    "ss"
+   ],
+   "pm_deg": [
+    0.2364,
+    "fs"
+   ],
+   "gm_dB": [
+    0.19,
+    "fs"
+   ],
+   "power_uW": [
+    0.0781,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.3047,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.6674,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.149,
+  "max_overshoot_pct": 3.71,
+  "gate_area_um2": 592.5,
+  "errors": {},
+  "issues": []
+ },
+ "opamp_2stg_hard_1_gain_ugf": {
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0323,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.0451,
+    "ss"
+   ],
+   "pm_deg": [
+    0.0617,
+    "ss"
+   ],
+   "gm_dB": [
+    0.05,
+    "ss"
+   ],
+   "power_uW": [
+    0.071,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.3276,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.7449,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.087,
+  "max_overshoot_pct": 3.22,
+  "gate_area_um2": 1999.4,
+  "errors": {},
+  "issues": [
+   "thin margin: dc_gain_dB +3.2% at fs"
+  ]
+ },
+ "opamp_2stg_hard_2_settle": {
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/profiles/hard_2_settle.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0525,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.7949,
+    "fs"
+   ],
+   "pm_deg": [
+    0.0633,
+    "fs"
+   ],
+   "gm_dB": [
+    0.05,
+    "ss"
+   ],
+   "power_uW": [
+    0.0529,
+    "sf"
+   ],
+   "rise_settle_ns": [
+    0.044,
+    "fs"
+   ],
+   "fall_settle_ns": [
+    0.0219,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.084,
+  "max_overshoot_pct": 9.15,
+  "gate_area_um2": 1706.9,
+  "errors": {},
+  "issues": [
+   "thin margin: fall_settle_ns +2.2% at ss"
+  ]
+ },
+ "opamp_2stg_hard_3_lowpower": {
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/profiles/hard_3_lowpower.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.051,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.2301,
+    "ss"
+   ],
+   "pm_deg": [
+    0.075,
+    "ss"
+   ],
+   "gm_dB": [
+    0.07,
+    "fs"
+   ],
+   "power_uW": [
+    0.0359,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.0915,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.6296,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.084,
+  "max_overshoot_pct": 8.54,
+  "gate_area_um2": 515.4,
+  "errors": {},
+  "issues": [
+   "thin margin: power_uW +3.6% at ff"
+  ]
+ },
+ "opamp_2stg_ws_1v2": {
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/spec.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1524,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.207,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1927,
+    "ss"
+   ],
+   "gm_dB": [
+    0.21,
+    "ff"
+   ],
+   "power_uW": [
+    0.1216,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.2461,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.7031,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.064,
+  "max_overshoot_pct": 4.5,
+  "gate_area_um2": 2327.3,
+  "errors": {},
+  "issues": []
+ },
+ "opamp_2stg_ws_1v8": {
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.2749,
+    "ff"
+   ],
+   "ugf_Hz": [
+    0.2064,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1673,
+    "ss"
+   ],
+   "gm_dB": [
+    0.16,
+    "ff"
+   ],
+   "power_uW": [
+    0.0928,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.1253,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.6933,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.13,
+  "max_overshoot_pct": 8.89,
+  "gate_area_um2": 1399.3,
+  "errors": {},
+  "issues": []
+ },
+ "opamp_2stg_ws_hard_1_gain_ugf": {
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/profiles/hard_1_gain_ugf.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0275,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.0086,
+    "ss"
+   ],
+   "pm_deg": [
+    0.0783,
+    "ss"
+   ],
+   "gm_dB": [
+    0.1,
+    "ff"
+   ],
+   "power_uW": [
+    0.0466,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.4457,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.7681,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.064,
+  "max_overshoot_pct": 7.63,
+  "gate_area_um2": 2454.9,
+  "errors": {},
+  "issues": [
+   "thin margin: ugf_Hz +0.9% at ss"
+  ]
+ },
+ "opamp_2stg_ws_hard_2_settle": {
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/profiles/hard_2_settle.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1175,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.8821,
+    "ss"
+   ],
+   "pm_deg": [
+    0.0967,
+    "ss"
+   ],
+   "gm_dB": [
+    0.02,
+    "ff"
+   ],
+   "power_uW": [
+    0.022,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.0037,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.0319,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.064,
+  "max_overshoot_pct": 8.71,
+  "gate_area_um2": 2513.7,
+  "errors": {},
+  "issues": [
+   "thin margin: rise_settle_ns +0.4% at ss"
+  ]
+ },
+ "opamp_2stg_ws_hard_3_lowpower": {
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/profiles/hard_3_lowpower.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.113,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.1174,
+    "ss"
+   ],
+   "pm_deg": [
+    0.115,
+    "sf"
+   ],
+   "gm_dB": [
+    0.14,
+    "fs"
+   ],
+   "power_uW": [
+    0.0149,
+    "fs"
+   ],
+   "rise_settle_ns": [
+    0.0631,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.604,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.077,
+  "max_overshoot_pct": 7.05,
+  "gate_area_um2": 1583.1,
+  "errors": {},
+  "issues": [
+   "thin margin: power_uW +1.5% at fs"
+  ]
+ },
+ "ota_5t_1v2": {
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0693,
+    "fs"
+   ],
+   "ugb_Hz": [
+    0.159,
+    "sf"
+   ],
+   "pm_deg": [
+    0.1164,
+    "fs"
+   ],
+   "power_uW": [
+    0.5073,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.058,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 2030.0,
+  "errors": {},
+  "issues": []
+ },
+ "ota_5t_1v8": {
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1281,
+    "fs"
+   ],
+   "ugb_Hz": [
+    1.2283,
+    "sf"
+   ],
+   "pm_deg": [
+    0.3855,
+    "fs"
+   ],
+   "power_uW": [
+    0.0299,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.203,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 688.0,
+  "errors": {},
+  "issues": [
+   "thin margin: power_uW +3.0% at fs"
+  ]
+ },
+ "ota_5t_hard_1_gain": {
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_1_gain.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.006,
+    "fs"
+   ],
+   "ugb_Hz": [
+    0.1074,
+    "sf"
+   ],
+   "pm_deg": [
+    0.065,
+    "fs"
+   ],
+   "power_uW": [
+    0.0417,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.059,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 6010.0,
+  "errors": {},
+  "issues": [
+   "thin margin: dc_gain_dB +0.6% at fs"
+  ]
+ },
+ "ota_5t_hard_2_lowpower": {
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0553,
+    "sf"
+   ],
+   "ugb_Hz": [
+    0.0213,
+    "fs"
+   ],
+   "pm_deg": [
+    0.1317,
+    "fs"
+   ],
+   "power_uW": [
+    0.047,
+    "sf"
+   ]
+  },
+  "min_sat_margin_V": 0.056,
+  "max_overshoot_pct": null,
+  "gate_area_um2": 5140.0,
+  "errors": {},
+  "issues": [
+   "thin margin: ugb_Hz +2.1% at fs"
+  ]
+ },
+ "ota_fc_ws_1v2": {
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1438,
+    "sf"
+   ],
+   "ugb_Hz": [
+    0.3189,
+    "ss"
+   ],
+   "pm_deg": [
+    0.3145,
+    "fs"
+   ],
+   "power_uW": [
+    0.3275,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.132,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.1764,
+    "ss"
+   ],
+   "swing_V": [
+    0.583,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.057,
+  "max_overshoot_pct": 9.12,
+  "gate_area_um2": 1510.5,
+  "errors": {},
+  "issues": []
+ },
+ "ota_fc_ws_1v8": {
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0308,
+    "fs"
+   ],
+   "ugb_Hz": [
+    0.3266,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1382,
+    "fs"
+   ],
+   "power_uW": [
+    0.392,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.421,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.1535,
+    "ss"
+   ],
+   "swing_V": [
+    0.0601,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.075,
+  "max_overshoot_pct": 6.11,
+  "gate_area_um2": 1452.1,
+  "errors": {},
+  "issues": [
+   "thin margin: dc_gain_dB +3.1% at fs"
+  ]
+ },
+ "ota_fc_ws_hard_1_speed": {
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0019,
+    "fs"
+   ],
+   "ugb_Hz": [
+    0.0067,
+    "fs"
+   ],
+   "pm_deg": [
+    0.055,
+    "ss"
+   ],
+   "power_uW": [
+    0.0113,
+    "fs"
+   ],
+   "rise_settle_ns": [
+    0.0067,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.0036,
+    "fs"
+   ],
+   "swing_V": [
+    0.0051,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.046,
+  "max_overshoot_pct": 9.28,
+  "gate_area_um2": 1293.5,
+  "errors": {},
+  "issues": [
+   "thin margin: dc_gain_dB +0.2% at fs",
+   "saturation margin 46 mV"
+  ]
+ },
+ "ota_fc_ws_hard_2_lowpower": {
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0465,
+    "ff"
+   ],
+   "ugb_Hz": [
+    0.0109,
+    "ss"
+   ],
+   "pm_deg": [
+    0.165,
+    "fs"
+   ],
+   "power_uW": [
+    0.0232,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.001,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.0051,
+    "ss"
+   ],
+   "swing_V": [
+    0.0395,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.049,
+  "max_overshoot_pct": 3.99,
+  "gate_area_um2": 336.2,
+  "errors": {},
+  "issues": [
+   "thin margin: rise_settle_ns +0.1% at ss",
+   "saturation margin 49 mV"
+  ]
+ },
+ "ota_fc_ws_hard_3_gain": {
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_3_gain.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0408,
+    "sf"
+   ],
+   "ugb_Hz": [
+    0.0244,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1367,
+    "fs"
+   ],
+   "power_uW": [
+    0.0265,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.0404,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.002,
+    "fs"
+   ],
+   "swing_V": [
+    0.0456,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.049,
+  "max_overshoot_pct": 0.83,
+  "gate_area_um2": 993.0,
+  "errors": {},
+  "issues": [
+   "thin margin: fall_settle_ns +0.2% at fs",
+   "saturation margin 49 mV"
+  ]
+ },
+ "ota_tele_1v8": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.058,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.2907,
+    "fs"
+   ],
+   "pm_deg": [
+    0.1,
+    "fs"
+   ],
+   "gm_dB": [
+    0.29,
+    "ss"
+   ],
+   "power_uW": [
+    0.2367,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.3803,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.07,
+    "fs"
+   ],
+   "swing_V": [
+    0.1264,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.074,
+  "max_overshoot_pct": 9.71,
+  "gate_area_um2": 390.0,
+  "errors": {},
+  "issues": []
+ },
+ "ota_tele_hard_1_gain_speed": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_1_gain_speed.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0401,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.0385,
+    "fs"
+   ],
+   "pm_deg": [
+    0.0683,
+    "fs"
+   ],
+   "gm_dB": [
+    0.07,
+    "fs"
+   ],
+   "power_uW": [
+    0.0194,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.235,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.063,
+    "fs"
+   ],
+   "swing_V": [
+    0.0329,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.054,
+  "max_overshoot_pct": 7.68,
+  "gate_area_um2": 697.0,
+  "errors": {},
+  "issues": [
+   "thin margin: power_uW +1.9% at ff"
+  ]
+ },
+ "ota_tele_hard_2_swing_gain": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_2_swing_gain.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.06,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.0344,
+    "ss"
+   ],
+   "pm_deg": [
+    0.05,
+    "sf"
+   ],
+   "gm_dB": [
+    0.14,
+    "fs"
+   ],
+   "power_uW": [
+    0.0672,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.106,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0989,
+    "fs"
+   ],
+   "swing_V": [
+    0.0349,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.053,
+  "max_overshoot_pct": 8.18,
+  "gate_area_um2": 1095.0,
+  "errors": {},
+  "issues": [
+   "thin margin: ugf_Hz +3.4% at ss"
+  ]
+ },
+ "ota_tele_hard_3_fast": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0267,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.0045,
+    "fs"
+   ],
+   "pm_deg": [
+    0.07,
+    "ff"
+   ],
+   "gm_dB": [
+    1.09,
+    "sf"
+   ],
+   "power_uW": [
+    0.0399,
+    "sf"
+   ],
+   "rise_settle_ns": [
+    0.0243,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0389,
+    "fs"
+   ],
+   "swing_V": [
+    0.0229,
+    "ff"
+   ]
+  },
+  "min_sat_margin_V": 0.021,
+  "max_overshoot_pct": 12.71,
+  "gate_area_um2": 1215.0,
+  "errors": {},
+  "issues": [
+   "thin margin: ugf_Hz +0.4% at fs",
+   "saturation margin 21 mV",
+   "overshoot 13 %"
+  ]
+ },
+ "ota_tele_hard_4_low_power": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_4_low_power.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0418,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.0703,
+    "fs"
+   ],
+   "pm_deg": [
+    0.11,
+    "fs"
+   ],
+   "gm_dB": [
+    0.34,
+    "ss"
+   ],
+   "power_uW": [
+    0.0407,
+    "sf"
+   ],
+   "rise_settle_ns": [
+    0.0279,
+    "fs"
+   ],
+   "fall_settle_ns": [
+    0.0426,
+    "fs"
+   ],
+   "swing_V": [
+    0.0587,
+    "ff"
+   ]
+  },
+  "min_sat_margin_V": 0.051,
+  "max_overshoot_pct": 2.5,
+  "gate_area_um2": 520.0,
+  "errors": {},
+  "issues": [
+   "thin margin: rise_settle_ns +2.8% at fs"
+  ]
+ },
+ "ota_tele_hard_5_allround_power": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_5_allround_power.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1622,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.0552,
+    "ss"
+   ],
+   "pm_deg": [
+    0.0967,
+    "ss"
+   ],
+   "gm_dB": [
+    0.12,
+    "ff"
+   ],
+   "power_uW": [
+    0.0111,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.0428,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0448,
+    "fs"
+   ],
+   "swing_V": [
+    0.8587,
+    "ff"
+   ]
+  },
+  "min_sat_margin_V": 0.058,
+  "max_overshoot_pct": 6.12,
+  "gate_area_um2": 408.2,
+  "errors": {},
+  "issues": [
+   "thin margin: power_uW +1.1% at ff"
+  ]
+ },
+ "ota_tele_p0_as_source": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p0_as_source.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.2886,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.1205,
+    "fs"
+   ],
+   "pm_deg": [
+    0.1782,
+    "fs"
+   ],
+   "gm_dB": [
+    0.04,
+    "fs"
+   ],
+   "power_uW": [
+    0.1526,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.2431,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0633,
+    "fs"
+   ],
+   "swing_V": [
+    0.6301,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.052,
+  "max_overshoot_pct": 7.07,
+  "gate_area_um2": 779.0,
+  "errors": {},
+  "issues": [
+   "thin margin: gm_dB +4.0% at fs"
+  ]
+ },
+ "ota_tele_p1_swing_lowpower": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1518,
+    "sf"
+   ],
+   "ugf_Hz": [
+    0.0836,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1,
+    "sf"
+   ],
+   "gm_dB": [
+    0.14,
+    "ff"
+   ],
+   "power_uW": [
+    0.1399,
+    "ff"
+   ],
+   "swing_V": [
+    0.172,
+    "fs"
+   ],
+   "rise_settle_ns": [
+    0.4522,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.3725,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.055,
+  "max_overshoot_pct": 5.37,
+  "gate_area_um2": 1323.0,
+  "errors": {},
+  "issues": []
+ },
+ "ota_tele_p2_speed": {
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p2_speed.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0851,
+    "fs"
+   ],
+   "ugf_Hz": [
+    0.009,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1,
+    "sf"
+   ],
+   "gm_dB": [
+    0.44,
+    "ff"
+   ],
+   "power_uW": [
+    0.0122,
+    "fs"
+   ],
+   "swing_V": [
+    0.49,
+    "fs"
+   ],
+   "rise_settle_ns": [
+    0.0183,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.0992,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.063,
+  "max_overshoot_pct": 5.6,
+  "gate_area_um2": 1523.0,
+  "errors": {},
+  "issues": [
+   "thin margin: ugf_Hz +0.9% at ss"
+  ]
+ },
+ "ota_tele_ws_1v2": {
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.1853,
+    "sf"
+   ],
+   "ugb_Hz": [
+    0.1629,
+    "fs"
+   ],
+   "pm_deg": [
+    0.1636,
+    "fs"
+   ],
+   "power_uW": [
+    0.1285,
+    "sf"
+   ],
+   "rise_settle_ns": [
+    0.1215,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0747,
+    "fs"
+   ],
+   "swing_V": [
+    1.0298,
+    "sf"
+   ]
+  },
+  "min_sat_margin_V": 0.063,
+  "max_overshoot_pct": 9.83,
+  "gate_area_um2": 554.9,
+  "errors": {},
+  "issues": []
+ },
+ "ota_tele_ws_1v8": {
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/spec.yaml",
+  "vdd": 1.8,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0405,
+    "fs"
+   ],
+   "ugb_Hz": [
+    0.1268,
+    "ss"
+   ],
+   "pm_deg": [
+    0.1273,
+    "fs"
+   ],
+   "power_uW": [
+    0.3748,
+    "ff"
+   ],
+   "rise_settle_ns": [
+    0.2776,
+    "fs"
+   ],
+   "fall_settle_ns": [
+    0.0571,
+    "fs"
+   ],
+   "swing_V": [
+    0.0491,
+    "ff"
+   ]
+  },
+  "min_sat_margin_V": 0.052,
+  "max_overshoot_pct": 8.09,
+  "gate_area_um2": 832.7,
+  "errors": {},
+  "issues": [
+   "thin margin: dc_gain_dB +4.0% at fs"
+  ]
+ },
+ "ota_tele_ws_hard_1_fast": {
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/profiles/hard_1_fast.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0011,
+    "sf"
+   ],
+   "ugb_Hz": [
+    0.0046,
+    "sf"
+   ],
+   "pm_deg": [
+    0.12,
+    "fs"
+   ],
+   "power_uW": [
+    0.0422,
+    "fs"
+   ],
+   "rise_settle_ns": [
+    0.0026,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0025,
+    "fs"
+   ],
+   "swing_V": [
+    0.005,
+    "fs"
+   ]
+  },
+  "min_sat_margin_V": 0.057,
+  "max_overshoot_pct": 5.4,
+  "gate_area_um2": 671.5,
+  "errors": {},
+  "issues": [
+   "thin margin: dc_gain_dB +0.1% at sf"
+  ]
+ },
+ "ota_tele_ws_hard_2_lowpower": {
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0037,
+    "fs"
+   ],
+   "ugb_Hz": [
+    0.0029,
+    "fs"
+   ],
+   "pm_deg": [
+    0.1683,
+    "fs"
+   ],
+   "power_uW": [
+    0.0312,
+    "sf"
+   ],
+   "rise_settle_ns": [
+    0.0008,
+    "ss"
+   ],
+   "fall_settle_ns": [
+    0.0009,
+    "fs"
+   ],
+   "swing_V": [
+    0.0343,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.054,
+  "max_overshoot_pct": 8.64,
+  "gate_area_um2": 256.6,
+  "errors": {},
+  "issues": [
+   "thin margin: rise_settle_ns +0.1% at ss"
+  ]
+ },
+ "ota_tele_ws_hard_3_gain": {
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/profiles/hard_3_gain.yaml",
+  "vdd": 1.2,
+  "corners_pass": {
+   "tt": true,
+   "ff": true,
+   "ss": true,
+   "sf": true,
+   "fs": true
+  },
+  "worst_margin": {
+   "dc_gain_dB": [
+    0.0013,
+    "sf"
+   ],
+   "ugb_Hz": [
+    0.0282,
+    "sf"
+   ],
+   "pm_deg": [
+    0.055,
+    "fs"
+   ],
+   "power_uW": [
+    0.0099,
+    "sf"
+   ],
+   "rise_settle_ns": [
+    0.0012,
+    "sf"
+   ],
+   "fall_settle_ns": [
+    0.0021,
+    "fs"
+   ],
+   "swing_V": [
+    0.0044,
+    "ss"
+   ]
+  },
+  "min_sat_margin_V": 0.053,
+  "max_overshoot_pct": 10.81,
+  "gate_area_um2": 1298.8,
+  "errors": {},
+  "issues": [
+   "thin margin: rise_settle_ns +0.1% at sf",
+   "overshoot 11 %"
+  ]
+ }
+}

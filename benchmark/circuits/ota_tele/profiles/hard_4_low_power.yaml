@@ -1,0 +1,57 @@
+profile: hard_4_low_power
+description: 'Hard point H4: ultra low power (power includes the 24 uW of Iref).'
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+golden: benchmark/golden/ota_tele_hard_4_low_power.sp
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 60.0
+    rule: hard point; golden TT 63.25 (+5.4 %), worst corner 62.52
+  ugf_Hz:
+    op: '>='
+    limit: 11400000.0
+    rule: hard point; golden TT 12010000.0 (+5.4 %), worst corner 11710000.0
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed for every hard point
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: fixed for every hard point
+  power_uW:
+    op: <=
+    limit: 55.0
+    rule: hard point; golden TT 51.8 (+5.8 %), worst corner 52.72
+  rise_settle_ns:
+    op: <=
+    limit: 47.0
+    rule: hard point; golden TT 44.35 (+5.6 %), worst corner 46.41
+  fall_settle_ns:
+    op: <=
+    limit: 47.0
+    rule: hard point; golden TT 44.11 (+6.1 %), worst corner 44.86
+  swing_V:
+    op: '>='
+    limit: 0.8
+    rule: hard point; golden TT 0.852 (+6.5 %), worst corner 0.848
+  n_triode:
+    op: <=
+    limit: 0
+    rule: fixed for every hard point

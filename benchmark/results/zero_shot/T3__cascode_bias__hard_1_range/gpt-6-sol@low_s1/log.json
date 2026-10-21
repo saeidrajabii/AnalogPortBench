@@ -1,0 +1,43 @@
+{
+ "task": "T3__cascode_bias__hard_1_range",
+ "tier": "T3",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/profiles/hard_1_range.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@low_s1",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.6331,
+  "vb2_V": 0.9,
+  "vb3_V": 0.6,
+  "vb4_V": 0.3,
+  "mismatch_0v9_nA": -805.0,
+  "match_lo_V": 0.27,
+  "match_hi_V": 0.94,
+  "match_width_V": 0.67,
+  "isink_err_pct": 3.22,
+  "isource_err_pct": -0.81,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isink_err_pct",
+  "isource_err_pct"
+ ]
+}

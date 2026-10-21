@@ -1,0 +1,72 @@
+# INFEASIBLE TASK (T4). Exact-copy cascode mirror with Vmin <= 32 mV at |err| <= 0.1 %, VDD = 1.2 V.
+#
+# Physical argument (Ut = kT/q = 25.86 mV at 27 C):
+#  1. Iout has to reach ground through a transistor M with its source at 0 and its drain below 'out'
+#     (no node is below ground, the current flows downhill). In every mirror whose output gates are set by
+#     the reference branch (simple, cascode, low-voltage cascode, regulated/gain-boosted cascode, Wilson,
+#     any W ratio) the gate of M does not depend on Vo.
+#  2. For fixed Vg and Vs the drain current of a MOSFET is at best Id = I0(Vds) * (1 - exp(-Vds/Ut)):
+#     exact in weak inversion, and moderate/strong inversion saturate more slowly. I0 grows with Vds (DIBL).
+#  3. n_triode <= 0 at Vo = 0.9 V forces Vds(M) >= Vdsat there, and BSIM4 Vdsat -> 2Ut/Abulk in weak
+#     inversion: the smallest Vdsat any Sky130 LVT NMOS shows in these runs is 42 mV; use 40 mV.
+#  4. At Vo = Vmin, Vds(M) <= Vmin. Hence Iout(Vmin)/Iout(0.9) <= (1 - exp(-Vmin/Ut)) / (1 - exp(-40mV/Ut)),
+#     with 1 - exp(-40/25.86) = 0.787.
+#  5. Spec: Iout(Vmin) = 0.95 Iref and Iout(0.9) <= 1.001 Iref  =>  1 - exp(-Vmin/Ut) >= 0.95/1.001 * 0.787 = 0.747
+#     =>  Vmin >= Ut * ln(1/0.253) = 1.374 Ut = 35.5 mV  (36.6 mV with the measured 42 mV Vdsat).
+#  The limit 0.032 V is 10 % below this floor; Rout and n_triode are not even needed for the argument.
+#
+# How close the designs get (TT): golden hard_2_low_vmin (passive LV cascode, all devices >= 100 mV into
+# saturation) 0.079 V at 0.15 % error; golden hard_1_high_rout (regulated cascode) 0.142 V at 0.00 %.
+# frontier_probe below (regulated cascode, bottom devices at Vds = 71 mV, only 24 mV above Vdsat, so not a
+# golden): 0.056 V at 0.00 %, Rout 2.5 GOhm, n_triode 0 -- exactly on the bound for Vds = 71 mV (56.9 mV).
+# Biasing the bottom devices at Vdsat (47 mV) would give ~41 mV; 32 mV stays out of reach.
+#
+# Caveat: the bound needs the gate drive of M to be independent of Vo. A loop that senses 'out' itself and
+# forces the reference transistor's drain to Vo (active Vds-replica / triode mirror) copies Iref even in
+# triode and is outside this argument; it is not a current-mirror topology in the sense of steps 1-4.
+profile: infeasible_1_vmin
+description: 'INFEASIBLE: |err| <= 0.1 % with Vmin <= 32 mV; weak-inversion bound with the bottom device at >= Vdsat gives Vmin >= 35.5 mV.'
+circuit: cm_cascode
+dut_ports: in out
+testbenches:
+  mirror_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA into 'in', Vo swept 0..VDD (metrics at Vo = 0.9 V)
+infeasible: true
+limits:
+  iout_err_pct:
+    op: 'abs<='
+    limit: 0.1
+    rule: "infeasible point"
+  rout_kohm:
+    op: '>='
+    limit: 15000.0
+    rule: "infeasible point (as hard_2_low_vmin)"
+  vmin_V:
+    op: '<='
+    limit: 0.032
+    rule: "infeasible point; bound 35.5 mV (see header)"
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: "no transistor out of saturation at Vo = 0.9 V"
+frontier_probe: |
+  .subckt dut in out
+  R1 in nb 3.5k
+  XM3 nb in nc 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=1 nf=1 m=8
+  XM1 nc nb 0 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=4 nf=1 m=8
+  XM4 out vg4 nd 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=0.5 nf=1 m=8
+  XM2 nd nb 0 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=4 nf=1 m=8
+  XMb0 vpb nb 0 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=4 nf=1 m=1
+  XMpd vpb vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=2 nf=1 m=1
+  XMt ts vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMpa p1 nd ts vdd sky130_fd_pr__pfet_01v8_lvt W=40 L=1 nf=1 m=1
+  XMpb p2 nc ts vdd sky130_fd_pr__pfet_01v8_lvt W=40 L=1 nf=1 m=1
+  XMna p1 p1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMnb p2 p1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMn2 vg4 p2 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMp2 vg4 vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=2 nf=1 m=1
+  .ends dut
+constraints:
+- "The output current must be set by transistors whose gates are driven only by the reference branch: no amplifier or feedback loop may sense `out`."

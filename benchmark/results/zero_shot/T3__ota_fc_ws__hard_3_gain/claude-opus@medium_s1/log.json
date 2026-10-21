@@ -1,0 +1,46 @@
+{
+ "task": "T3__ota_fc_ws__hard_3_gain",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_3_gain.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 82.22,
+  "f3db_Hz": 2817.9507030666537,
+  "ugb_Hz": 38817751.730988845,
+  "pm_deg": 92.3,
+  "vout_dc_V": 0.4104,
+  "power_uW": 174.66,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 21.98,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 16.1,
+  "fall_settle_ns": 30.28,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 11.3,
+  "swing_V": 0.721,
+  "swing_lo_V": 0.199,
+  "swing_hi_V": 0.92,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "swing_V"
+ ]
+}

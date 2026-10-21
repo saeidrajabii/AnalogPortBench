@@ -1,0 +1,43 @@
+{
+ "task": "T3__cascode_bias__hard_2_precision",
+ "tier": "T3",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/profiles/hard_2_precision.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s1",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.5928,
+  "vb2_V": 0.4469,
+  "vb3_V": 1.2609,
+  "vb4_V": 0.5862,
+  "mismatch_0v9_nA": -5056.7,
+  "match_lo_V": 0.09,
+  "match_hi_V": 0.11,
+  "match_width_V": 0.02,
+  "isink_err_pct": -0.05,
+  "isource_err_pct": -25.34,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isource_err_pct",
+  "n_triode"
+ ]
+}

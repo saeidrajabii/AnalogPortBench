@@ -1,0 +1,52 @@
+# HARD spec point for opamp_2stg at VDD = 1.2 V.
+# Limits set as hard as the hand-designed golden benchmark/golden/opamp_2stg_hard_2_settle.sp allows
+# with >= 5 % margin on every limit at TT and a pass at all five corners (tt ff ss sf fs).
+profile: hard_2_settle
+description: 'Fast 1 % settling on both edges of the 0.8 <-> 1.0 V step: rise <= 7.28 ns, fall <= 5.93 ns (spec.yaml: 12.24 / 26.73 ns), within the spec.yaml power.'
+circuit: opamp_2stg
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: 0.9
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: 0.9
+    CL: 1p
+    VSTEP: 0.2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = 0.9 V (as the source testbench), Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 72.71
+    rule: 'spec.yaml (source - 3 dB)'
+  ugf_Hz:
+    op: '>='
+    limit: 66590000.0
+    rule: 'spec.yaml (0.8 x source)'
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: 'hard: >= 60 deg'
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: 'spec.yaml'
+  power_uW:
+    op: '<='
+    limit: 296.4
+    rule: 'spec.yaml (1.2 x source)'
+  rise_settle_ns:
+    op: '<='
+    limit: 7.28
+    rule: 'hard: golden 6.91 ns at TT / 0.95; worst corner fs 6.96 ns'
+  fall_settle_ns:
+    op: '<='
+    limit: 5.93
+    rule: 'hard: golden 5.63 ns at TT / 0.95; worst corner ss 5.80 ns'
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: 'hard: no transistor out of saturation'

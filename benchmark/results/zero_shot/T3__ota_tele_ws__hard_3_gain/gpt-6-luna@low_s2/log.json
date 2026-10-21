@@ -1,0 +1,39 @@
+{
+ "task": "T3__ota_tele_ws__hard_3_gain",
+ "tier": "T3",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/profiles/hard_3_gain.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s2",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [
+  "ota_ol_ac: SimError: ngspice failed in <repo>/build/eval/ota_tele_ws/claude/gptB2/T3__ota_tele_ws__hard_3_gain/gpt-6-luna@low_s2/ota_ol_ac (rc=1):\nError: unknown subckt: xdut.xminp xdut.nleft ninp xdut.tail xdut.sky130_fd_pr__nfet_01v8_lvt ",
+  "opamp_tran: SimError: ngspice failed in <repo>/build/eval/ota_tele_ws/claude/gptB2/T3__ota_tele_ws__hard_3_gain/gpt-6-luna@low_s2/opamp_tran (rc=1):\nError: unknown subckt: xdut.xminp xdut.nleft nin xdut.tail xdut.sky130_fd_pr__nfet_01v8_lvt ",
+  "ota_swing_dc: SimError: ngspice failed in <repo>/build/eval/ota_tele_ws/claude/gptB2/T3__ota_tele_ws__hard_3_gain/gpt-6-luna@low_s2/ota_swing_dc (rc=1):\nError: unknown subckt: xdut.xminp xdut.nleft ninp xdut.tail xdut.sky130_fd_pr__nfet_01v8_lvt "
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

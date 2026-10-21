@@ -1,0 +1,43 @@
+.subckt Cascode_Bias_WS Iin Vbias_1 Vbias_2 Vbias_3 Vbias_4
+XMN4  Iin Iin 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=2
+XMN6  net1 Iin 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=1
+XMN7  net2 Iin 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=1
+XMN12 Vbias_2 Vbias_2 net1 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=1
+XMN11 Vbias_1 Vbias_1 net2 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=1
+XMN8  Vbias_3 Vbias_3 0 0 sky130_fd_pr__nfet_01v8_lvt W=1 L=2 nf=1 m=1
+XMN9  Vbias_4 Vbias_3 net10 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=1
+XMN10 net10 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=1
+XMP4  Vbias_2 Vbias_2 vdd vdd sky130_fd_pr__pfet_01v8_lvt W=2 L=1 nf=1 m=1
+XMP3  net13 Vbias_1 vdd vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=1
+XMP2  Vbias_1 Vbias_2 net13 vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=1
+XMP7  net5 Vbias_1 vdd vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=1
+XMP6  Vbias_3 Vbias_2 net5 vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=1
+XMP11 net6 Vbias_1 vdd vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=1
+XMP10 Vbias_4 Vbias_2 net6 vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=1
+.ends Cascode_Bias_WS
+
+.subckt OTA_Folded_Cascode Vbias_2 Vbias_3 Vbias_4 vm vout vp
+* tail current source (60 uA), non-cascoded for headroom
+XMN3 net08 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=6
+* input pair
+XMN2 net010 vp net08 0 sky130_fd_pr__nfet_01v8_lvt W=60 L=0.8 nf=1 m=1
+XMN1 net016 vm net08 0 sky130_fd_pr__nfet_01v8_lvt W=60 L=0.8 nf=1 m=1
+* PMOS current sources (60 uA each side), self-biased via net1
+XMP1 net010 net1 vdd vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=6
+XMP3 net016 net1 vdd vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=6
+* PMOS cascodes (30 uA)
+XMP4 net1 Vbias_2 net010 vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=3
+XMP5 vout Vbias_2 net016 vdd sky130_fd_pr__pfet_01v8_lvt W=16 L=1 nf=1 m=3
+* NMOS cascoded sinks (30 uA)
+XMN6 net1 Vbias_3 net018 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=3
+XMN7 net018 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=3
+XMN9 vout Vbias_3 net017 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=3
+XMN8 net017 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W=6 L=1.5 nf=1 m=3
+* output compensation capacitor
+Cc vout 0 0.4p
+.ends OTA_Folded_Cascode
+
+.subckt dut iref inp inn out
+XI0 iref vb1 vb2 vb3 vb4 Cascode_Bias_WS
+XI1 vb2 vb3 vb4 inn out inp OTA_Folded_Cascode
+.ends dut

@@ -1,0 +1,89 @@
+Port the analog circuit below from a TSMC 0.18 µm CMOS process to the SkyWater SKY130 process.
+The ported circuit will be simulated in ngspice and must meet the specifications listed below.
+You may change device sizes, biasing and circuit topology, as long as the interface and test conditions are kept.
+
+## Source design (TSMC 0.18 µm)
+Transistor models: tsmc18dN (NMOS) and tsmc18dP (PMOS), BSIM3. Supply VDD = 1.8 V on the global
+node `vdd`; ground is node `0`.
+
+```spice
+.subckt Cascode_Bias_WS Iin Vbias_1 Vbias_2 Vbias_3 Vbias_4
+  MN12 Vbias_2 Vbias_2 net1 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN11 Vbias_1 Vbias_1 net2 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN10 net10 Vbias_4 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN9 Vbias_4 Vbias_3 net10 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN8 Vbias_3 Vbias_3 0 0 tsmc18dN w=6.66u l=3.33u as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN7 net2 Iin 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN6 net1 Iin 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN4 Iin Iin 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MP11 net6 Vbias_1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP10 Vbias_4 Vbias_2 net6 vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP7 net5 Vbias_1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP6 Vbias_3 Vbias_2 net5 vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP4 Vbias_2 Vbias_2 vdd vdd tsmc18dP w=12.195u l=4u as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP3 net13 Vbias_1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP2 Vbias_1 Vbias_2 net13 vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+.ends Cascode_Bias_WS
+.subckt dut iin out vb1 vb2 vb3 vb4
+XI0 iin vb1 vb2 vb3 vb4 Cascode_Bias_WS
+MN0 nsrc vb4 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+MN2 out vb3 nsrc 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+MP1 psrc vb1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+MP0 out vb2 psrc vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+.ends dut
+```
+
+## Target technology (SKY130)
+- Use only the transistors sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt.
+- They are subcircuits. Instantiate them with an X prefix and the terminals in the order drain gate source
+  bulk, followed by the parameters W, L, nf and m, each written as name=value and separated by spaces.
+- W is the total gate width and L the gate length, both in micrometres, written as plain numbers without
+  unit suffixes. Minimum L: 0.15 µm for nfet_01v8_lvt, 0.35 µm for pfet_01v8_lvt. Minimum W: 0.42 µm.
+- Always use nf=1. For a wider transistor, increase W, or use m=k to connect k identical transistors in parallel.
+- Sky130 W and L are plain numbers in µm; R and C values keep their SI suffixes (e.g. 2p, 10k).
+  The m parameter means the same in both netlists.
+- Resistors and capacitors may be ideal SPICE R and C elements.
+- Supply: VDD = 1.8 V on the global node `vdd`; ground is node `0`. Both are available inside every
+  subcircuit without being ports.
+- The ideal reference current must be mirrored: it may not flow directly into the source of a transistor.
+  No element may connect `inp` directly to `out`.
+- The testbench includes the model library and provides all sources and analyses. Do not add
+  `.lib`, `.include`, `.option`, sources or analysis statements.
+
+## Netlist format example
+This example only illustrates the syntax; it is not a suggested design.
+
+```spice
+.subckt example a b c
+XM1 a b 0 0 sky130_fd_pr__nfet_01v8_lvt W=2 L=0.5 nf=1 m=1
+XM2 a c vdd vdd sky130_fd_pr__pfet_01v8_lvt W=4 L=0.5 nf=1 m=2
+.ends example
+```
+
+## Interface
+The netlist must define the subcircuit `.subckt dut iin out vb1 vb2 vb3 vb4`, with exactly these ports in this order.
+- `iin`: an ideal reference current flows into this node from `vdd`.
+- `vb1`, `vb2`, `vb3`, `vb4`: bias voltage outputs (unloaded in the test).
+- `out`: the node where a PMOS cascode current source (from `vdd`) and an NMOS cascode current sink (to ground) meet.
+
+## Test conditions (TT corner, 27 °C)
+- An ideal 20 µA current source from `vdd` drives `iin`.
+- An ideal voltage source holds `out`; it is swept from 0 V to VDD in 10 mV steps (DC analysis).
+- The DC operating point is evaluated with `out` = 0.9 V.
+
+## Specifications
+
+| Metric | Definition | Requirement | Source design (180 nm, VDD 1.8 V) |
+|---|---|---|---|
+| mismatch_0v9_nA | PMOS source current minus NMOS sink current at `out` = 0.9 V, in nA | between -1000 and 1000 | -125.7 |
+| match_width_V | width of the `out` voltage range over which the mismatch magnitude is below 1 µA, in V | ≥ 1.144 | 1.43 |
+| isink_err_pct | (Isink - Iref) / Iref at `out` = 0.9 V, in %, where Isink is the total drain current of the NMOS transistors whose drain is `out` | between -10 and 10 | 0.84 |
+| isource_err_pct | (Isource - Iref) / Iref at `out` = 0.9 V, in %, where Isource is the total drain current of the PMOS transistors whose drain is `out` | between -10 and 10 | 0.21 |
+| n_triode | number of transistors whose drain-source voltage magnitude is below their Vdsat at the DC operating point | ≤ 0 | 0 |
+
+## Output format
+Reply with exactly one ```spice code block containing the complete netlist: every .subckt the
+design needs, including `dut`. You may add a short explanation outside the code block.
+If you conclude that the specifications cannot all be met in SKY130 at this supply, add a line outside the
+code block that starts with `INFEASIBLE:` followed by the reason, state the smallest change to the
+specifications that would make them achievable, and still give your best design.

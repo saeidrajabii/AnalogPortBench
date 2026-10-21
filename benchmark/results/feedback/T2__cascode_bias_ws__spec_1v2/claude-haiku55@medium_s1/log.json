@@ -1,0 +1,625 @@
+{
+ "task": "T2__cascode_bias_ws__spec_1v2",
+ "tier": "T2",
+ "circuit": "cascode_bias_ws",
+ "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+ "vdd": 1.2,
+ "model": "claude-haiku55@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "max_attempts": 3,
+  "access": "command-line client, tools disabled"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "8acce761f8a4b5731d13805d227cdc6e0a9a3e13a88fe2bff6cc9faeaf016e1b",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias_ws",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "vb1_V": 0.7232,
+     "vb2_V": 0.5348,
+     "vb3_V": 0.6909,
+     "vb4_V": 0.5587,
+     "mismatch_0v9_nA": -1644.9,
+     "match_lo_V": 0.12,
+     "match_hi_V": 0.56,
+     "match_width_V": 0.44,
+     "isink_err_pct": -16.97,
+     "isource_err_pct": -25.19,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.04,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xmr.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.559,
+       "vds_V": 0.558,
+       "vdsat_V": 0.084,
+       "margin_V": 0.475
+      },
+      {
+       "device": "m.xdut.xmn0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.nsrc",
+       "id_uA": 16.607,
+       "vgs_V": 0.559,
+       "vds_V": 0.124,
+       "vdsat_V": 0.084,
+       "margin_V": 0.04
+      },
+      {
+       "device": "m.xdut.xmn2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 16.607,
+       "vgs_V": 0.567,
+       "vds_V": 0.776,
+       "vdsat_V": 0.078,
+       "margin_V": 0.698
+      },
+      {
+       "device": "m.xdut.xmb3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb3",
+       "id_uA": 21.276,
+       "vgs_V": 0.69,
+       "vds_V": 0.69,
+       "vdsat_V": 0.161,
+       "margin_V": 0.529
+      },
+      {
+       "device": "m.xdut.xmpb3.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb3",
+       "id_uA": 21.276,
+       "vgs_V": 0.477,
+       "vds_V": 0.509,
+       "vdsat_V": 0.103,
+       "margin_V": 0.406
+      },
+      {
+       "device": "m.xdut.xmb2p.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb2",
+       "id_uA": 19.875,
+       "vgs_V": 0.664,
+       "vds_V": 0.664,
+       "vdsat_V": 0.238,
+       "margin_V": 0.426
+      },
+      {
+       "device": "m.xdut.xmb2n.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb2",
+       "id_uA": 19.875,
+       "vgs_V": 0.559,
+       "vds_V": 0.535,
+       "vdsat_V": 0.084,
+       "margin_V": 0.451
+      },
+      {
+       "device": "m.xdut.xmr1p.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb1",
+       "id_uA": 20.821,
+       "vgs_V": 0.477,
+       "vds_V": 0.477,
+       "vdsat_V": 0.103,
+       "margin_V": 0.373
+      },
+      {
+       "device": "m.xdut.xmr1n.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb1",
+       "id_uA": 20.821,
+       "vgs_V": 0.559,
+       "vds_V": 0.723,
+       "vdsat_V": 0.084,
+       "margin_V": 0.64
+      },
+      {
+       "device": "m.xdut.xmp1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.psrc",
+       "id_uA": 14.963,
+       "vgs_V": 0.477,
+       "vds_V": 0.153,
+       "vdsat_V": 0.103,
+       "margin_V": 0.05
+      },
+      {
+       "device": "m.xdut.xmp0.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 14.963,
+       "vgs_V": 0.512,
+       "vds_V": 0.146,
+       "vdsat_V": 0.103,
+       "margin_V": 0.044
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cascode_bias_ws/spec_1v2.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": -1644.9,
+      "op": "abs<=",
+      "limit": 1000.0,
+      "source": -125.7,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": 0.44,
+      "op": ">=",
+      "limit": 0.7627,
+      "source": 1.43,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": -16.97,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": 0.84,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": -25.19,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": 0.21,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": 0,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias_ws/v2iter/clC/T2__cascode_bias_ws__spec_1v2/claude-haiku55@medium_t1"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias_ws",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "vb1_V": 0.6473,
+     "vb2_V": 0.4906,
+     "vb3_V": 0.7676,
+     "vb4_V": 0.6205,
+     "mismatch_0v9_nA": -3664.7,
+     "match_lo_V": 0.12,
+     "match_hi_V": 0.16,
+     "match_width_V": 0.04,
+     "isink_err_pct": -15.47,
+     "isource_err_pct": -33.8,
+     "n_triode": 1
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 1,
+     "min_sat_margin_V": -0.017,
+     "triode_devices": [
+      "m.xdut.xmp1.msky130_fd_pr__pfet_01v8_lvt"
+     ],
+     "devices": [
+      {
+       "device": "m.xdut.xmr.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.62,
+       "vds_V": 0.62,
+       "vdsat_V": 0.118,
+       "margin_V": 0.502
+      },
+      {
+       "device": "m.xdut.xmn0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.nsrc",
+       "id_uA": 16.905,
+       "vgs_V": 0.62,
+       "vds_V": 0.137,
+       "vdsat_V": 0.118,
+       "margin_V": 0.019
+      },
+      {
+       "device": "m.xdut.xmn2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 16.905,
+       "vgs_V": 0.63,
+       "vds_V": 0.762,
+       "vdsat_V": 0.111,
+       "margin_V": 0.651
+      },
+      {
+       "device": "m.xdut.xmb3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb3",
+       "id_uA": 18.856,
+       "vgs_V": 0.766,
+       "vds_V": 0.765,
+       "vdsat_V": 0.218,
+       "margin_V": 0.548
+      },
+      {
+       "device": "m.xdut.xmpb3.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb3",
+       "id_uA": 18.856,
+       "vgs_V": 0.552,
+       "vds_V": 0.432,
+       "vdsat_V": 0.152,
+       "margin_V": 0.28
+      },
+      {
+       "device": "m.xdut.xmb2p.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb2",
+       "id_uA": 19.514,
+       "vgs_V": 0.708,
+       "vds_V": 0.707,
+       "vdsat_V": 0.287,
+       "margin_V": 0.42
+      },
+      {
+       "device": "m.xdut.xmb2n.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb2",
+       "id_uA": 19.514,
+       "vgs_V": 0.62,
+       "vds_V": 0.49,
+       "vdsat_V": 0.118,
+       "margin_V": 0.372
+      },
+      {
+       "device": "m.xdut.xmr1p.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb1",
+       "id_uA": 20.095,
+       "vgs_V": 0.552,
+       "vds_V": 0.552,
+       "vdsat_V": 0.152,
+       "margin_V": 0.4
+      },
+      {
+       "device": "m.xdut.xmr1n.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb1",
+       "id_uA": 20.095,
+       "vgs_V": 0.62,
+       "vds_V": 0.647,
+       "vdsat_V": 0.118,
+       "margin_V": 0.528
+      },
+      {
+       "device": "m.xdut.xmp1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.psrc",
+       "id_uA": 13.24,
+       "vgs_V": 0.553,
+       "vds_V": 0.135,
+       "vdsat_V": 0.152,
+       "margin_V": -0.017
+      },
+      {
+       "device": "m.xdut.xmp0.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 13.24,
+       "vgs_V": 0.573,
+       "vds_V": 0.164,
+       "vdsat_V": 0.145,
+       "margin_V": 0.019
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cascode_bias_ws/spec_1v2.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": -3664.7,
+      "op": "abs<=",
+      "limit": 1000.0,
+      "source": -125.7,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": 0.04,
+      "op": ">=",
+      "limit": 0.7627,
+      "source": 1.43,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": -15.47,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": 0.84,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": -33.8,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": 0.21,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 1,
+      "op": "<=",
+      "limit": 0,
+      "source": 0,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias_ws/v2iter/clC/T2__cascode_bias_ws__spec_1v2/claude-haiku55@medium_t2"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": false
+  },
+  {
+   "turn": 3,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cascode_bias_ws",
+    "netlist": "turn3_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "vb1_V": 0.6473,
+     "vb2_V": 0.382,
+     "vb3_V": 0.8239,
+     "vb4_V": 0.6205,
+     "mismatch_0v9_nA": -2398.1,
+     "match_lo_V": 0.14,
+     "match_hi_V": 0.24,
+     "match_width_V": 0.1,
+     "isink_err_pct": -11.39,
+     "isource_err_pct": -23.38,
+     "n_triode": 1
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 1,
+     "min_sat_margin_V": -0.066,
+     "triode_devices": [
+      "m.xdut.xmp0.msky130_fd_pr__pfet_01v8_lvt"
+     ],
+     "devices": [
+      {
+       "device": "m.xdut.xmr.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.62,
+       "vds_V": 0.62,
+       "vdsat_V": 0.118,
+       "margin_V": 0.502
+      },
+      {
+       "device": "m.xdut.xmn0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.nsrc",
+       "id_uA": 17.722,
+       "vgs_V": 0.62,
+       "vds_V": 0.182,
+       "vdsat_V": 0.118,
+       "margin_V": 0.064
+      },
+      {
+       "device": "m.xdut.xmn2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 17.722,
+       "vgs_V": 0.641,
+       "vds_V": 0.717,
+       "vdsat_V": 0.113,
+       "margin_V": 0.603
+      },
+      {
+       "device": "m.xdut.xmb3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb3",
+       "id_uA": 18.232,
+       "vgs_V": 0.822,
+       "vds_V": 0.82,
+       "vdsat_V": 0.256,
+       "margin_V": 0.565
+      },
+      {
+       "device": "m.xdut.xmpb3.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb3",
+       "id_uA": 18.232,
+       "vgs_V": 0.552,
+       "vds_V": 0.376,
+       "vdsat_V": 0.152,
+       "margin_V": 0.224
+      },
+      {
+       "device": "m.xdut.xmb2p.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb2",
+       "id_uA": 19.054,
+       "vgs_V": 0.816,
+       "vds_V": 0.813,
+       "vdsat_V": 0.406,
+       "margin_V": 0.407
+      },
+      {
+       "device": "m.xdut.xmb2n.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb2",
+       "id_uA": 19.054,
+       "vgs_V": 0.62,
+       "vds_V": 0.381,
+       "vdsat_V": 0.118,
+       "margin_V": 0.263
+      },
+      {
+       "device": "m.xdut.xmr1p.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "vb1",
+       "id_uA": 20.095,
+       "vgs_V": 0.552,
+       "vds_V": 0.552,
+       "vdsat_V": 0.152,
+       "margin_V": 0.4
+      },
+      {
+       "device": "m.xdut.xmr1n.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "vb1",
+       "id_uA": 20.095,
+       "vgs_V": 0.62,
+       "vds_V": 0.647,
+       "vdsat_V": 0.118,
+       "margin_V": 0.528
+      },
+      {
+       "device": "m.xdut.xmp1.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.psrc",
+       "id_uA": 15.324,
+       "vgs_V": 0.552,
+       "vds_V": 0.195,
+       "vdsat_V": 0.152,
+       "margin_V": 0.043
+      },
+      {
+       "device": "m.xdut.xmp0.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 15.324,
+       "vgs_V": 0.623,
+       "vds_V": 0.104,
+       "vdsat_V": 0.171,
+       "margin_V": -0.066
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cascode_bias_ws/spec_1v2.yaml",
+    "checks": [
+     {
+      "metric": "mismatch_0v9_nA",
+      "value": -2398.1,
+      "op": "abs<=",
+      "limit": 1000.0,
+      "source": -125.7,
+      "pass": false
+     },
+     {
+      "metric": "match_width_V",
+      "value": 0.1,
+      "op": ">=",
+      "limit": 0.7627,
+      "source": 1.43,
+      "pass": false
+     },
+     {
+      "metric": "isink_err_pct",
+      "value": -11.39,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": 0.84,
+      "pass": false
+     },
+     {
+      "metric": "isource_err_pct",
+      "value": -23.38,
+      "op": "abs<=",
+      "limit": 10.0,
+      "source": 0.21,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 1,
+      "op": "<=",
+      "limit": 0,
+      "source": 0,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cascode_bias_ws/v2iter/clC/T2__cascode_bias_ws__spec_1v2/claude-haiku55@medium_t3"
+   },
+   "valid": true,
+   "counted_as": "design attempt 3",
+   "pass": false
+  }
+ ],
+ "design_attempts": 3,
+ "syntax_retries_used": 0,
+ "passed": false,
+ "passed_at_attempt": null
+}

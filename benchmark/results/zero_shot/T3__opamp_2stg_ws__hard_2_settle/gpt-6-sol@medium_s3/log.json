@@ -1,0 +1,45 @@
+{
+ "task": "T3__opamp_2stg_ws__hard_2_settle",
+ "tier": "T3",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/profiles/hard_2_settle.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 56.67,
+  "ugf_Hz": 72660408.625325,
+  "pm_deg": 44.8,
+  "gm_dB": 15.3,
+  "power_uW": 302.0,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 15.8,
+  "rise_overshoot_pct": 12.45,
+  "rise_slew_V_per_us": 49.2,
+  "fall_settle_ns": 23.09,
+  "fall_overshoot_pct": 40.87,
+  "fall_slew_V_per_us": 39.7,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "pm_deg",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

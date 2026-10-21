@@ -1,0 +1,27 @@
+profile: hard_1_low_vmin
+description: 'Hard point H1: ultra-low compliance (Vmin <= 58 mV) with the accuracy budget of spec.yaml (|err| <= 10 %). Needs a flat (cascoded) output and weak inversion; best solved by spending the error budget on a deliberate +8 % mirror ratio.'
+circuit: cm_simple
+dut_ports: in out
+testbenches:
+  mirror_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA into 'in', Vo swept 0..VDD (metrics at Vo = 0.9 V)
+golden: benchmark/golden/cm_simple_hard_1_low_vmin.sp
+limits:
+  iout_err_pct:
+    op: 'abs<='
+    limit: 10.0
+    rule: "as spec.yaml; golden TT 8.17 (+18 % margin), worst corner 8.18"
+  rout_kohm:
+    op: '>='
+    limit: 1000.0
+    rule: "hard point; golden TT 18399 (18x), worst corner 17970"
+  vmin_V:
+    op: '<='
+    limit: 0.058
+    rule: "hard point; golden TT 0.054 (+6.9 %), worst corner 0.054"
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: "no transistor out of saturation at Vo = 0.9 V"

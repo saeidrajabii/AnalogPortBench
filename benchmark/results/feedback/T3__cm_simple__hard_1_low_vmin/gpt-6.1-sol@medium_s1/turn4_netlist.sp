@@ -1,0 +1,19 @@
+.subckt dut in out
+
+XREF in in vref 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=1 nf=1 m=80
+RREF vref 0 1.05k
+XOUT out vg vsense 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=1 nf=1 m=80
+ROUT vsense 0 1k
+
+XBIASN vb in 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=1 nf=1 m=16
+XBIASP vb vb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=10
+XTAIL vtail vb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=25
+
+XDP1 vm vref vtail vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=4 nf=1 m=80
+XDP2 vg vsense vtail vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=4 nf=1 m=80
+XLOAD1 vm vm 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=8 nf=1 m=80
+XLOAD2 vg vm 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=8 nf=1 m=80
+
+CCOMP vg 0 10p
+
+.ends dut

@@ -1,0 +1,47 @@
+{
+ "task": "T3__ota_fc_ws__hard_1_speed",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 36.5,
+  "f3db_Hz": 2465646.860122064,
+  "ugb_Hz": 109433708.57001035,
+  "pm_deg": 45.9,
+  "vout_dc_V": 0.5639,
+  "power_uW": 169.44,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.26,
+  "rise_overshoot_pct": 5.95,
+  "rise_slew_V_per_us": 39.8,
+  "fall_settle_ns": 14.87,
+  "fall_overshoot_pct": 1.42,
+  "fall_slew_V_per_us": 25.9,
+  "swing_V": 0.683,
+  "swing_lo_V": 0.236,
+  "swing_hi_V": 0.919,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "pm_deg",
+  "rise_settle_ns"
+ ]
+}

@@ -1,0 +1,16 @@
+## Simulation results (design attempt 2 of 3)
+Your netlist was simulated with the testbenches described in the task (VDD = 1.2 V, TT corner, 27 °C).
+
+| Metric | Requirement | Your design | Met |
+|---|---|---|---|
+| mismatch_0v9_nA | between -100 and 100 | -6389 | no |
+| match_width_V | ≥ 0.93 | 0 | no |
+| isink_err_pct | between -0.55 and 0.55 | -0.09 | yes |
+| isource_err_pct | between -0.55 and 0.55 | -32.04 | no |
+| n_triode | ≤ 0 | 1 | no |
+
+Transistors out of saturation at the DC operating point (drain-source voltage magnitude below Vdsat):
+- XPSRC: |Vds| = 0.036 V, Vdsat = 0.061 V
+
+Revise the design so that it meets every specification. Reply in the same format: exactly one ```spice
+code block containing the complete netlist.

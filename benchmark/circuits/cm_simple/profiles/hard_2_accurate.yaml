@@ -1,0 +1,27 @@
+profile: hard_2_accurate
+description: 'Hard point H2: very accurate copy (|err| <= 0.13 %) with high output resistance (>= 20 MOhm) and low compliance (Vmin <= 0.11 V). A simple mirror cannot reach this accuracy (Vds mismatch / DIBL); needs a cascoded output whose input-side Vds matches the output side.'
+circuit: cm_simple
+dut_ports: in out
+testbenches:
+  mirror_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA into 'in', Vo swept 0..VDD (metrics at Vo = 0.9 V)
+golden: benchmark/golden/cm_simple_hard_2_accurate.sp
+limits:
+  iout_err_pct:
+    op: 'abs<='
+    limit: 0.13
+    rule: "hard point; golden TT 0.11 (+15 %), worst corner 0.12"
+  rout_kohm:
+    op: '>='
+    limit: 20000.0
+    rule: "hard point; golden TT 22573 (+12.9 %), worst corner 21882"
+  vmin_V:
+    op: '<='
+    limit: 0.11
+    rule: "hard point; golden TT 0.095 (+14 %), worst corner 0.095"
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: "no transistor out of saturation at Vo = 0.9 V"

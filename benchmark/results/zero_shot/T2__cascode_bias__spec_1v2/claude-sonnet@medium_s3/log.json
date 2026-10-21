@@ -1,0 +1,43 @@
+{
+ "task": "T2__cascode_bias__spec_1v2",
+ "tier": "T2",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/spec_1v2.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.7779,
+  "vb2_V": 0.272,
+  "vb3_V": 1.1501,
+  "vb4_V": 0.5346,
+  "mismatch_0v9_nA": -3958.7,
+  "match_lo_V": 0.18,
+  "match_hi_V": 0.4,
+  "match_width_V": 0.22,
+  "isink_err_pct": -0.09,
+  "isource_err_pct": -19.89,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isource_err_pct",
+  "n_triode"
+ ]
+}

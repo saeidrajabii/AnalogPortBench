@@ -1,0 +1,32 @@
+# Hard spec point for cascode_bias_ws at VDD = 1.2 V (hand-designed golden: benchmark/golden/cascode_bias_ws_hard_2_flat.sp).
+# Limits set as tight as the golden allows with >= 5 % margin at TT and a pass at tt ff ss sf fs.
+profile: hard_2_flat
+description: 'Flat output: source/sink mismatch at Vo = 0.9 V within 36 nA (1.2 V), with the widest matched range.'
+circuit: cascode_bias_ws
+dut_ports: iin out vb1 vb2 vb3 vb4
+testbenches:
+  cascode_bias_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA
+limits:
+  mismatch_0v9_nA:
+    op: abs<=
+    limit: 36
+    rule: '|mismatch| <= 36 nA at Vo = 0.9 V'
+  match_width_V:
+    op: '>='
+    limit: 0.95
+    rule: '>= 0.95 V (spec.yaml 1.144 V is not reachable at 1.2 V; physical limit ~1.04 V)'
+  isink_err_pct:
+    op: abs<=
+    limit: 5
+    rule: '|Isink - Iref| <= 5 % at Vo = 0.9 V'
+  isource_err_pct:
+    op: abs<=
+    limit: 5
+    rule: '|Isource - Iref| <= 5 % at Vo = 0.9 V'
+  n_triode:
+    op: <=
+    limit: 0
+    rule: no transistor out of saturation

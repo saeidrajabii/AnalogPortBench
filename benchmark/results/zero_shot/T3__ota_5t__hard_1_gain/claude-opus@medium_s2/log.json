@@ -1,0 +1,40 @@
+{
+ "task": "T3__ota_5t__hard_1_gain",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_1_gain.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 35.44,
+  "f3db_Hz": 220215.12252131297,
+  "ugb_Hz": 13051252.718911538,
+  "pm_deg": null,
+  "vout_dc_V": 0.5766,
+  "power_uW": 53.13,
+  "input_current_uA": 0.0,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "n_triode"
+ ]
+}

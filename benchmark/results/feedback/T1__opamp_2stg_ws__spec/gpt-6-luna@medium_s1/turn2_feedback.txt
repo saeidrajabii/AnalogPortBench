@@ -1,0 +1,10 @@
+## Your reply could not be evaluated
+- opamp_loop: SimError: ngspice failed:
+- Error: argument out of range for divide
+- Error: Can't evaluate "i(vprb_b)/i(vprb_a)"
+- Error: RHS "(tv*lg_ti - 1)/(tv + lg_ti + 2)" invalid
+- Error: RHS "db(loopgain)" invalid
+- Error: RHS "180/pi*cph(loopgain)" invalid
+
+This does not count as one of your 3 design attempts. Reply in the same format: exactly one
+```spice code block containing the complete, corrected netlist.

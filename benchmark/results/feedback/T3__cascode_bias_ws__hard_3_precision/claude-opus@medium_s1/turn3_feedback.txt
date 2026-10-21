@@ -1,0 +1,15 @@
+## Simulation results (design attempt 2 of 3)
+Your netlist was simulated with the testbenches described in the task (VDD = 1.2 V, TT corner, 27 °C).
+
+| Metric | Requirement | Your design | Met |
+|---|---|---|---|
+| mismatch_0v9_nA | between -36 and 36 | -37.7 | no |
+| match_width_V | ≥ 0.94 | 0.98 | yes |
+| isink_err_pct | between -0.25 and 0.25 | 0.24 | yes |
+| isource_err_pct | between -0.25 and 0.25 | 0.05 | yes |
+| n_triode | ≤ 0 | 0 | yes |
+
+All transistors are in saturation at the DC operating point.
+
+Revise the design so that it meets every specification. Reply in the same format: exactly one ```spice
+code block containing the complete netlist.

@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele__hard_2_swing_gain",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_2_swing_gain.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@low_s1",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 66.26,
+  "ugf_Hz": 20281835.7042601,
+  "pm_deg": 38.0,
+  "gm_dB": 9.7,
+  "power_uW": 82.34,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 44.72,
+  "rise_overshoot_pct": 19.57,
+  "rise_slew_V_per_us": 11.8,
+  "fall_settle_ns": 49.56,
+  "fall_overshoot_pct": 16.1,
+  "fall_slew_V_per_us": 6.2,
+  "swing_V": 0.843,
+  "swing_lo_V": 0.142,
+  "swing_hi_V": 0.985,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "pm_deg",
+  "gm_dB",
+  "fall_settle_ns",
+  "swing_V"
+ ]
+}

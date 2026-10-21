@@ -1,0 +1,40 @@
+{
+ "task": "T3__cm_cascode__hard_1_high_rout",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s1",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "reference current used directly as the source of XMRC (must be mirrored)"
+ ],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 11.253,
+  "iout_vdd_uA": 11.663,
+  "iout_err_pct": -43.73,
+  "rout_kohm": 701.0,
+  "vmin_V": null,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

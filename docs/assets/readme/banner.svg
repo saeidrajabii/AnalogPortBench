@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" font-family="Helvetica, Arial, sans-serif">
+<title>AnalogPortBench</title>
+<rect width="1280" height="300" rx="18" fill="#15161d"/>
+<polyline points="891,93 927,93 927,49 851,49 851,12 817,12 817,12" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="817" cy="12" r="3.5" fill="#262838"/>
+<polyline points="988,51 947,51 947,64 889,64 889,18 925,18 925,12" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="925" cy="12" r="3.5" fill="#262838"/>
+<polyline points="1130,84 1213,84 1213,40 1110,40 1110,85 1067,85 1067,52" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="1067" cy="52" r="3.5" fill="#262838"/>
+<polyline points="659,48 550,48 550,12 620,12 620,54 696,54 696,79" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="696" cy="79" r="3.5" fill="#262838"/>
+<polyline points="744,140 641,140 641,183 714,183 714,211 669,211 669,231" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="669" cy="231" r="3.5" fill="#262838"/>
+<polyline points="910,93 993,93 993,41 892,41 892,72 998,72 998,119" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="998" cy="119" r="3.5" fill="#262838"/>
+<polyline points="1027,51 963,51 963,105 926,105 926,156 992,156 992,208" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="992" cy="208" r="3.5" fill="#262838"/>
+<polyline points="915,27 990,27 990,12 897,12 897,12 943,12 943,12" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="943" cy="12" r="3.5" fill="#262838"/>
+<polyline points="960,270 909,270 909,288 956,288 956,288 1039,288 1039,288" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="1039" cy="288" r="3.5" fill="#262838"/>
+<polyline points="949,134 909,134 909,115 850,115 850,74 787,74 787,84" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="787" cy="84" r="3.5" fill="#262838"/>
+<polyline points="709,230 817,230 817,248 729,248 729,283 809,283 809,243" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="809" cy="243" r="3.5" fill="#262838"/>
+<polyline points="1209,221 1155,221 1155,198 1205,198 1205,167 1162,167 1162,121" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="1162" cy="121" r="3.5" fill="#262838"/>
+<polyline points="714,67 822,67 822,53 714,53 714,72 788,72 788,112" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="788" cy="112" r="3.5" fill="#262838"/>
+<polyline points="685,75 774,75 774,115 814,115 814,99 877,99 877,153" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="877" cy="153" r="3.5" fill="#262838"/>
+<polyline points="725,280 669,280 669,288 572,288 572,288 540,288 540,288" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="540" cy="288" r="3.5" fill="#262838"/>
+<polyline points="924,130 982,130 982,105 1041,105 1041,62 1116,62 1116,51" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="1116" cy="51" r="3.5" fill="#262838"/>
+<polyline points="846,257 900,257 900,288 976,288 976,271 917,271 917,288" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="917" cy="288" r="3.5" fill="#262838"/>
+<polyline points="905,120 1014,120 1014,80 1054,80 1054,46 963,46 963,12" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="963" cy="12" r="3.5" fill="#262838"/>
+<polyline points="1211,186 1131,186 1131,221 1081,221 1081,203 1032,203 1032,254" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="1032" cy="254" r="3.5" fill="#262838"/>
+<polyline points="709,258 758,258 758,247 715,247 715,210 658,210 658,184" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="658" cy="184" r="3.5" fill="#262838"/>
+<polyline points="777,165 672,165 672,191 718,191 718,134 806,134 806,176" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="806" cy="176" r="3.5" fill="#262838"/>
+<polyline points="693,93 607,93 607,45 558,45 558,26 667,26 667,12" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="667" cy="12" r="3.5" fill="#262838"/>
+<polyline points="623,182 666,182 666,157 601,157 601,98 540,98 540,143" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="540" cy="143" r="3.5" fill="#262838"/>
+<polyline points="588,48 659,48 659,12 746,12 746,36 650,36 650,81" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="650" cy="81" r="3.5" fill="#262838"/>
+<polyline points="767,245 684,245 684,210 754,210 754,158 670,158 670,135" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="670" cy="135" r="3.5" fill="#262838"/>
+<polyline points="1245,171 1196,171 1196,190 1243,190 1243,214 1163,214 1163,234" fill="none" stroke="#262838" stroke-width="2"/>
+<circle cx="1163" cy="234" r="3.5" fill="#262838"/>
+<text x="64" y="132" font-size="64" font-weight="bold" fill="#ffffff" letter-spacing="-1.5">AnalogPortBench</text>
+<text x="66" y="176" font-size="24" fill="#b9bbc7">Benchmarking LLMs on Analog Circuit Porting</text>
+<rect x="66" y="206" width="123.6" height="32" rx="16" fill="none" stroke="#2A78D6" stroke-width="2"/>
+<text x="127.8" y="227" font-size="15" fill="#ffffff" text-anchor="middle">10 circuits</text>
+<rect x="199.6" y="206" width="94.8" height="32" rx="16" fill="none" stroke="#7B6CE0" stroke-width="2"/>
+<text x="247.0" y="227" font-size="15" fill="#ffffff" text-anchor="middle">54 tasks</text>
+<rect x="304.4" y="206" width="171.6" height="32" rx="16" fill="none" stroke="#1BAF7A" stroke-width="2"/>
+<text x="390.2" y="227" font-size="15" fill="#ffffff" text-anchor="middle">ngspice + SKY130</text>
+<rect x="486.0" y="206" width="133.2" height="32" rx="16" fill="none" stroke="#E8590C" stroke-width="2"/>
+<text x="552.6" y="227" font-size="15" fill="#ffffff" text-anchor="middle">4 infeasible</text>
+<line x1="803.0" y1="73.0" x2="803.0" y2="85.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="803.0" y1="215.0" x2="803.0" y2="227.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="778.0" y1="98.0" x2="790.0" y2="98.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="920.0" y1="98.0" x2="932.0" y2="98.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="829.0" y1="73.0" x2="829.0" y2="85.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="829.0" y1="215.0" x2="829.0" y2="227.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="778.0" y1="124.0" x2="790.0" y2="124.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="920.0" y1="124.0" x2="932.0" y2="124.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="855.0" y1="73.0" x2="855.0" y2="85.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="855.0" y1="215.0" x2="855.0" y2="227.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="778.0" y1="150.0" x2="790.0" y2="150.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="920.0" y1="150.0" x2="932.0" y2="150.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="881.0" y1="73.0" x2="881.0" y2="85.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="881.0" y1="215.0" x2="881.0" y2="227.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="778.0" y1="176.0" x2="790.0" y2="176.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="920.0" y1="176.0" x2="932.0" y2="176.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="907.0" y1="73.0" x2="907.0" y2="85.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="907.0" y1="215.0" x2="907.0" y2="227.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="778.0" y1="202.0" x2="790.0" y2="202.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<line x1="920.0" y1="202.0" x2="932.0" y2="202.0" stroke="#2A78D6" stroke-width="3" stroke-linecap="round"/>
+<rect x="790.0" y="85.0" width="130" height="130" rx="10" fill="#15161d" stroke="#2A78D6" stroke-width="3"/>
+<text x="855" y="152" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">0.18 µm</text>
+<text x="855" y="180" font-size="16" fill="#b9bbc7" text-anchor="middle">1.8 V</text>
+<line x1="1093.4" y1="86.0" x2="1093.4" y2="98.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1093.4" y1="202.0" x2="1093.4" y2="214.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1071.0" y1="108.4" x2="1083.0" y2="108.4" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1187.0" y1="108.4" x2="1199.0" y2="108.4" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1114.2" y1="86.0" x2="1114.2" y2="98.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1114.2" y1="202.0" x2="1114.2" y2="214.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1071.0" y1="129.2" x2="1083.0" y2="129.2" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1187.0" y1="129.2" x2="1199.0" y2="129.2" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1135.0" y1="86.0" x2="1135.0" y2="98.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1135.0" y1="202.0" x2="1135.0" y2="214.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1071.0" y1="150.0" x2="1083.0" y2="150.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1187.0" y1="150.0" x2="1199.0" y2="150.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1155.8" y1="86.0" x2="1155.8" y2="98.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1155.8" y1="202.0" x2="1155.8" y2="214.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1071.0" y1="170.8" x2="1083.0" y2="170.8" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1187.0" y1="170.8" x2="1199.0" y2="170.8" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1176.6" y1="86.0" x2="1176.6" y2="98.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1176.6" y1="202.0" x2="1176.6" y2="214.0" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1071.0" y1="191.6" x2="1083.0" y2="191.6" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<line x1="1187.0" y1="191.6" x2="1199.0" y2="191.6" stroke="#1BAF7A" stroke-width="3" stroke-linecap="round"/>
+<rect x="1083.0" y="98.0" width="104" height="104" rx="10" fill="#15161d" stroke="#1BAF7A" stroke-width="3"/>
+<text x="1135" y="152" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">SKY130</text>
+<text x="1135" y="175" font-size="12" fill="#b9bbc7" text-anchor="middle">1.8 V / 1.2 V</text>
+<path d="M 950 150 L 1050 150" stroke="#ffffff" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+<text x="1000" y="136" font-size="16" fill="#b9bbc7" text-anchor="middle">LLM port</text>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ffffff"/></marker></defs>
+</svg>

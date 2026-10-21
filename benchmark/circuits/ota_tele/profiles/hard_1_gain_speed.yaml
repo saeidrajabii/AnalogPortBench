@@ -1,0 +1,57 @@
+profile: hard_1_gain_speed
+description: 'Hard point H1: very high gain with speed. Needs two gain stages and a cascoded first stage.'
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+golden: benchmark/golden/ota_tele_hard_1_gain_speed.sp
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 83.0
+    rule: hard point; golden TT 87.67 (+5.6 %), worst corner 85.55
+  ugf_Hz:
+    op: '>='
+    limit: 43500000.0
+    rule: hard point; golden TT 45910000.0 (+5.5 %), worst corner 44630000.0
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed for every hard point
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: fixed for every hard point
+  power_uW:
+    op: <=
+    limit: 195.0
+    rule: hard point; golden TT 184.16 (+5.6 %), worst corner 188.36
+  rise_settle_ns:
+    op: <=
+    limit: 22.0
+    rule: hard point; golden TT 17.83 (+19.0 %), worst corner 21.52
+  fall_settle_ns:
+    op: <=
+    limit: 20.0
+    rule: hard point; golden TT 17.65 (+11.8 %), worst corner 19.4
+  swing_V:
+    op: '>='
+    limit: 0.7
+    rule: hard point; golden TT 0.745 (+6.4 %), worst corner 0.733
+  n_triode:
+    op: <=
+    limit: 0
+    rule: fixed for every hard point

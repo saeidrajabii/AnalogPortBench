@@ -1,0 +1,55 @@
+# Hard spec point for ota_tele_ws at VDD = 1.2 V. Limits are as tight as the golden design allows: every limit
+# is met with >= 5 % margin at TT (both (v-L)/L and (v-L)/v) and the golden passes all five corners.
+profile: hard_2_lowpower
+description: 'Hard point 2: lowest power (< 112 uW including the 20 uA reference) with > 72 dB gain and wide swing; slow.'
+circuit: ota_tele_ws
+dut_ports: iref inp inn out
+testbenches:
+  ota_ol_ac:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+golden: benchmark/golden/ota_tele_ws_hard_2_lowpower.sp
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 72.1
+    rule: hard point; golden TT 75.93 (+5.3 %), worst corner 72.37 (fs)
+  ugb_Hz:
+    op: '>='
+    limit: 18700000.0
+    rule: hard point; golden TT 19840000 (+6.1 %), worst corner 18750000 (fs)
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed for every hard point; golden TT 74.8, worst corner 70.0 (fs)
+  power_uW:
+    op: '<='
+    limit: 112.0
+    rule: hard point; golden TT 106.1 (-5.3 %), worst corner 108.5 (sf)
+  rise_settle_ns:
+    op: '<='
+    limit: 37.0
+    rule: hard point; golden TT 33.29 (-10 %), worst corner 36.97 (ss)
+  fall_settle_ns:
+    op: '<='
+    limit: 45.4
+    rule: hard point; golden TT 41.84 (-7.8 %), worst corner 45.36 (fs)
+  swing_V:
+    op: '>='
+    limit: 0.583
+    rule: hard point; golden TT 0.614 (+5.3 %), worst corner 0.603 (ss)
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: fixed for every hard point

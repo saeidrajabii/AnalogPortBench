@@ -1,0 +1,33 @@
+{
+ "task": "T4__cm_cascode__infeasible_1_vmin",
+ "tier": "T4",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/infeasible_1_vmin.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@low_s2",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [
+  "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_cascode/claude/gptB2/T4__cm_cascode__infeasible_1_vmin/gpt-6.1-sol@low_s2/mirror_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

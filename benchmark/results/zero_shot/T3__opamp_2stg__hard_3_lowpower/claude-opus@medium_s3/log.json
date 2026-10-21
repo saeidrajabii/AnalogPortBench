@@ -1,0 +1,49 @@
+{
+ "task": "T3__opamp_2stg__hard_3_lowpower",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_3_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "draws 1.3004 uA from the input source (> 1 uA)"
+ ],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": -57.75,
+  "ugf_Hz": null,
+  "pm_deg": null,
+  "gm_dB": null,
+  "power_uW": 60.65,
+  "input_current_uA": 1.3004,
+  "rise_settle_ns": 41.42,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": null,
+  "fall_settle_ns": 7.74,
+  "fall_overshoot_pct": 8.37,
+  "fall_slew_V_per_us": null,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "rise_settle_ns",
+  "n_triode"
+ ]
+}

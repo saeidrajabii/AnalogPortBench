@@ -1,0 +1,9 @@
+build/
+__pycache__/
+*.pyc
+# never commit foundry model files or API keys
+*.lib
+tsmc*
+key/
+*.key
+.env

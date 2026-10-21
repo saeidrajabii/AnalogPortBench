@@ -1,0 +1,44 @@
+{
+ "task": "T3__opamp_2stg_ws__hard_3_lowpower",
+ "tier": "T3",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/profiles/hard_3_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 53.82,
+  "ugf_Hz": 71413252.49211006,
+  "pm_deg": 44.0,
+  "gm_dB": 13.1,
+  "power_uW": 192.39,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 16.39,
+  "rise_overshoot_pct": 7.49,
+  "rise_slew_V_per_us": 43.9,
+  "fall_settle_ns": 24.36,
+  "fall_overshoot_pct": 42.82,
+  "fall_slew_V_per_us": 31.7,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "pm_deg",
+  "rise_settle_ns"
+ ]
+}

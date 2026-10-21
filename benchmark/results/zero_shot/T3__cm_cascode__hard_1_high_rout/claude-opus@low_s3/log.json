@@ -1,0 +1,36 @@
+{
+ "task": "T3__cm_cascode__hard_1_high_rout",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 19.902,
+  "iout_vdd_uA": 19.908,
+  "iout_err_pct": -0.49,
+  "rout_kohm": 48192.8,
+  "vmin_V": 0.113,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm"
+ ]
+}

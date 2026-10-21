@@ -1,0 +1,33 @@
+{
+ "task": "T4__cm_simple__infeasible_1_vmin",
+ "tier": "T4",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/profiles/infeasible_1_vmin.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s2",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [
+  "mirror_dc: SimError: ngspice failed in <repo>/build/eval/cm_simple/claude/gptB/T4__cm_simple__infeasible_1_vmin/gpt-6-sol@medium_s2/mirror_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

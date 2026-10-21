@@ -1,0 +1,39 @@
+{
+ "task": "T3__ota_5t__hard_1_gain",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_1_gain.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 31.51,
+  "f3db_Hz": 103464.56450321001,
+  "ugb_Hz": 3901588.720998213,
+  "pm_deg": 79.1,
+  "vout_dc_V": 0.045,
+  "power_uW": 45.83,
+  "input_current_uA": 0.0,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "n_triode"
+ ]
+}

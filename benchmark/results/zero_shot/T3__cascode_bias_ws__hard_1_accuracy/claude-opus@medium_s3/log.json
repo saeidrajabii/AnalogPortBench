@@ -1,0 +1,41 @@
+{
+ "task": "T3__cascode_bias_ws__hard_1_accuracy",
+ "tier": "T3",
+ "circuit": "cascode_bias_ws",
+ "spec": "circuits/cascode_bias_ws/profiles/hard_1_accuracy.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.8682,
+  "vb2_V": 0.7083,
+  "vb3_V": 0.61,
+  "vb4_V": 0.4214,
+  "mismatch_0v9_nA": -137.1,
+  "match_lo_V": 0.49,
+  "match_hi_V": 1.0,
+  "match_width_V": 0.51,
+  "isink_err_pct": 0.39,
+  "isource_err_pct": -0.3,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V"
+ ]
+}

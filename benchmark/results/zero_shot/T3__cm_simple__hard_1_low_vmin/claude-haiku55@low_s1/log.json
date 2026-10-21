@@ -1,0 +1,35 @@
+{
+ "task": "T3__cm_simple__hard_1_low_vmin",
+ "tier": "T3",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 19.979,
+  "iout_vdd_uA": 19.998,
+  "iout_err_pct": -0.11,
+  "rout_kohm": 12224.9,
+  "vmin_V": 0.396,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "vmin_V"
+ ]
+}

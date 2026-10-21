@@ -1,0 +1,49 @@
+{
+ "task": "T3__ota_tele__hard_3_fast",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@low_s3",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.76,
+  "ugf_Hz": 82810935.79281285,
+  "pm_deg": 65.8,
+  "gm_dB": 22.3,
+  "power_uW": 132.35,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 7.74,
+  "rise_overshoot_pct": 2.81,
+  "rise_slew_V_per_us": 74.4,
+  "fall_settle_ns": 18.91,
+  "fall_overshoot_pct": 5.61,
+  "fall_slew_V_per_us": 23.6,
+  "swing_V": 0.159,
+  "swing_lo_V": 0.457,
+  "swing_hi_V": 0.616,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "rise_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

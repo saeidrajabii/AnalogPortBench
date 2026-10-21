@@ -1,0 +1,37 @@
+{
+ "task": "T3__cm_simple__hard_1_low_vmin",
+ "tier": "T3",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 23.071,
+  "iout_vdd_uA": 23.979,
+  "iout_err_pct": 15.35,
+  "rout_kohm": 329.4,
+  "vmin_V": 0.062,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V"
+ ]
+}

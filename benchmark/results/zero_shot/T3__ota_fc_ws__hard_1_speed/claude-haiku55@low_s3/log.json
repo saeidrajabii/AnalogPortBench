@@ -1,0 +1,50 @@
+{
+ "task": "T3__ota_fc_ws__hard_1_speed",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 27.28,
+  "f3db_Hz": 715075.9453607978,
+  "ugb_Hz": 16568108.79818146,
+  "pm_deg": 90.0,
+  "vout_dc_V": 0.8122,
+  "power_uW": 76.22,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 38.02,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 8.0,
+  "fall_settle_ns": 46.34,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": null,
+  "swing_V": 0.684,
+  "swing_lo_V": 0.163,
+  "swing_hi_V": 0.847,
+  "n_triode": 4
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

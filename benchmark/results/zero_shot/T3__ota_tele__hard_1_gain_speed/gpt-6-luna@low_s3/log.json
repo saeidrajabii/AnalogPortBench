@@ -1,0 +1,40 @@
+{
+ "task": "T3__ota_tele__hard_1_gain_speed",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_1_gain_speed.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s3",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [
+  "opamp_loop: SimError: ngspice failed in <repo>/build/eval/ota_tele/claude/gptB2/T3__ota_tele__hard_1_gain_speed/gpt-6-luna@low_s3/opamp_loop (rc=1):\nError on line:",
+  "opamp_tran: SimError: ngspice failed in <repo>/build/eval/ota_tele/claude/gptB2/T3__ota_tele__hard_1_gain_speed/gpt-6-luna@low_s3/opamp_tran (rc=1):\nError on line:",
+  "ota_swing_dc: SimError: ngspice failed in <repo>/build/eval/ota_tele/claude/gptB2/T3__ota_tele__hard_1_gain_speed/gpt-6-luna@low_s3/ota_swing_dc (rc=1):\nError on line:"
+ ],
+ "metrics": {},
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

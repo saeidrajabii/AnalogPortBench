@@ -1,0 +1,26 @@
+* Current-mirror DC testbench (from tb_CM_basic / tb_CM_N_cascode).
+* DUT: .subckt dut in out. Iref is forced into 'in'; 'out' is held by VO and swept 0..VDD.
+$HEADER
+.param VDD=$VDD Iref=$IREF
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12
+.temp 27
+
+$DUT
+
+VSUP vdd 0 dc {VDD}
+IREF vdd nin dc {Iref}
+VO nout 0 dc 0.9
+XDUT nin nout dut
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+op
+print all > op_nodes.txt
+$OPPRINT
+dc VO 0 $VDD 0.01
+wrdata dc_sweep.txt i(VO)
+.endc
+.end

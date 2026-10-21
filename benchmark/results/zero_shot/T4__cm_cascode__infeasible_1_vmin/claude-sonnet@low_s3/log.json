@@ -1,0 +1,38 @@
+{
+ "task": "T4__cm_cascode__infeasible_1_vmin",
+ "tier": "T4",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/infeasible_1_vmin.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": -13.032,
+  "iout_vdd_uA": -0.0,
+  "iout_err_pct": -165.16,
+  "rout_kohm": 92.7,
+  "vmin_V": null,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "iout_err_pct",
+  "rout_kohm",
+  "vmin_V",
+  "n_triode"
+ ]
+}

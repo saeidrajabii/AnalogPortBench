@@ -1,0 +1,46 @@
+{
+ "task": "T1__ota_fc_ws__spec",
+ "tier": "T1",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 65.77,
+  "f3db_Hz": 46311.41966381077,
+  "ugb_Hz": 82960615.94152524,
+  "pm_deg": 49.9,
+  "vout_dc_V": 0.7077,
+  "power_uW": 351.71,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.7,
+  "rise_overshoot_pct": 2.21,
+  "rise_slew_V_per_us": 49.4,
+  "fall_settle_ns": 19.58,
+  "fall_overshoot_pct": 63.44,
+  "fall_slew_V_per_us": 24.4,
+  "swing_V": 1.225,
+  "swing_lo_V": 0.231,
+  "swing_hi_V": 1.456,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "pm_deg"
+ ]
+}

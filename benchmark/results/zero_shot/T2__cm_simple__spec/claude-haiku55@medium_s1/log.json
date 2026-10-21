@@ -1,0 +1,33 @@
+{
+ "task": "T2__cm_simple__spec",
+ "tier": "T2",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.389,
+  "iout_vdd_uA": 20.962,
+  "iout_err_pct": 1.95,
+  "rout_kohm": 513.4,
+  "vmin_V": 0.319,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

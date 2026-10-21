@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele__hard_1_gain_speed",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_1_gain_speed.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 49.5,
+  "ugf_Hz": 49397693.06577935,
+  "pm_deg": 85.0,
+  "gm_dB": 31.3,
+  "power_uW": 133.38,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 15.77,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 21.9,
+  "fall_settle_ns": 28.84,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 13.3,
+  "swing_V": 0.428,
+  "swing_lo_V": 0.306,
+  "swing_hi_V": 0.734,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

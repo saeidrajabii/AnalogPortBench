@@ -1,0 +1,5 @@
+## Your reply could not be evaluated
+- cascode_bias_dc: KeyError: 'vb1'
+
+This does not count as one of your 3 design attempts. Reply in the same format: exactly one
+```spice code block containing the complete, corrected netlist.

@@ -1,0 +1,46 @@
+{
+ "task": "T1__ota_tele__spec",
+ "tier": "T1",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-haiku55@low_s2",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 52.96,
+  "ugf_Hz": 50303054.06575041,
+  "pm_deg": 85.3,
+  "gm_dB": 43.1,
+  "power_uW": 216.76,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 14.55,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 21.9,
+  "fall_settle_ns": 15.29,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 20.9,
+  "swing_V": 0.419,
+  "swing_lo_V": 0.835,
+  "swing_hi_V": 1.254,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "swing_V"
+ ]
+}

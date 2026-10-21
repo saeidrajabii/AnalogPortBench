@@ -1,0 +1,8625 @@
+[
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cascode_bias__spec_1v2/gpt-6-sol@low_s1/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_simple__spec/gpt-6-sol@low_s2/netlist.sp",
+  "corners": {
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_simple__spec/gpt-6-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_simple__spec/gpt-6-sol@low_s1/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_simple__spec/gpt-6-sol@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_simple__spec/gpt-6-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_simple__spec/gpt-6-sol@low_s1/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_cascode__spec/gpt-6-sol@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_cascode__spec/gpt-6-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_cascode__spec/gpt-6-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_cascode__spec/gpt-6-sol@low_s2/netlist.sp",
+  "corners": {
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_cascode__spec/gpt-6-sol@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_cascode__spec/gpt-6-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__ota_fc_ws__spec/gpt-6-sol@low_s2/netlist.sp",
+  "corners": {
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__ota_5t__spec/gpt-6-sol@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cascode_bias__spec/gpt-6-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_simple__spec/gpt-6-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_simple__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_simple__spec/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_simple__spec/gpt-6-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_simple__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_simple__spec/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_cascode__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cm_cascode__spec/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__cascode_bias_ws__spec_1v2/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_cascode__spec/gpt-6-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cm_cascode__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__ota_fc_ws__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cascode_bias_ws__spec/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__ota_5t__spec/gpt-6-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__ota_5t__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__ota_5t__spec/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__ota_5t__spec/gpt-6-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB/T2__ota_5t__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cascode_bias__spec/gpt-6-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB/T1__cascode_bias__spec/gpt-6-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T3__cm_cascode__hard_1_high_rout",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__cm_cascode__hard_1_high_rout/gpt-6.1-sol@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "rout_kohm",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cascode_bias__spec_1v2/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "isource_err_pct"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "isource_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6.1-sol@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6.1-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T3__cm_simple__hard_1_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__cm_simple__hard_1_low_vmin/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6.1-sol@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6.1-sol@low_s3/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "vmin_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6.1-sol@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6.1-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__ota_fc_ws__spec/gpt-6.1-sol@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias_ws__spec/gpt-6.1-sol@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias_ws__spec/gpt-6.1-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__ota_5t__spec/gpt-6.1-sol@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__ota_5t__spec/gpt-6.1-sol@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_1_high_rout",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__cm_cascode__hard_1_high_rout/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cascode_bias__spec_1v2/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__ota_tele__p1_swing_lowpower",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__ota_tele__p1_swing_lowpower/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugf_Hz",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "ugf_Hz",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_1_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__cm_simple__hard_1_low_vmin/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_1_accuracy",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_1_accuracy.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__cascode_bias_ws__hard_1_accuracy/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__ota_tele_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__ota_tele_ws__spec/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_2_lowpower",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__ota_5t__hard_2_lowpower/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_2_lowpower",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__ota_5t__hard_2_lowpower/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_2_lowpower",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__ota_5t__hard_2_lowpower/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cascode_bias_ws__spec_1v2/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cascode_bias_ws__spec_1v2/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__ota_5t__spec/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__ota_5t__spec/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_2_flat",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_2_flat.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T3__cascode_bias_ws__hard_2_flat/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias__spec/gpt-6.1-sol@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias__spec/gpt-6.1-sol@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias__spec/gpt-6.1-sol@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6-luna@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6-luna@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6-luna@low_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6-luna@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6-luna@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6-luna@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6-luna@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6-luna@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6-luna@low_s3/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6-luna@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6-luna@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias__spec/gpt-6-luna@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "match_width_V"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cascode_bias__spec_1v2/gpt-6-luna@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6-luna@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6-luna@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_simple__spec/gpt-6-luna@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6-luna@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6-luna@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_simple__spec/gpt-6-luna@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6-luna@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6-luna@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/gptB2/T2__cm_cascode__spec/gpt-6-luna@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6-luna@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cm_cascode__spec/gpt-6-luna@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/gptB2/T1__cascode_bias__spec/gpt-6-luna@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-sonnet@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-sonnet@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-sonnet@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-sonnet@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-sonnet@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-sonnet@low_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-sonnet@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-sonnet@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-sonnet@low_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-sonnet@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-sonnet@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-sonnet@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "match_width_V",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-sonnet@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "match_width_V",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "match_width_V",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_5t__spec/claude-sonnet@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "low",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-sonnet@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-sonnet@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-sonnet@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-sonnet@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-sonnet@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-sonnet@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-sonnet@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-sonnet@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-sonnet@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-sonnet@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-sonnet@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-sonnet@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": false,
+    "fails": [
+     "match_width_V",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "match_width_V",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-sonnet@medium_s3/netlist.sp",
+  "corners": {
+   "sf": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-sonnet@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-sonnet@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-sonnet@medium_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias__spec_1v2/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias_ws__spec_1v2/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "match_width_V",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_5t__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_5t__spec/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_5t__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__ota_5t__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-opus@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-opus@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "low",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-opus@low_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_1_high_rout",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T3__cm_cascode__hard_1_high_rout/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_1_high_rout",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T3__cm_cascode__hard_1_high_rout/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "rout_kohm",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias__spec_1v2/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias__spec_1v2/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias__spec_1v2/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__ota_tele__p1_swing_lowpower",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__ota_tele__p1_swing_lowpower/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "swing_V"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "swing_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__opamp_2stg_ws__spec",
+  "tier": "T1",
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__opamp_2stg_ws__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias_ws__spec_1v2/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cascode_bias_ws__spec_1v2/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_fc_ws__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "swing_V"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "swing_V"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_2_accurate",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_2_accurate.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T3__cm_simple__hard_2_accurate/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias_ws__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_2_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_2_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T3__cm_cascode__hard_2_low_vmin/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "vmin_V",
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "vmin_V",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_2_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_2_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T3__cm_cascode__hard_2_low_vmin/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_5t__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__ota_5t__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__ota_5t__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-opus@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-opus@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cascode_bias__spec/claude-opus@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-haiku55@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-haiku55@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "vmin_V",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "vmin_V",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-haiku55@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-haiku55@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-haiku55@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-haiku55@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-haiku55@low_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-haiku55@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-haiku55@low_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "low",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__ota_5t__spec/claude-haiku55@low_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-haiku55@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-haiku55@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T2__cm_simple__spec",
+  "tier": "T2",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_simple__spec/claude-haiku55@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-haiku55@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-haiku55@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__cm_simple__spec",
+  "tier": "T1",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_simple__spec/claude-haiku55@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-haiku55@medium_s2/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_runs/clB/T2__cm_cascode__spec/claude-haiku55@medium_s1/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "zero-shot",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_runs/clB/T1__cm_cascode__spec/claude-haiku55@medium_s3/netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_1_high_rout",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T3__cm_cascode__hard_1_high_rout/gpt-6-sol@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "rout_kohm",
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "rout_kohm"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "rout_kohm",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "rout_kohm"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T2__cascode_bias__spec_1v2/gpt-6-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__ota_tele__p1_swing_lowpower",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T2__ota_tele__p1_swing_lowpower/gpt-6-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "swing_V",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_1_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T3__cm_simple__hard_1_low_vmin/gpt-6-sol@medium_s1/turn5_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "rout_kohm",
+     "vmin_V"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "rout_kohm",
+     "vmin_V"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "rout_kohm"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T2__cascode_bias_ws__spec_1v2/gpt-6-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "match_width_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_2_accurate",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_2_accurate.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T3__cm_simple__hard_2_accurate/gpt-6-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct",
+     "rout_kohm",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/gptC/T1__cascode_bias_ws__spec/gpt-6-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T2__ota_tele__p0_as_source",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p0_as_source.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T2__ota_tele__p0_as_source/gpt-6-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": false,
+    "fails": [
+     "fall_settle_ns",
+     "n_triode"
+    ]
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "fall_settle_ns",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_2_flat",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_2_flat.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC/T3__cascode_bias_ws__hard_2_flat/gpt-6-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T2__cascode_bias__spec_1v2/gpt-6.1-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__ota_tele__p1_swing_lowpower",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T2__ota_tele__p1_swing_lowpower/gpt-6.1-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "ugf_Hz",
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugf_Hz",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_1_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cm_simple__hard_1_low_vmin/gpt-6.1-sol@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "rout_kohm",
+     "vmin_V",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_1_accuracy",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_1_accuracy.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cascode_bias_ws__hard_1_accuracy/gpt-6.1-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias__hard_2_precision",
+  "tier": "T3",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/profiles/hard_2_precision.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cascode_bias__hard_2_precision/gpt-6.1-sol@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isink_err_pct",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isink_err_pct",
+     "isource_err_pct"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isink_err_pct",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isink_err_pct",
+     "isource_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__opamp_2stg_ws__spec",
+  "tier": "T1",
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/gptC2/T1__opamp_2stg_ws__spec/gpt-6.1-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_1_gain",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_1_gain.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__ota_5t__hard_1_gain/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__ota_tele__p2_speed",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p2_speed.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T2__ota_tele__p2_speed/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "power_uW"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "rise_settle_ns",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "power_uW"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__opamp_2stg__spec",
+  "tier": "T1",
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/gptC2/T1__opamp_2stg__spec/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB",
+     "ugf_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB",
+     "ugf_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_tele__hard_4_low_power",
+  "tier": "T3",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_4_low_power.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__ota_tele__hard_4_low_power/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "fall_settle_ns"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T2__cascode_bias_ws__spec_1v2/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias__hard_1_range",
+  "tier": "T3",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/profiles/hard_1_range.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cascode_bias__hard_1_range/gpt-6.1-sol@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/gptC2/T1__ota_fc_ws__spec/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_3_precision",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_3_precision.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cascode_bias_ws__hard_3_precision/gpt-6.1-sol@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_2_accurate",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_2_accurate.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cm_simple__hard_2_accurate/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "iout_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T1__cascode_bias_ws__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/gptC2/T1__cascode_bias_ws__spec/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_fc_ws__hard_1_speed",
+  "tier": "T3",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__ota_fc_ws__hard_1_speed/gpt-6.1-sol@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "power_uW"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "rise_settle_ns"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "rise_settle_ns"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "power_uW",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_2_flat",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_2_flat.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__cascode_bias_ws__hard_2_flat/gpt-6.1-sol@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T2__ota_5t__spec/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "task": "T3__ota_tele__hard_3_fast",
+  "tier": "T3",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T3__ota_tele__hard_3_fast/gpt-6.1-sol@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "fall_settle_ns",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB",
+     "ugf_Hz",
+     "fall_settle_ns",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/gptC2/T2__ota_5t__spec/gpt-6-luna@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T3__cm_cascode__hard_1_high_rout",
+  "tier": "T3",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__cm_cascode__hard_1_high_rout/claude-sonnet@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_2_lowpower",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_5t__hard_2_lowpower/claude-sonnet@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__cascode_bias_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__cascode_bias_ws__spec_1v2/claude-sonnet@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__ota_fc_ws__spec/claude-sonnet@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__ota_5t__spec/claude-sonnet@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T3__ota_fc_ws__hard_1_speed",
+  "tier": "T3",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_fc_ws__hard_1_speed/claude-sonnet@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__ota_5t__spec/claude-sonnet@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__ota_tele__p1_swing_lowpower",
+  "tier": "T2",
+  "circuit": "ota_tele",
+  "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__ota_tele__p1_swing_lowpower/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_1_low_vmin",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_1_low_vmin.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__cm_simple__hard_1_low_vmin/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cascode_bias__hard_2_precision",
+  "tier": "T3",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/profiles/hard_2_precision.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__cascode_bias__hard_2_precision/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isink_err_pct",
+     "isource_err_pct"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V",
+     "isink_err_pct",
+     "isource_err_pct",
+     "n_triode"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__cm_cascode__spec",
+  "tier": "T2",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__cm_cascode__spec/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_1_gain",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_1_gain.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_5t__hard_1_gain/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB",
+     "ugb_Hz",
+     "n_triode"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_2_lowpower",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_5t__hard_2_lowpower/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__ota_tele_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "ota_tele_ws",
+  "spec": "circuits/ota_tele_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__ota_tele_ws__spec_1v2/claude-opus@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "power_uW"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__opamp_2stg_ws__hard_3_lowpower",
+  "tier": "T3",
+  "circuit": "opamp_2stg_ws",
+  "spec": "circuits/opamp_2stg_ws/profiles/hard_3_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__opamp_2stg_ws__hard_3_lowpower/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__ota_fc_ws__hard_3_gain",
+  "tier": "T3",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_3_gain.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_fc_ws__hard_3_gain/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "swing_V"
+    ]
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "fall_settle_ns",
+     "swing_V"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cascode_bias__hard_1_range",
+  "tier": "T3",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/profiles/hard_1_range.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__cascode_bias__hard_1_range/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__ota_fc_ws__spec",
+  "tier": "T1",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__ota_fc_ws__spec/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB"
+    ]
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cascode_bias_ws__hard_3_precision",
+  "tier": "T3",
+  "circuit": "cascode_bias_ws",
+  "spec": "circuits/cascode_bias_ws/profiles/hard_3_precision.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__cascode_bias_ws__hard_3_precision/claude-opus@medium_s1/turn4_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "isource_err_pct"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__cm_simple__hard_2_accurate",
+  "tier": "T3",
+  "circuit": "cm_simple",
+  "spec": "circuits/cm_simple/profiles/hard_2_accurate.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__cm_simple__hard_2_accurate/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__ota_5t__spec/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T3__ota_fc_ws__hard_1_speed",
+  "tier": "T3",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/profiles/hard_1_speed.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_fc_ws__hard_1_speed/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "dc_gain_dB",
+     "n_triode"
+    ]
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__ota_5t__spec/claude-opus@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-opus",
+  "effort": "medium",
+  "task": "T2__ota_fc_ws__spec_1v2",
+  "tier": "T2",
+  "circuit": "ota_fc_ws",
+  "spec": "circuits/ota_fc_ws/spec_1v2.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__ota_fc_ws__spec_1v2/claude-opus@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__opamp_2stg__spec",
+  "tier": "T1",
+  "circuit": "opamp_2stg",
+  "spec": "circuits/opamp_2stg/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__opamp_2stg__spec/claude-haiku55@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": false,
+    "fails": [
+     "pm_deg"
+    ]
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T3__ota_5t__hard_2_lowpower",
+  "tier": "T3",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T3__ota_5t__hard_2_lowpower/claude-haiku55@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__cm_cascode__spec",
+  "tier": "T1",
+  "circuit": "cm_cascode",
+  "spec": "circuits/cm_cascode/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__cm_cascode__spec/claude-haiku55@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__ota_5t__spec",
+  "tier": "T1",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__ota_5t__spec/claude-haiku55@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": true,
+    "fails": []
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": true
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T2__ota_5t__spec",
+  "tier": "T2",
+  "circuit": "ota_5t",
+  "spec": "circuits/ota_5t/spec.yaml",
+  "vdd": 1.2,
+  "netlist": "results/v2_iter/clC/T2__ota_5t__spec/claude-haiku55@medium_s1/turn3_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "ugb_Hz"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ },
+ {
+  "mode": "feedback",
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "task": "T1__cascode_bias__spec",
+  "tier": "T1",
+  "circuit": "cascode_bias",
+  "spec": "circuits/cascode_bias/spec.yaml",
+  "vdd": 1.8,
+  "netlist": "results/v2_iter/clC/T1__cascode_bias__spec/claude-haiku55@medium_s1/turn2_netlist.sp",
+  "corners": {
+   "ff": {
+    "pass": true,
+    "fails": []
+   },
+   "sf": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "ss": {
+    "pass": false,
+    "fails": [
+     "mismatch_0v9_nA",
+     "match_width_V"
+    ]
+   },
+   "fs": {
+    "pass": true,
+    "fails": []
+   }
+  },
+  "all_corners": false
+ }
+]

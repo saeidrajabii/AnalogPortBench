@@ -1,0 +1,16 @@
+## Simulation results (design attempt 2 of 3)
+Your netlist was simulated with the testbenches described in the task (VDD = 1.2 V, TT corner, 27 °C).
+
+| Metric | Requirement | Your design | Met |
+|---|---|---|---|
+| dc_gain_dB | ≥ 30 | 31.86 | yes |
+| ugb_Hz | ≥ 1.616e+07 | 1.238e+07 | no |
+| pm_deg | ≥ 60 | 83.7 | yes |
+| power_uW | ≤ 37 | 32.15 | yes |
+| n_triode | ≤ 0 | 1 | no |
+
+Transistors out of saturation at the DC operating point (drain-source voltage magnitude below Vdsat):
+- XTAIL: |Vds| = 0.05 V, Vdsat = 0.063 V
+
+Revise the design so that it meets every specification. Reply in the same format: exactly one ```spice
+code block containing the complete netlist.

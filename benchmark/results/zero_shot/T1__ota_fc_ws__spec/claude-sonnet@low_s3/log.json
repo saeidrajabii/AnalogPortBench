@@ -1,0 +1,47 @@
+{
+ "task": "T1__ota_fc_ws__spec",
+ "tier": "T1",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-sonnet@low_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.56,
+  "f3db_Hz": 543847.3817079092,
+  "ugb_Hz": 57965314.52912655,
+  "pm_deg": 83.3,
+  "vout_dc_V": 1.2401,
+  "power_uW": 325.79,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 13.22,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 23.4,
+  "fall_settle_ns": 15.32,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 17.7,
+  "swing_V": 1.08,
+  "swing_lo_V": 0.238,
+  "swing_hi_V": 1.318,
+  "n_triode": 5
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "n_triode"
+ ]
+}

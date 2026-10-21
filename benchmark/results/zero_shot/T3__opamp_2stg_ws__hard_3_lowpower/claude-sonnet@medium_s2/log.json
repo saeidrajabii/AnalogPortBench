@@ -1,0 +1,47 @@
+{
+ "task": "T3__opamp_2stg_ws__hard_3_lowpower",
+ "tier": "T3",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/profiles/hard_3_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s2",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 56.35,
+  "ugf_Hz": 59990125.451691054,
+  "pm_deg": 32.9,
+  "gm_dB": 8.8,
+  "power_uW": 195.32,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 28.85,
+  "rise_overshoot_pct": 18.1,
+  "rise_slew_V_per_us": 36.6,
+  "fall_settle_ns": 40.66,
+  "fall_overshoot_pct": 35.86,
+  "fall_slew_V_per_us": 34.9,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

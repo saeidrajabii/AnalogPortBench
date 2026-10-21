@@ -1,0 +1,48 @@
+{
+ "task": "T3__opamp_2stg__hard_1_gain_ugf",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@medium_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 56.85,
+  "ugf_Hz": 42122504.179865934,
+  "pm_deg": 10.0,
+  "gm_dB": 3.7,
+  "power_uW": 350.91,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 48.57,
+  "rise_overshoot_pct": 25.47,
+  "rise_slew_V_per_us": 28.6,
+  "fall_settle_ns": 49.67,
+  "fall_overshoot_pct": 114.14,
+  "fall_slew_V_per_us": 19.4,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "power_uW",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

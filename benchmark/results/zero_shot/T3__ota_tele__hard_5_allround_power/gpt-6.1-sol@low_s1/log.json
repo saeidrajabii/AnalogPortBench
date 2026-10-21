@@ -1,0 +1,49 @@
+{
+ "task": "T3__ota_tele__hard_5_allround_power",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_5_allround_power.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@low_s1",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 57.5,
+  "ugf_Hz": 38646522.06083527,
+  "pm_deg": 48.7,
+  "gm_dB": 11.5,
+  "power_uW": 137.91,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 35.99,
+  "rise_overshoot_pct": 38.26,
+  "rise_slew_V_per_us": 20.4,
+  "fall_settle_ns": 25.89,
+  "fall_overshoot_pct": 9.33,
+  "fall_slew_V_per_us": 26.1,
+  "swing_V": 0.809,
+  "swing_lo_V": 0.148,
+  "swing_hi_V": 0.956,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

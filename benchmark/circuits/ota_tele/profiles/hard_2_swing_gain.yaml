@@ -1,0 +1,57 @@
+profile: hard_2_swing_gain
+description: 'Hard point H2: near rail-to-rail output swing with high gain.'
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+golden: benchmark/golden/ota_tele_hard_2_swing_gain.sp
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 65.0
+    rule: hard point; golden TT 68.84 (+5.9 %), worst corner 68.07
+  ugf_Hz:
+    op: '>='
+    limit: 17500000.0
+    rule: hard point; golden TT 18700000.0 (+6.9 %), worst corner 18270000.0
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: fixed for every hard point
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: fixed for every hard point
+  power_uW:
+    op: <=
+    limit: 105.0
+    rule: hard point; golden TT 97.32 (+7.3 %), worst corner 99.43
+  rise_settle_ns:
+    op: <=
+    limit: 48.5
+    rule: hard point; golden TT 45.7 (+5.8 %), worst corner 47.47
+  fall_settle_ns:
+    op: <=
+    limit: 47.0
+    rule: hard point; golden TT 44.12 (+6.1 %), worst corner 45.05
+  swing_V:
+    op: '>='
+    limit: 0.86
+    rule: hard point; golden TT 0.904 (+5.1 %), worst corner 0.891
+  n_triode:
+    op: <=
+    limit: 0
+    rule: fixed for every hard point

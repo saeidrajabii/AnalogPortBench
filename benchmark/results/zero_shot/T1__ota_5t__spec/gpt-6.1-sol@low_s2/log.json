@@ -1,0 +1,35 @@
+{
+ "task": "T1__ota_5t__spec",
+ "tier": "T1",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6.1-sol@low_s2",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 32.3,
+  "f3db_Hz": 806483.2806858643,
+  "ugb_Hz": 33151195.078626744,
+  "pm_deg": 85.9,
+  "vout_dc_V": 0.6063,
+  "power_uW": 105.74,
+  "input_current_uA": 0.0,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

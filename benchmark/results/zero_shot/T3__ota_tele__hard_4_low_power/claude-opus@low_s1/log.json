@@ -1,0 +1,45 @@
+{
+ "task": "T3__ota_tele__hard_4_low_power",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_4_low_power.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 60.18,
+  "ugf_Hz": 12833011.763359087,
+  "pm_deg": 61.4,
+  "gm_dB": 29.5,
+  "power_uW": 52.31,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 41.03,
+  "rise_overshoot_pct": 0.1,
+  "rise_slew_V_per_us": 6.5,
+  "fall_settle_ns": 46.99,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 6.0,
+  "swing_V": 0.722,
+  "swing_lo_V": 0.139,
+  "swing_hi_V": 0.861,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "swing_V"
+ ]
+}

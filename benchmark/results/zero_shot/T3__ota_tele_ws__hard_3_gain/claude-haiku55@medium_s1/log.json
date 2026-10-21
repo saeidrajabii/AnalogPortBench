@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele_ws__hard_3_gain",
+ "tier": "T3",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/profiles/hard_3_gain.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.5,
+  "f3db_Hz": 711598.0652268428,
+  "ugb_Hz": 73639034.76448725,
+  "pm_deg": 72.7,
+  "vout_dc_V": 0.5867,
+  "power_uW": 134.53,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.78,
+  "rise_overshoot_pct": 1.43,
+  "rise_slew_V_per_us": 32.8,
+  "fall_settle_ns": 22.77,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 17.5,
+  "swing_V": 0.535,
+  "swing_lo_V": 0.265,
+  "swing_hi_V": 0.8,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "swing_V",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,873 @@
+{
+ "task": "T3__opamp_2stg__hard_1_gain_ugf",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+ "vdd": 1.2,
+ "model": "gpt-6.1-sol@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "gpt-6.1-sol",
+  "effort": null,
+  "max_attempts": 3,
+  "access": "OpenAI API"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "0f51700515d9177733c750167d38c7b5062d3b65679784cb9d5f6f537230d09e",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "opamp_2stg",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "dc_gain_dB": 71.93,
+     "ugf_Hz": 101569092.9744051,
+     "pm_deg": 47.1,
+     "gm_dB": 6.3,
+     "power_uW": 265.67,
+     "input_current_uA": 0.0,
+     "rise_settle_ns": 17.62,
+     "rise_overshoot_pct": 30.46,
+     "rise_slew_V_per_us": 27.1,
+     "fall_settle_ns": 8.77,
+     "fall_overshoot_pct": 0.74,
+     "fall_slew_V_per_us": 49.7,
+     "n_triode": 3
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 3,
+     "min_sat_margin_V": -0.04,
+     "triode_devices": [
+      "m.xdut.xmpcbias.msky130_fd_pr__pfet_01v8_lvt",
+      "m.xdut.xmpmref.msky130_fd_pr__pfet_01v8_lvt",
+      "m.xdut.xmpmout.msky130_fd_pr__pfet_01v8_lvt"
+     ],
+     "devices": [
+      {
+       "device": "m.xdut.xmnref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "niref",
+       "id_uA": 20.0,
+       "vgs_V": 0.534,
+       "vds_V": 0.534,
+       "vdsat_V": 0.072,
+       "margin_V": 0.462
+      },
+      {
+       "device": "m.xdut.xmnbias.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.pbias",
+       "id_uA": 20.383,
+       "vgs_V": 0.534,
+       "vds_V": 0.601,
+       "vdsat_V": 0.072,
+       "margin_V": 0.529
+      },
+      {
+       "device": "m.xdut.xmpref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pbias",
+       "id_uA": 20.383,
+       "vgs_V": 0.599,
+       "vds_V": 0.598,
+       "vdsat_V": 0.147,
+       "margin_V": 0.451
+      },
+      {
+       "device": "m.xdut.xmpcbias.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.ncas",
+       "id_uA": 15.596,
+       "vgs_V": 0.599,
+       "vds_V": 0.107,
+       "vdsat_V": 0.147,
+       "margin_V": -0.04
+      },
+      {
+       "device": "m.xdut.xmncb0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.ncb0",
+       "id_uA": 15.596,
+       "vgs_V": 0.522,
+       "vds_V": 0.522,
+       "vdsat_V": 0.067,
+       "margin_V": 0.455
+      },
+      {
+       "device": "m.xdut.xmncb1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.ncas",
+       "id_uA": 15.596,
+       "vgs_V": 0.571,
+       "vds_V": 0.571,
+       "vdsat_V": 0.058,
+       "margin_V": 0.512
+      },
+      {
+       "device": "m.xdut.xmntail.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.tail",
+       "id_uA": 47.176,
+       "vgs_V": 0.534,
+       "vds_V": 0.338,
+       "vdsat_V": 0.072,
+       "margin_V": 0.266
+      },
+      {
+       "device": "m.xdut.xmninp.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n1",
+       "id_uA": 23.679,
+       "vgs_V": 0.562,
+       "vds_V": 0.257,
+       "vdsat_V": 0.083,
+       "margin_V": 0.174
+      },
+      {
+       "device": "m.xdut.xmninn.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.pmgate",
+       "id_uA": 23.497,
+       "vgs_V": 0.561,
+       "vds_V": 0.317,
+       "vdsat_V": 0.083,
+       "margin_V": 0.235
+      },
+      {
+       "device": "m.xdut.xmpmref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pref",
+       "id_uA": 23.497,
+       "vgs_V": 0.544,
+       "vds_V": 0.126,
+       "vdsat_V": 0.146,
+       "margin_V": -0.02
+      },
+      {
+       "device": "m.xdut.xmpcref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pmgate",
+       "id_uA": 23.497,
+       "vgs_V": 0.539,
+       "vds_V": 0.418,
+       "vdsat_V": 0.123,
+       "margin_V": 0.295
+      },
+      {
+       "device": "m.xdut.xmpmout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pout",
+       "id_uA": 23.679,
+       "vgs_V": 0.544,
+       "vds_V": 0.128,
+       "vdsat_V": 0.146,
+       "margin_V": -0.018
+      },
+      {
+       "device": "m.xdut.xmpcout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.n1",
+       "id_uA": 23.679,
+       "vgs_V": 0.537,
+       "vds_V": 0.476,
+       "vdsat_V": 0.121,
+       "margin_V": 0.355
+      },
+      {
+       "device": "m.xdut.xmnout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n2",
+       "id_uA": 118.238,
+       "vgs_V": 0.595,
+       "vds_V": 0.51,
+       "vdsat_V": 0.104,
+       "margin_V": 0.406
+      },
+      {
+       "device": "m.xdut.xmncout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 118.238,
+       "vgs_V": 0.582,
+       "vds_V": 0.388,
+       "vdsat_V": 0.062,
+       "margin_V": 0.326
+      },
+      {
+       "device": "m.xdut.xmpout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 118.238,
+       "vgs_V": 0.599,
+       "vds_V": 0.301,
+       "vdsat_V": 0.147,
+       "margin_V": 0.154
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+    "checks": [
+     {
+      "metric": "dc_gain_dB",
+      "value": 71.93,
+      "op": ">=",
+      "limit": 78.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "ugf_Hz",
+      "value": 101569092.9744051,
+      "op": ">=",
+      "limit": 89000000.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "pm_deg",
+      "value": 47.1,
+      "op": ">=",
+      "limit": 60.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "gm_dB",
+      "value": 6.3,
+      "op": ">=",
+      "limit": 10.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "power_uW",
+      "value": 265.67,
+      "op": "<=",
+      "limit": 296.4,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rise_settle_ns",
+      "value": 17.62,
+      "op": "<=",
+      "limit": 12.24,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "fall_settle_ns",
+      "value": 8.77,
+      "op": "<=",
+      "limit": 26.73,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "n_triode",
+      "value": 3,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": false
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/opamp_2stg/v2iter/gptC2/T3__opamp_2stg__hard_1_gain_ugf/gpt-6.1-sol@medium_t1"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "opamp_2stg",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "dc_gain_dB": 78.21,
+     "ugf_Hz": 98319290.23461586,
+     "pm_deg": -14.2,
+     "gm_dB": -1.7,
+     "power_uW": 284.35,
+     "input_current_uA": 0.0,
+     "rise_settle_ns": 49.23,
+     "rise_overshoot_pct": 73.9,
+     "rise_slew_V_per_us": 18.8,
+     "fall_settle_ns": 49.95,
+     "fall_overshoot_pct": 207.32,
+     "fall_slew_V_per_us": 52.5,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.043,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xmnref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "niref",
+       "id_uA": 20.0,
+       "vgs_V": 0.534,
+       "vds_V": 0.534,
+       "vdsat_V": 0.072,
+       "margin_V": 0.462
+      },
+      {
+       "device": "m.xdut.xmnbias.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.pbias",
+       "id_uA": 20.383,
+       "vgs_V": 0.534,
+       "vds_V": 0.601,
+       "vdsat_V": 0.072,
+       "margin_V": 0.529
+      },
+      {
+       "device": "m.xdut.xmpref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pbias",
+       "id_uA": 20.383,
+       "vgs_V": 0.599,
+       "vds_V": 0.598,
+       "vdsat_V": 0.147,
+       "margin_V": 0.451
+      },
+      {
+       "device": "m.xdut.xmpcbias.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.ncas",
+       "id_uA": 18.772,
+       "vgs_V": 0.599,
+       "vds_V": 0.19,
+       "vdsat_V": 0.147,
+       "margin_V": 0.043
+      },
+      {
+       "device": "m.xdut.xmncb0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.ncb0",
+       "id_uA": 18.772,
+       "vgs_V": 0.468,
+       "vds_V": 0.468,
+       "vdsat_V": 0.052,
+       "margin_V": 0.416
+      },
+      {
+       "device": "m.xdut.xmncb1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.ncas",
+       "id_uA": 18.772,
+       "vgs_V": 0.542,
+       "vds_V": 0.542,
+       "vdsat_V": 0.053,
+       "margin_V": 0.488
+      },
+      {
+       "device": "m.xdut.xmntail.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.tail",
+       "id_uA": 47.309,
+       "vgs_V": 0.534,
+       "vds_V": 0.346,
+       "vdsat_V": 0.072,
+       "margin_V": 0.273
+      },
+      {
+       "device": "m.xdut.xmninp.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n1",
+       "id_uA": 23.693,
+       "vgs_V": 0.554,
+       "vds_V": 0.213,
+       "vdsat_V": 0.085,
+       "margin_V": 0.128
+      },
+      {
+       "device": "m.xdut.xmninn.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.pmgate",
+       "id_uA": 23.616,
+       "vgs_V": 0.553,
+       "vds_V": 0.28,
+       "vdsat_V": 0.084,
+       "margin_V": 0.196
+      },
+      {
+       "device": "m.xdut.xmpmref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pref",
+       "id_uA": 23.616,
+       "vgs_V": 0.574,
+       "vds_V": 0.184,
+       "vdsat_V": 0.132,
+       "margin_V": 0.052
+      },
+      {
+       "device": "m.xdut.xmpcref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pmgate",
+       "id_uA": 23.616,
+       "vgs_V": 0.482,
+       "vds_V": 0.39,
+       "vdsat_V": 0.084,
+       "margin_V": 0.306
+      },
+      {
+       "device": "m.xdut.xmpmout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pout",
+       "id_uA": 23.693,
+       "vgs_V": 0.574,
+       "vds_V": 0.187,
+       "vdsat_V": 0.132,
+       "margin_V": 0.055
+      },
+      {
+       "device": "m.xdut.xmpcout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.n1",
+       "id_uA": 23.693,
+       "vgs_V": 0.479,
+       "vds_V": 0.455,
+       "vdsat_V": 0.083,
+       "margin_V": 0.372
+      },
+      {
+       "device": "m.xdut.xmnout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n2",
+       "id_uA": 130.496,
+       "vgs_V": 0.558,
+       "vds_V": 0.441,
+       "vdsat_V": 0.098,
+       "margin_V": 0.343
+      },
+      {
+       "device": "m.xdut.xmncout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 130.496,
+       "vgs_V": 0.569,
+       "vds_V": 0.458,
+       "vdsat_V": 0.061,
+       "margin_V": 0.397
+      },
+      {
+       "device": "m.xdut.xmpout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 120.464,
+       "vgs_V": 0.599,
+       "vds_V": 0.301,
+       "vdsat_V": 0.142,
+       "margin_V": 0.159
+      },
+      {
+       "device": "m.xdut.xmpouta.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 10.031,
+       "vgs_V": 0.599,
+       "vds_V": 0.301,
+       "vdsat_V": 0.142,
+       "margin_V": 0.159
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+    "checks": [
+     {
+      "metric": "dc_gain_dB",
+      "value": 78.21,
+      "op": ">=",
+      "limit": 78.4,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "ugf_Hz",
+      "value": 98319290.23461586,
+      "op": ">=",
+      "limit": 89000000.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "pm_deg",
+      "value": -14.2,
+      "op": ">=",
+      "limit": 60.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "gm_dB",
+      "value": -1.7,
+      "op": ">=",
+      "limit": 10.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "power_uW",
+      "value": 284.35,
+      "op": "<=",
+      "limit": 296.4,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rise_settle_ns",
+      "value": 49.23,
+      "op": "<=",
+      "limit": 12.24,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "fall_settle_ns",
+      "value": 49.95,
+      "op": "<=",
+      "limit": 26.73,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/opamp_2stg/v2iter/gptC2/T3__opamp_2stg__hard_1_gain_ugf/gpt-6.1-sol@medium_t2"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": false
+  },
+  {
+   "turn": 3,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "opamp_2stg",
+    "netlist": "turn3_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "dc_gain_dB": 78.41,
+     "ugf_Hz": 133564987.09769492,
+     "pm_deg": -29.6,
+     "gm_dB": -2.4,
+     "power_uW": 289.43,
+     "input_current_uA": 0.0,
+     "rise_settle_ns": 49.9,
+     "rise_overshoot_pct": 45.11,
+     "rise_slew_V_per_us": 14.4,
+     "fall_settle_ns": 49.96,
+     "fall_overshoot_pct": 15.33,
+     "fall_slew_V_per_us": 22.6,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.011,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xmnref.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "niref",
+       "id_uA": 20.0,
+       "vgs_V": 0.534,
+       "vds_V": 0.534,
+       "vdsat_V": 0.072,
+       "margin_V": 0.462
+      },
+      {
+       "device": "m.xdut.xmnbias.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.pbias",
+       "id_uA": 20.383,
+       "vgs_V": 0.534,
+       "vds_V": 0.601,
+       "vdsat_V": 0.072,
+       "margin_V": 0.529
+      },
+      {
+       "device": "m.xdut.xmpref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pbias",
+       "id_uA": 20.383,
+       "vgs_V": 0.599,
+       "vds_V": 0.598,
+       "vdsat_V": 0.147,
+       "margin_V": 0.451
+      },
+      {
+       "device": "m.xdut.xmpcbias.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.ncas",
+       "id_uA": 18.272,
+       "vgs_V": 0.599,
+       "vds_V": 0.167,
+       "vdsat_V": 0.147,
+       "margin_V": 0.019
+      },
+      {
+       "device": "m.xdut.xmncb0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.ncb0",
+       "id_uA": 18.272,
+       "vgs_V": 0.479,
+       "vds_V": 0.479,
+       "vdsat_V": 0.054,
+       "margin_V": 0.425
+      },
+      {
+       "device": "m.xdut.xmncb1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.ncas",
+       "id_uA": 18.272,
+       "vgs_V": 0.554,
+       "vds_V": 0.554,
+       "vdsat_V": 0.056,
+       "margin_V": 0.498
+      },
+      {
+       "device": "m.xdut.xmntail.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.tail",
+       "id_uA": 52.052,
+       "vgs_V": 0.534,
+       "vds_V": 0.346,
+       "vdsat_V": 0.072,
+       "margin_V": 0.273
+      },
+      {
+       "device": "m.xdut.xmninp.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n1",
+       "id_uA": 26.058,
+       "vgs_V": 0.554,
+       "vds_V": 0.247,
+       "vdsat_V": 0.087,
+       "margin_V": 0.161
+      },
+      {
+       "device": "m.xdut.xmninn.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.pmgate",
+       "id_uA": 25.994,
+       "vgs_V": 0.554,
+       "vds_V": 0.276,
+       "vdsat_V": 0.086,
+       "margin_V": 0.19
+      },
+      {
+       "device": "m.xdut.xmpmref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pref",
+       "id_uA": 25.994,
+       "vgs_V": 0.578,
+       "vds_V": 0.153,
+       "vdsat_V": 0.142,
+       "margin_V": 0.011
+      },
+      {
+       "device": "m.xdut.xmpcref.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pmgate",
+       "id_uA": 25.994,
+       "vgs_V": 0.513,
+       "vds_V": 0.425,
+       "vdsat_V": 0.103,
+       "margin_V": 0.321
+      },
+      {
+       "device": "m.xdut.xmpmout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.pout",
+       "id_uA": 26.058,
+       "vgs_V": 0.578,
+       "vds_V": 0.154,
+       "vdsat_V": 0.142,
+       "margin_V": 0.012
+      },
+      {
+       "device": "m.xdut.xmpcout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "xdut.n1",
+       "id_uA": 26.058,
+       "vgs_V": 0.512,
+       "vds_V": 0.453,
+       "vdsat_V": 0.103,
+       "margin_V": 0.35
+      },
+      {
+       "device": "m.xdut.xmnout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.n2",
+       "id_uA": 130.487,
+       "vgs_V": 0.593,
+       "vds_V": 0.461,
+       "vdsat_V": 0.107,
+       "margin_V": 0.354
+      },
+      {
+       "device": "m.xdut.xmncout.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 130.487,
+       "vgs_V": 0.572,
+       "vds_V": 0.438,
+       "vdsat_V": 0.061,
+       "margin_V": 0.377
+      },
+      {
+       "device": "m.xdut.xmpout.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 120.456,
+       "vgs_V": 0.599,
+       "vds_V": 0.3,
+       "vdsat_V": 0.142,
+       "margin_V": 0.159
+      },
+      {
+       "device": "m.xdut.xmpouta.msky130_fd_pr__pfet_01v8_lvt",
+       "type": "p",
+       "drain": "nout",
+       "id_uA": 10.031,
+       "vgs_V": 0.599,
+       "vds_V": 0.3,
+       "vdsat_V": 0.142,
+       "margin_V": 0.159
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+    "checks": [
+     {
+      "metric": "dc_gain_dB",
+      "value": 78.41,
+      "op": ">=",
+      "limit": 78.4,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "ugf_Hz",
+      "value": 133564987.09769492,
+      "op": ">=",
+      "limit": 89000000.0,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "pm_deg",
+      "value": -29.6,
+      "op": ">=",
+      "limit": 60.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "gm_dB",
+      "value": -2.4,
+      "op": ">=",
+      "limit": 10.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "power_uW",
+      "value": 289.43,
+      "op": "<=",
+      "limit": 296.4,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rise_settle_ns",
+      "value": 49.9,
+      "op": "<=",
+      "limit": 12.24,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "fall_settle_ns",
+      "value": 49.96,
+      "op": "<=",
+      "limit": 26.73,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/opamp_2stg/v2iter/gptC2/T3__opamp_2stg__hard_1_gain_ugf/gpt-6.1-sol@medium_t3"
+   },
+   "valid": true,
+   "counted_as": "design attempt 3",
+   "pass": false
+  }
+ ],
+ "design_attempts": 3,
+ "syntax_retries_used": 0,
+ "passed": false,
+ "passed_at_attempt": null
+}

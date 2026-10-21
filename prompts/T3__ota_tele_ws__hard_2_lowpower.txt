@@ -1,0 +1,113 @@
+Port the analog circuit below from a TSMC 0.18 µm CMOS process to the SkyWater SKY130 process.
+The ported circuit will be simulated in ngspice and must meet the specifications listed below.
+You may change device sizes, biasing and circuit topology, as long as the interface and test conditions are kept.
+
+## Source design (TSMC 0.18 µm)
+Transistor models: tsmc18dN (NMOS) and tsmc18dP (PMOS), BSIM3. Supply VDD = 1.8 V on the global
+node `vdd`; ground is node `0`.
+
+```spice
+.subckt Cascode_Bias_WS Iin Vbias_1 Vbias_2 Vbias_3 Vbias_4
+  MN12 Vbias_2 Vbias_2 net1 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN11 Vbias_1 Vbias_1 net2 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN10 net10 Vbias_4 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN9 Vbias_4 Vbias_3 net10 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN8 Vbias_3 Vbias_3 0 0 tsmc18dN w=6.66u l=3.33u as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN7 net2 Iin 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN6 net1 Iin 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MN4 Iin Iin 0 0 tsmc18dN w=6.66u l=360.0n as=2.997e-12 ad=2.997e-12 ps=14.22u pd=14.22u m=1
+  MP11 net6 Vbias_1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP10 Vbias_4 Vbias_2 net6 vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP7 net5 Vbias_1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP6 Vbias_3 Vbias_2 net5 vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP4 Vbias_2 Vbias_2 vdd vdd tsmc18dP w=12.195u l=4u as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP3 net13 Vbias_1 vdd vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+  MP2 Vbias_1 Vbias_2 net13 vdd tsmc18dP w=12.195u l=360.0n as=5.48775e-12 ad=5.48775e-12 ps=25.29u pd=25.29u m=1
+.ends Cascode_Bias_WS
+.subckt OTA_Telescopic VCM Vbias_2 Vbias_3 Vbias_4 vm vout vp
+  MP0 net0100 net082 vdd vdd tsmc18dP w=2.43u l=360.0n as=1.0935e-12 ad=1.0935e-12 ps=5.76u pd=5.76u m=5
+  MP3 vout Vbias_2 net097 vdd tsmc18dP w=2.43u l=360.0n as=1.0935e-12 ad=1.0935e-12 ps=5.76u pd=5.76u m=5
+  MP4 net016 Vbias5 vdd vdd tsmc18dP w=2.43u l=360.0n as=1.0935e-12 ad=1.0935e-12 ps=5.76u pd=5.76u m=1
+  MP2 net097 net082 vdd vdd tsmc18dP w=2.43u l=360.0n as=1.0935e-12 ad=1.0935e-12 ps=5.76u pd=5.76u m=5
+  MP1 net082 Vbias_2 net0100 vdd tsmc18dP w=2.43u l=360.0n as=1.0935e-12 ad=1.0935e-12 ps=5.76u pd=5.76u m=5
+  MP5 Vbias5 Vbias_2 net016 vdd tsmc18dP w=2.43u l=360.0n as=1.0935e-12 ad=1.0935e-12 ps=5.76u pd=5.76u m=1
+  MN11 Vbias5 Vbias5 net015 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=1
+  MN8 net015 VCM net014 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=1
+  MN4 net8 Vbias_3 net012 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN5 net012 Vbias_4 0 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN9 net014 Vbias_3 net017 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=1
+  MN1 net074 vp net8 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN6 net6 Vbias_4 0 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN3 net030 vm net8 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN7 net8 Vbias_3 net6 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN0 net082 Vbias5 net074 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN2 vout Vbias5 net030 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=5
+  MN10 net017 Vbias_4 0 0 tsmc18dN w=1.35u l=360.0n as=6.075e-13 ad=6.075e-13 ps=3.6u pd=3.6u m=1
+.ends OTA_Telescopic
+.subckt dut iref inp inn out
+XI0 iref vb1 vb2 vb3 vb4 Cascode_Bias_WS
+Rcm1 vdd vcmref 5meg
+Rcm2 vcmref 0 5meg
+XI1 vcmref vb2 vb3 vb4 inn out inp OTA_Telescopic
+.ends dut
+```
+
+## Target technology (SKY130)
+- Use only the transistors sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt.
+- They are subcircuits. Instantiate them with an X prefix and the terminals in the order drain gate source
+  bulk, followed by the parameters W, L, nf and m, each written as name=value and separated by spaces.
+- W is the total gate width and L the gate length, both in micrometres, written as plain numbers without
+  unit suffixes. Minimum L: 0.15 µm for nfet_01v8_lvt, 0.35 µm for pfet_01v8_lvt. Minimum W: 0.42 µm.
+- Always use nf=1. For a wider transistor, increase W, or use m=k to connect k identical transistors in parallel.
+- Sky130 W and L are plain numbers in µm; R and C values keep their SI suffixes (e.g. 2p, 10k).
+  The m parameter means the same in both netlists.
+- Resistors and capacitors may be ideal SPICE R and C elements.
+- Supply: VDD = 1.2 V on the global node `vdd`; ground is node `0`. Both are available inside every
+  subcircuit without being ports.
+- The ideal reference current must be mirrored: it may not flow directly into the source of a transistor.
+  No element may connect `inp` directly to `out`.
+- The testbench includes the model library and provides all sources and analyses. Do not add
+  `.lib`, `.include`, `.option`, sources or analysis statements.
+
+## Netlist format example
+This example only illustrates the syntax; it is not a suggested design.
+
+```spice
+.subckt example a b c
+XM1 a b 0 0 sky130_fd_pr__nfet_01v8_lvt W=2 L=0.5 nf=1 m=1
+XM2 a c vdd vdd sky130_fd_pr__pfet_01v8_lvt W=4 L=0.5 nf=1 m=2
+.ends example
+```
+
+## Interface
+The netlist must define the subcircuit `.subckt dut iref inp inn out`, with exactly these ports in this order.
+- `iref`: an ideal bias reference current flows into this node from `vdd`.
+- `inp`, `inn`: non-inverting and inverting inputs.
+- `out`: output.
+
+## Test conditions (TT corner, 27 °C)
+- An ideal 20 µA current source from `vdd` drives `iref`.
+- Open loop: `inn` is held at VCM = 0.6 V DC; `inp` = VCM plus a small AC signal; AC analysis from 10 Hz to 1 GHz.
+- Load: 1 pF from `out` to ground.
+- Step response: unity-gain follower (`out` connected to `inn`), `inp` is a pulse between 0.5 V and 0.7 V (10 ps edges, 100 ns period), transient analysis for 200 ns.
+- Output swing: open loop, `inn` held at VCM, `inp` swept from VCM - 30 mV to VCM + 30 mV in 5 µV steps (DC analysis).
+
+## Specifications
+The requirements below are for this port at VDD = 1.2 V; they are not all derived from the source design's performance.
+| Metric | Definition | Requirement | Source design (180 nm, VDD 1.8 V) |
+|---|---|---|---|
+| dc_gain_dB | open-loop gain from `inp` to `out` at 10 Hz, in dB | ≥ 72.1 | 65.54 |
+| ugb_Hz | frequency where the open-loop gain magnitude is 1, in Hz | ≥ 1.87e+07 | 5.837e+07 |
+| pm_deg | 180° plus the phase at the unity-gain frequency, in degrees | ≥ 60 | 82.9 |
+| power_uW | VDD times the total supply current at the DC operating point (bias circuitry included), in µW | ≤ 112 | 266.8 |
+| rise_settle_ns | time from the rising input edge until `out` stays within 1 % of the step of its final value, in ns | ≤ 37 | 12.73 |
+| fall_settle_ns | time from the falling input edge until `out` stays within 1 % of the step of its final value, in ns | ≤ 45.4 | 12.5 |
+| swing_V | output voltage range over which the open-loop small-signal gain (`inn` held at VCM, `inp` swept by +-30 mV around VCM) stays within 6 dB of its peak, in V | ≥ 0.583 | 0.641 |
+| n_triode | number of transistors whose drain-source voltage magnitude is below their Vdsat at the DC operating point | ≤ 0 | 0 |
+
+## Output format
+Reply with exactly one ```spice code block containing the complete netlist: every .subckt the
+design needs, including `dut`. You may add a short explanation outside the code block.
+If you conclude that the specifications cannot all be met in SKY130 at this supply, add a line outside the
+code block that starts with `INFEASIBLE:` followed by the reason, state the smallest change to the
+specifications that would make them achievable, and still give your best design.

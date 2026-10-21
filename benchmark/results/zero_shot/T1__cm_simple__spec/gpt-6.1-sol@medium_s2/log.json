@@ -1,0 +1,33 @@
+{
+ "task": "T1__cm_simple__spec",
+ "tier": "T1",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6.1-sol@medium_s2",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.856,
+  "iout_vdd_uA": 22.593,
+  "iout_err_pct": 4.28,
+  "rout_kohm": 521.6,
+  "vmin_V": 0.128,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

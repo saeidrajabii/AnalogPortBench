@@ -1,0 +1,43 @@
+{
+ "task": "T4__cascode_bias__infeasible_1_range",
+ "tier": "T4",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/profiles/infeasible_1_range.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s2",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 0.7356,
+  "vb2_V": 0.1817,
+  "vb3_V": 1.1494,
+  "vb4_V": 0.5342,
+  "mismatch_0v9_nA": -4910.5,
+  "match_lo_V": 0.12,
+  "match_hi_V": 0.29,
+  "match_width_V": 0.17,
+  "isink_err_pct": -0.09,
+  "isource_err_pct": -24.65,
+  "n_triode": 2
+ },
+ "passed": false,
+ "fails": [
+  "mismatch_0v9_nA",
+  "match_width_V",
+  "isource_err_pct",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "task": "T3__ota_tele__hard_3_fast",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.53,
+  "ugf_Hz": 123960828.81203987,
+  "pm_deg": 70.9,
+  "gm_dB": 27.1,
+  "power_uW": 128.2,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 7.21,
+  "rise_overshoot_pct": 19.07,
+  "rise_slew_V_per_us": 56.1,
+  "fall_settle_ns": 9.86,
+  "fall_overshoot_pct": 1.5,
+  "fall_slew_V_per_us": 31.5,
+  "swing_V": 0.501,
+  "swing_lo_V": 0.342,
+  "swing_hi_V": 0.843,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "rise_settle_ns"
+ ]
+}

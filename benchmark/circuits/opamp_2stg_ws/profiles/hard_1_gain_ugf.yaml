@@ -1,0 +1,52 @@
+# HARD spec point for opamp_2stg_ws at VDD = 1.2 V.
+# Limits set as hard as the hand-designed golden benchmark/golden/opamp_2stg_ws_hard_1_gain_ugf.sp allows
+# with >= 5 % margin on every limit at TT and a pass at all five corners (tt ff ss sf fs).
+profile: hard_1_gain_ugf
+description: 'High loop gain at high UGF: >= 80 dB with UGF >= 118 MHz at 1.2 V.'
+circuit: opamp_2stg_ws
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: 0.9
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: 0.9
+    CL: 1p
+    VSTEP: 0.2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = 0.9 V (as the source testbench), Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 80.0
+    rule: 'hard: golden 84.1 dB at TT / 1.05; fs corner 82.2 dB'
+  ugf_Hz:
+    op: '>='
+    limit: 118000000.0
+    rule: 'hard: golden 126.1 MHz at TT (>= 5 % margin); ss corner 119.0 MHz'
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: 'hard: >= 60 deg'
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: 'spec.yaml'
+  power_uW:
+    op: '<='
+    limit: 430.5
+    rule: 'spec.yaml (1.2 x source)'
+  rise_settle_ns:
+    op: '<='
+    limit: 10.77
+    rule: 'spec.yaml (1.5 x source)'
+  fall_settle_ns:
+    op: '<='
+    limit: 24.62
+    rule: 'spec.yaml (1.5 x source)'
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: 'hard: no transistor out of saturation'

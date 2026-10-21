@@ -1,0 +1,33 @@
+{
+ "task": "T1__cm_simple__spec",
+ "tier": "T1",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-sonnet@low_s2",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 21.257,
+  "iout_vdd_uA": 24.281,
+  "iout_err_pct": 6.28,
+  "rout_kohm": 292.1,
+  "vmin_V": 0.289,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

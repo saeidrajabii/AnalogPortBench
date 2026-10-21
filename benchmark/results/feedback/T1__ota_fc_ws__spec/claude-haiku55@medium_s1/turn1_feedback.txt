@@ -1,0 +1,28 @@
+## Simulation results (design attempt 1 of 3)
+Your netlist was simulated with the testbenches described in the task (VDD = 1.8 V, TT corner, 27 °C).
+
+| Metric | Requirement | Your design | Met |
+|---|---|---|---|
+| dc_gain_dB | ≥ 53.62 | 29.73 | no |
+| ugb_Hz | ≥ 4.151e+07 | 3.677e+07 | no |
+| pm_deg | ≥ 55 | 81.3 | yes |
+| power_uW | ≤ 387.3 | 405.2 | no |
+| rise_settle_ns | ≤ 20.76 | 18.79 | yes |
+| fall_settle_ns | ≤ 26.25 | 15.98 | yes |
+| swing_V | ≥ 0.8216 | 1.116 | yes |
+| n_triode | ≤ 0 | 10 | no |
+
+Transistors out of saturation at the DC operating point (drain-source voltage magnitude below Vdsat):
+- XI0.XMN10: |Vds| = 0.057 V, Vdsat = 0.139 V
+- XI0.XMP3: |Vds| = 0.106 V, Vdsat = 0.218 V
+- XI0.XMP7: |Vds| = 0.117 V, Vdsat = 0.218 V
+- XI0.XMP11: |Vds| = 0.118 V, Vdsat = 0.218 V
+- XI1.XMN3: |Vds| = 0.054 V, Vdsat = 0.139 V
+- XI1.XMN4: |Vds| = 0.054 V, Vdsat = 0.139 V
+- XI1.XMN7: |Vds| = 0.059 V, Vdsat = 0.139 V
+- XI1.XMN8: |Vds| = 0.059 V, Vdsat = 0.139 V
+- XI1.XMP0: |Vds| = 0.101 V, Vdsat = 0.285 V
+- XI1.XMP2: |Vds| = 0.101 V, Vdsat = 0.285 V
+
+Revise the design so that it meets every specification. Reply in the same format: exactly one ```spice
+code block containing the complete netlist.

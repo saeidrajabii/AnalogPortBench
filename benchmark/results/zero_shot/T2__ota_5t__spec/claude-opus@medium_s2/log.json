@@ -1,0 +1,35 @@
+{
+ "task": "T2__ota_5t__spec",
+ "tier": "T2",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 33.94,
+  "f3db_Hz": 1088161.307833857,
+  "ugb_Hz": 51011850.38839076,
+  "pm_deg": 68.7,
+  "vout_dc_V": 0.611,
+  "power_uW": 62.8,
+  "input_current_uA": 0.0,
+  "n_triode": 1
+ },
+ "passed": true,
+ "fails": []
+}

@@ -1,0 +1,55 @@
+# Hard spec point for ota_fc_ws at VDD = 1.2 V.
+# Limits are as tight as the hand-designed golden golden/ota_fc_ws_hard_3_gain.sp (two-stage, cascoded NMOS mirror in stage 1)
+# allows with >= 5 % margin at TT and a pass at all five corners (tt ff ss sf fs).
+profile: hard_3_gain
+description: "Hard point, highest gain at 1.2 V: gain >= 73.1 dB with swing >= 0.79 V and power <= 204 uW; slow (UGB 16.2 MHz, settling 36 ns)."
+circuit: ota_fc_ws
+dut_ports: iref inp inn out
+testbenches:
+  ota_ol_ac:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 73.1
+    rule: golden TT / 1.05, or the golden's worst corner if lower
+  ugb_Hz:
+    op: '>='
+    limit: 16200000.0
+    rule: golden TT / 1.05, or the golden's worst corner if lower
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: '>= 60 deg'
+  power_uW:
+    op: '<='
+    limit: 204.0
+    rule: golden TT / 0.95, or the golden's worst corner if higher
+  rise_settle_ns:
+    op: '<='
+    limit: 31.7
+    rule: golden TT / 0.95, or the golden's worst corner if higher
+  fall_settle_ns:
+    op: '<='
+    limit: 35.6
+    rule: golden TT / 0.95, or the golden's worst corner if higher
+  swing_V:
+    op: '>='
+    limit: 0.79
+    rule: golden TT / 1.05, or the golden's worst corner if lower
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: no transistor out of saturation

@@ -1,0 +1,27 @@
+profile: hard_2_low_vmin
+description: 'Hard point H2: accurate copy (|err| <= 0.2 %) at very low compliance (Vmin <= 85 mV; the weak-inversion bound is ~76 mV when the bottom devices sit >= 50 mV above Vdsat) with Rout >= 15 MOhm. Needs a low-voltage cascode with every device in weak inversion and the bottom devices at Vds ~ 6 Ut.'
+circuit: cm_cascode
+dut_ports: in out
+testbenches:
+  mirror_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA into 'in', Vo swept 0..VDD (metrics at Vo = 0.9 V)
+golden: benchmark/golden/cm_cascode_hard_2_low_vmin.sp
+limits:
+  iout_err_pct:
+    op: 'abs<='
+    limit: 0.2
+    rule: "hard point; golden TT 0.15 (+25 %), worst corner 0.15"
+  rout_kohm:
+    op: '>='
+    limit: 15000.0
+    rule: "hard point; golden TT 19881 (+33 %), worst corner 19399"
+  vmin_V:
+    op: '<='
+    limit: 0.085
+    rule: "hard point; golden TT 0.079 (+7.1 %), worst corner 0.079"
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: "no transistor out of saturation at Vo = 0.9 V"

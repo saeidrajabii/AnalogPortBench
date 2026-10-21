@@ -1,0 +1,49 @@
+{
+ "task": "T3__ota_tele__hard_3_fast",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_3_fast.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 37.9,
+  "ugf_Hz": 45841354.96059849,
+  "pm_deg": 78.6,
+  "gm_dB": 34.0,
+  "power_uW": 130.3,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 13.0,
+  "rise_overshoot_pct": 0.56,
+  "rise_slew_V_per_us": 18.0,
+  "fall_settle_ns": 23.95,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 14.6,
+  "swing_V": 0.617,
+  "swing_lo_V": 0.262,
+  "swing_hi_V": 0.879,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

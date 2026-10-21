@@ -1,0 +1,47 @@
+{
+ "task": "T2__ota_tele__p1_swing_lowpower",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p1_swing_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@low_s2",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 30.05,
+  "ugf_Hz": 42536196.07507775,
+  "pm_deg": 87.6,
+  "gm_dB": null,
+  "power_uW": 56.33,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 13.83,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 20.7,
+  "fall_settle_ns": 28.82,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 10.5,
+  "swing_V": 0.788,
+  "swing_lo_V": 0.196,
+  "swing_hi_V": 0.984,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "gm_dB",
+  "n_triode"
+ ]
+}

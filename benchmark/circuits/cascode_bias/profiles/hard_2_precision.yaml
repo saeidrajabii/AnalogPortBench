@@ -1,0 +1,33 @@
+# Hard spec point for cascode_bias at VDD = 1.2 V (hand-designed golden: benchmark/golden/cascode_bias_hard_2_precision.sp).
+# Limits set as tight as the golden allows with >= 5 % margin at TT and a pass at tt ff ss sf fs.
+# Fails: the naive port (sky130_naive_keepL.sp) and the 1.2 V golden cascode_bias_1v2.sp (Isink +0.20 %, mismatch -62 nA).
+profile: hard_2_precision
+description: 'Precision: Isink and Isource within 0.06 % of Iref and |mismatch| <= 22 nA at Vo = 0.9 V, matched range >= 0.94 V at 1.2 V.'
+circuit: cascode_bias
+dut_ports: iin out vb1 vb2 vb3 vb4
+testbenches:
+  cascode_bias_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA
+limits:
+  mismatch_0v9_nA:
+    op: abs<=
+    limit: 22
+    rule: '|mismatch| <= 22 nA at Vo = 0.9 V'
+  match_width_V:
+    op: '>='
+    limit: 0.94
+    rule: '>= 0.94 V'
+  isink_err_pct:
+    op: abs<=
+    limit: 0.06
+    rule: '|Isink - Iref| <= 0.06 % at Vo = 0.9 V'
+  isource_err_pct:
+    op: abs<=
+    limit: 0.06
+    rule: '|Isource - Iref| <= 0.06 % at Vo = 0.9 V'
+  n_triode:
+    op: <=
+    limit: 0
+    rule: no transistor out of saturation

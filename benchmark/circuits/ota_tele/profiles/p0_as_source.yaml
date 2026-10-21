@@ -1,0 +1,58 @@
+# Spec profile for the spec-variation study (see profiles/README.md).
+profile: p0_as_source
+description: Same limits as spec.yaml (derived from the 180 nm design at 1.8 V), now
+  at VDD = 1.2 V.
+circuit: ota_tele
+dut_ports: iref inp inn out
+testbenches:
+  opamp_loop:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+  opamp_tran:
+    IREF_uA: 20
+    VCM: VDD/2
+    CL: 1p
+    VSTEP: 0.2
+  ota_swing_dc:
+    IREF_uA: 20
+    VCM: VDD/2
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = VDD/2 = 0.6 V, Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 66.84
+    rule: '>= source - 3 dB'
+  ugf_Hz:
+    op: '>='
+    limit: 44560000.0
+    rule: '>= 0.8 x source'
+  pm_deg:
+    op: '>='
+    limit: 55.0
+    rule: '>= 55 deg'
+  gm_dB:
+    op: '>='
+    limit: 10.0
+    rule: '>= 10 dB'
+  power_uW:
+    op: <=
+    limit: 267.2
+    rule: <= 1.2 x source
+  rise_settle_ns:
+    op: <=
+    limit: 19.17
+    rule: <= 1.5 x source
+  fall_settle_ns:
+    op: <=
+    limit: 19.42
+    rule: <= 1.5 x source
+  swing_V:
+    op: '>='
+    limit: 0.4288
+    rule: '>= 0.8 x source'
+  n_triode:
+    op: <=
+    limit: 0
+    rule: no more transistors out of saturation than the source

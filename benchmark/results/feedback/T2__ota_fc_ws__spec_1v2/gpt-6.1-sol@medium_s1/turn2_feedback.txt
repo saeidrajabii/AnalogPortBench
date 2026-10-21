@@ -1,0 +1,8 @@
+## Your reply could not be evaluated
+- ota_ol_ac: SimError: ngspice failed:
+- Error on line:
+- opamp_tran: SimError: ngspice failed:
+- ota_swing_dc: SimError: ngspice failed:
+
+This does not count as one of your 3 design attempts. Reply in the same format: exactly one
+```spice code block containing the complete, corrected netlist.

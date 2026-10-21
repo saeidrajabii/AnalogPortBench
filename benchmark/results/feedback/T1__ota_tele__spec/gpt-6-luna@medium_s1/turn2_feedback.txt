@@ -1,0 +1,5 @@
+## Your reply could not be evaluated
+- reference current used directly as the source of XMN (must be mirrored)
+
+This does not count as one of your 3 design attempts. Reply in the same format: exactly one
+```spice code block containing the complete, corrected netlist.

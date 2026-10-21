@@ -1,0 +1,35 @@
+{
+ "task": "T3__cm_simple__hard_2_accurate",
+ "tier": "T3",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/profiles/hard_2_accurate.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 19.989,
+  "iout_vdd_uA": 19.998,
+  "iout_err_pct": -0.05,
+  "rout_kohm": 26007.8,
+  "vmin_V": 0.303,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "vmin_V"
+ ]
+}

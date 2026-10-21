@@ -1,0 +1,38 @@
+{
+ "task": "T3__ota_5t__hard_2_lowpower",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@low_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 34.93,
+  "f3db_Hz": 192643.55721360067,
+  "ugb_Hz": 10388212.42111342,
+  "pm_deg": 75.9,
+  "vout_dc_V": 0.6857,
+  "power_uW": 30.96,
+  "input_current_uA": 0.0,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "ugb_Hz",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,16 @@
+# Environment for AnalogPortBench (0.18 um -> SKY130 analog porting benchmark).
+#   conda env create -f environment.yml      (then: conda activate analog-port)
+#   bash scripts/setup_env.sh                 (also installs the Sky130 PDK via ciel)
+name: analog-port
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - ngspice=41        # newest on conda-forge; repo results were made with ngspice-42 (BSIM3 code is the same)
+  - numpy
+  - matplotlib
+  - pyyaml
+  - pip
+  - pip:
+      - ciel           # open_pdks PDK manager (successor of volare)
+      - openai         # OpenAI runner (benchmark/llm/run_openai_v2.py)

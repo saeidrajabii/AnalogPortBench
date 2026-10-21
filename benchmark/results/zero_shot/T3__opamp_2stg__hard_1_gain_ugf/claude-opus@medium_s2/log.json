@@ -1,0 +1,43 @@
+{
+ "task": "T3__opamp_2stg__hard_1_gain_ugf",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_1_gain_ugf.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 52.89,
+  "ugf_Hz": 68931181.8182595,
+  "pm_deg": 73.6,
+  "gm_dB": 21.7,
+  "power_uW": 258.13,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.04,
+  "rise_overshoot_pct": 0.04,
+  "rise_slew_V_per_us": 28.6,
+  "fall_settle_ns": 7.87,
+  "fall_overshoot_pct": 0.88,
+  "fall_slew_V_per_us": 31.6,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz"
+ ]
+}

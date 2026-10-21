@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele__hard_1_gain_speed",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_1_gain_speed.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s2",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 42.54,
+  "ugf_Hz": 46573053.62323672,
+  "pm_deg": 86.4,
+  "gm_dB": 44.5,
+  "power_uW": 88.28,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 10.34,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 30.3,
+  "fall_settle_ns": 34.46,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 10.5,
+  "swing_V": 0.197,
+  "swing_lo_V": 0.599,
+  "swing_hi_V": 0.796,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

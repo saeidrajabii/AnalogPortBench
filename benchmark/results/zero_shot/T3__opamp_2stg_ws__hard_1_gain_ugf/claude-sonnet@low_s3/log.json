@@ -1,0 +1,44 @@
+{
+ "task": "T3__opamp_2stg_ws__hard_1_gain_ugf",
+ "tier": "T3",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/profiles/hard_1_gain_ugf.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 42.78,
+  "ugf_Hz": 102161577.27161546,
+  "pm_deg": 65.7,
+  "gm_dB": 25.7,
+  "power_uW": 259.46,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 5.23,
+  "rise_overshoot_pct": 0.22,
+  "rise_slew_V_per_us": 54.5,
+  "fall_settle_ns": 10.07,
+  "fall_overshoot_pct": 18.94,
+  "fall_slew_V_per_us": 41.8,
+  "n_triode": 4
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "task": "T2__cm_cascode__spec",
+ "tier": "T2",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.014,
+  "iout_vdd_uA": 20.025,
+  "iout_err_pct": 0.07,
+  "rout_kohm": 26490.1,
+  "vmin_V": 0.192,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

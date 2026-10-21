@@ -1,0 +1,47 @@
+{
+ "task": "T3__opamp_2stg__hard_2_settle",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_2_settle.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 44.9,
+  "ugf_Hz": 66120289.05705304,
+  "pm_deg": 58.1,
+  "gm_dB": 32.0,
+  "power_uW": 163.91,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 12.6,
+  "rise_overshoot_pct": 3.88,
+  "rise_slew_V_per_us": 39.6,
+  "fall_settle_ns": 20.19,
+  "fall_overshoot_pct": 27.65,
+  "fall_slew_V_per_us": 32.4,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

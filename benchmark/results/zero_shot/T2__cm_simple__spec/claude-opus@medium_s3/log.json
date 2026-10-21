@@ -1,0 +1,33 @@
+{
+ "task": "T2__cm_simple__spec",
+ "tier": "T2",
+ "circuit": "cm_simple",
+ "spec": "circuits/cm_simple/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s3",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 20.38,
+  "iout_vdd_uA": 20.705,
+  "iout_err_pct": 1.9,
+  "rout_kohm": 913.5,
+  "vmin_V": 0.161,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

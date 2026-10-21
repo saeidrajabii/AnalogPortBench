@@ -1,0 +1,26 @@
+* Open-loop output-swing testbench: inn at VCM, inp swept VCM-Vsw..VCM+Vsw (DC).
+* Output swing = output range over which the small-signal gain dVout/dVid stays within 6 dB of its peak.
+* DUT: .subckt dut iref inp inn out.
+$HEADER
+.param VDD=$VDD Iref=$IREF
+.global vdd
+.options reltol=1e-4 gmin=1e-12 vntol=1e-7 abstol=1e-12
+.temp 27
+
+$DUT
+
+VSUP vdd 0 dc {VDD}
+.param VCM=$VCM
+IREF vdd niref dc {Iref}
+VCMS ninn 0 dc {VCM}
+VID ninp ninn dc 0
+XDUT niref ninp ninn nout dut
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=9
+dc VID -30m 30m 5u
+wrdata swing.txt v(nout)
+.endc
+.end

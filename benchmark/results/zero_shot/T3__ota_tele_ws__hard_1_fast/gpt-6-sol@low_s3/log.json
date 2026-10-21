@@ -1,0 +1,54 @@
+{
+ "task": "T3__ota_tele_ws__hard_1_fast",
+ "tier": "T3",
+ "circuit": "ota_tele_ws",
+ "spec": "circuits/ota_tele_ws/profiles/hard_1_fast.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@low_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [
+  "reference current used directly as the source of XBIAS (must be mirrored)"
+ ],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.03,
+  "f3db_Hz": 1299096.5948909854,
+  "ugb_Hz": 60736221.94346338,
+  "pm_deg": 49.7,
+  "vout_dc_V": 0.5447,
+  "power_uW": 141.36,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 14.31,
+  "rise_overshoot_pct": 3.83,
+  "rise_slew_V_per_us": 33.5,
+  "fall_settle_ns": 31.93,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 10.6,
+  "swing_V": 0.279,
+  "swing_lo_V": 0.566,
+  "swing_hi_V": 0.845,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "pm_deg",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

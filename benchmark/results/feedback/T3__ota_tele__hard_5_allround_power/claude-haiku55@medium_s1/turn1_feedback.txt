@@ -1,0 +1,25 @@
+## Your reply could not be evaluated
+- MB1: element type 'M' not allowed
+- MB2: element type 'M' not allowed
+- MB3: element type 'M' not allowed
+- MB4: element type 'M' not allowed
+- MB5: element type 'M' not allowed
+- MB6: element type 'M' not allowed
+- MB7: element type 'M' not allowed
+- MB8: element type 'M' not allowed
+- MT: element type 'M' not allowed
+- M1: element type 'M' not allowed
+- M2: element type 'M' not allowed
+- M3: element type 'M' not allowed
+- M4: element type 'M' not allowed
+- M5: element type 'M' not allowed
+- M6: element type 'M' not allowed
+- M7: element type 'M' not allowed
+- M8: element type 'M' not allowed
+- opamp_loop: SimError: ngspice failed:
+- Error on line:
+- opamp_tran: SimError: ngspice failed:
+- ota_swing_dc: SimError: ngspice failed:
+
+This does not count as one of your 3 design attempts. Reply in the same format: exactly one
+```spice code block containing the complete, corrected netlist.

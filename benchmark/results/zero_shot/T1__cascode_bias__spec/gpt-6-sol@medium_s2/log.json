@@ -1,0 +1,38 @@
+{
+ "task": "T1__cascode_bias__spec",
+ "tier": "T1",
+ "circuit": "cascode_bias",
+ "spec": "circuits/cascode_bias/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6-sol@medium_s2",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 1.3517,
+  "vb2_V": 0.7998,
+  "vb3_V": 0.8991,
+  "vb4_V": 0.4136,
+  "mismatch_0v9_nA": -10.8,
+  "match_lo_V": 0.25,
+  "match_hi_V": 1.53,
+  "match_width_V": 1.28,
+  "isink_err_pct": 0.0,
+  "isource_err_pct": -0.05,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

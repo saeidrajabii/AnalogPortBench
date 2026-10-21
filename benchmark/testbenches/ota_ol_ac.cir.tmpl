@@ -1,0 +1,29 @@
+* Open-loop AC testbench for a low-gain OTA (from tb_OTA_5T): both inputs at VCM, AC on inp.
+* DUT: .subckt dut iref inp inn out.
+$HEADER
+.param VDD=$VDD Iref=$IREF
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12
+.temp 27
+
+$DUT
+
+VSUP vdd 0 dc {VDD}
+.param VCM=$VCM CL=$CL
+IREF vdd niref dc {Iref}
+VCMS ninn 0 dc {VCM}
+VIN ninp ninn dc 0 ac 1
+XDUT niref ninp ninn nout dut
+CL nout 0 {CL}
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+op
+print all > op_nodes.txt
+$OPPRINT
+ac dec 50 10 1G
+wrdata ac.txt v(nout)
+.endc
+.end

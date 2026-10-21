@@ -1,0 +1,18 @@
+{
+ "task": "T4__cm_cascode__infeasible_1_vmin",
+ "tier": "T4",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/infeasible_1_vmin.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@medium_s2",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": true,
+ "extraction": {
+  "n_code_blocks": 0
+ }
+}

@@ -1,0 +1,40 @@
+# INFEASIBLE TASK (tier T4): no design can meet match_width_V >= 1.144 V at VDD = 1.2 V.
+# Argument: with the source and sink gate voltages fixed while Vo is swept, a transistor (or stack) with V across it
+# carries at most (1 - exp(-V/Ut)) of its saturated current (weak inversion, Ut = 25.85 mV at 27 C; strong inversion
+# is worse). Keeping |Isource - Isink| < 1 uA at 20 uA needs each side within ~5 %, i.e. >= 3 Ut ~ 78 mV at each
+# rail, so the matched range is at most ~1.2 - 2 x 0.078 = 1.04 V (a stricter form, Isink*Isource*exp(-(VDD-W)/Ut) <
+# (1 uA)^2 with both currents >= 18 uA, gives W < 1.05 V; see circuits/cascode_bias/profiles/infeasible_1_range.yaml).
+# Scope: designs whose source/sink gates are not driven from `out` (a cascode bias generator by definition).
+# Best existing design: golden/cascode_bias_ws_1v2.sp reaches 0.95-0.96 V at all corners (16 % short).
+profile: infeasible_1_range
+description: The source-derived spec at VDD = 1.2 V without supply scaling (matched
+  range >= 1.144 V).
+circuit: cascode_bias_ws
+dut_ports: iin out vb1 vb2 vb3 vb4
+testbenches:
+  cascode_bias_dc:
+    IREF_uA: 20
+vdd: 1.2
+infeasible: true
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA
+limits:
+  mismatch_0v9_nA:
+    op: abs<=
+    limit: 1000.0
+    rule: '|mismatch| <= 1 uA at Vo = 0.9 V'
+  match_width_V:
+    op: '>='
+    limit: 1.144
+    rule: '>= 0.8 x source'
+  isink_err_pct:
+    op: abs<=
+    limit: 10.0
+    rule: '|Isink - Iref| <= 10 % at Vo = 0.9 V'
+  isource_err_pct:
+    op: abs<=
+    limit: 10.0
+    rule: '|Isource - Iref| <= 10 % at Vo = 0.9 V'
+  n_triode:
+    op: <=
+    limit: 0
+    rule: no more transistors out of saturation than the source

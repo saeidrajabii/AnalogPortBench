@@ -1,0 +1,35 @@
+{
+ "task": "T1__cm_cascode__spec",
+ "tier": "T1",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-haiku55@medium_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "iout_0v9_uA": 18.598,
+  "iout_vdd_uA": 18.648,
+  "iout_err_pct": -7.01,
+  "rout_kohm": 16025.6,
+  "vmin_V": null,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "vmin_V"
+ ]
+}

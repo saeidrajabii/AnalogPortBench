@@ -1,0 +1,5 @@
+## Your reply could not be evaluated
+- The design draws 9.0012 uA from the input source (> 1 uA).
+
+This does not count as one of your 3 design attempts. Reply in the same format: exactly one
+```spice code block containing the complete, corrected netlist.

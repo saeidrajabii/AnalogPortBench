@@ -1,0 +1,36 @@
+# Hard spec point for ota_5t at VDD = 1.2 V (hand-designed golden: benchmark/golden/ota_5t_hard_1_gain.sp, single-stage
+# telescopic PMOS-input OTA with cascoded NMOS mirror). Limits as tight as the golden allows with >= 5 % margin at TT and
+# a pass at all five corners (tt ff ss sf fs); the gain limit is the golden's worst corner (fs, 48.29 dB).
+# Fails: the naive port (sky130_naive_keepL.sp) and the 1.2 V golden ota_5t_1v2.sp (gain 35.2 dB).
+profile: hard_1_gain
+description: 'Highest gain at the spec UGB: DC gain >= 48 dB with UGB >= 16.16 MHz, PM >= 60 deg, power <= 66 uW at 1.2 V (VCM = 0.5 V).'
+circuit: ota_5t
+dut_ports: iref inp inn out
+testbenches:
+  ota_ol_ac:
+    IREF_uA: 20
+    VCM: 0.5
+    CL: 1p
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, VCM = 0.5 V, Iref = 20 uA, CL = 1 pF
+limits:
+  dc_gain_dB:
+    op: '>='
+    limit: 48.0
+    rule: golden TT / 1.05, or the golden's worst corner if lower
+  ugb_Hz:
+    op: '>='
+    limit: 16160000.0
+    rule: '>= 16.16 MHz (spec.yaml)'
+  pm_deg:
+    op: '>='
+    limit: 60.0
+    rule: '>= 60 deg'
+  power_uW:
+    op: '<='
+    limit: 66.0
+    rule: golden TT / 0.95, or the golden's worst corner if higher
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: no transistor out of saturation

@@ -1,0 +1,47 @@
+{
+ "task": "T1__ota_fc_ws__spec",
+ "tier": "T1",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "gpt-6-luna@low_s1",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 40.73,
+  "f3db_Hz": 405476.25594509277,
+  "ugb_Hz": 43791760.894531384,
+  "pm_deg": 79.7,
+  "vout_dc_V": 1.1998,
+  "power_uW": 326.85,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 16.28,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 18.8,
+  "fall_settle_ns": 16.5,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 17.4,
+  "swing_V": 1.124,
+  "swing_lo_V": 0.238,
+  "swing_hi_V": 1.363,
+  "n_triode": 5
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "n_triode"
+ ]
+}

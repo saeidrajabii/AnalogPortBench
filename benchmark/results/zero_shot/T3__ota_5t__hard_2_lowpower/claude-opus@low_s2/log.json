@@ -1,0 +1,38 @@
+{
+ "task": "T3__ota_5t__hard_2_lowpower",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 32.77,
+  "f3db_Hz": 289628.82678198477,
+  "ugb_Hz": 12585051.259433657,
+  "pm_deg": 86.1,
+  "vout_dc_V": 0.5817,
+  "power_uW": 32.23,
+  "input_current_uA": 0.0,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "ugb_Hz",
+  "n_triode"
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "task": "T1__cascode_bias_ws__spec",
+ "tier": "T1",
+ "circuit": "cascode_bias_ws",
+ "spec": "circuits/cascode_bias_ws/spec.yaml",
+ "vdd": 1.8,
+ "run": "claude-opus@medium_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "vb1_V": 1.206,
+  "vb2_V": 0.9711,
+  "vb3_V": 0.8491,
+  "vb4_V": 0.5911,
+  "mismatch_0v9_nA": -86.4,
+  "match_lo_V": 0.19,
+  "match_hi_V": 1.54,
+  "match_width_V": 1.35,
+  "isink_err_pct": 0.12,
+  "isource_err_pct": -0.31,
+  "n_triode": 0
+ },
+ "passed": true,
+ "fails": []
+}

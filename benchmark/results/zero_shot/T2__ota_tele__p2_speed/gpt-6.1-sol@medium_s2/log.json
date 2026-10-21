@@ -1,0 +1,47 @@
+{
+ "task": "T2__ota_tele__p2_speed",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p2_speed.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@medium_s2",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 51.63,
+  "ugf_Hz": 52704871.219758265,
+  "pm_deg": 71.2,
+  "gm_dB": 27.4,
+  "power_uW": 184.1,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 8.24,
+  "rise_overshoot_pct": 0.99,
+  "rise_slew_V_per_us": 31.6,
+  "fall_settle_ns": 21.19,
+  "fall_overshoot_pct": 2.06,
+  "fall_slew_V_per_us": 22.3,
+  "swing_V": 0.826,
+  "swing_lo_V": 0.133,
+  "swing_hi_V": 0.96,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "ugf_Hz",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

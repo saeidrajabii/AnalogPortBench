@@ -1,0 +1,47 @@
+{
+ "task": "T3__opamp_2stg__hard_3_lowpower",
+ "tier": "T3",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/profiles/hard_3_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@low_s3",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 64.16,
+  "ugf_Hz": 42797769.50041727,
+  "pm_deg": 15.8,
+  "gm_dB": 4.8,
+  "power_uW": 146.02,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 48.86,
+  "rise_overshoot_pct": 37.81,
+  "rise_slew_V_per_us": 17.8,
+  "fall_settle_ns": 49.78,
+  "fall_overshoot_pct": 62.89,
+  "fall_slew_V_per_us": 13.5,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

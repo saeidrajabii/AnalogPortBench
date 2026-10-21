@@ -1,0 +1,45 @@
+{
+ "task": "T2__opamp_2stg_ws__spec",
+ "tier": "T2",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 39.8,
+  "ugf_Hz": 60831975.61160191,
+  "pm_deg": 64.8,
+  "gm_dB": 34.7,
+  "power_uW": 186.52,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 11.75,
+  "rise_overshoot_pct": 1.2,
+  "rise_slew_V_per_us": 32.5,
+  "fall_settle_ns": 16.4,
+  "fall_overshoot_pct": 19.87,
+  "fall_slew_V_per_us": 26.0,
+  "n_triode": 4
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "rise_settle_ns",
+  "n_triode"
+ ]
+}

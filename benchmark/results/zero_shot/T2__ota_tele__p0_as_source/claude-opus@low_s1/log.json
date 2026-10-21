@@ -1,0 +1,49 @@
+{
+ "task": "T2__ota_tele__p0_as_source",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p0_as_source.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@low_s1",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 52.53,
+  "ugf_Hz": 29574188.338849302,
+  "pm_deg": 79.5,
+  "gm_dB": 37.0,
+  "power_uW": 180.18,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 19.34,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 15.2,
+  "fall_settle_ns": 34.54,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 11.3,
+  "swing_V": 0.75,
+  "swing_lo_V": 0.163,
+  "swing_hi_V": 0.913,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

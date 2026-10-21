@@ -1,0 +1,68 @@
+# INFEASIBLE TASK (T4). Vmin <= 27 mV with the spec.yaml accuracy budget (|err| <= 10 %), VDD = 1.2 V.
+#
+# Physical argument (Ut = kT/q = 25.86 mV at 27 C):
+#  1. Iout has to reach ground through a transistor M with its source at 0 and its drain below 'out'.
+#     In every mirror whose output gates are set by the reference branch (simple, cascode, low-voltage or
+#     regulated cascode, any W ratio, i.e. also a deliberately skewed ratio) the gate of M does not depend on Vo.
+#  2. For fixed Vg and Vs, Id = I0(Vds) * (1 - exp(-Vds/Ut)) at best (exact in weak inversion, slower
+#     saturation in moderate/strong inversion); I0 grows with Vds (DIBL).
+#  3. n_triode <= 0 at Vo = 0.9 V forces Vds(M) >= Vdsat >= 2Ut/Abulk; smallest Sky130 LVT Vdsat seen in
+#     these runs 42 mV, use 40 mV: 1 - exp(-40/25.86) = 0.787.
+#  4. At Vo = Vmin, Vds(M) <= Vmin, so Iout(Vmin)/Iout(0.9) <= (1 - exp(-Vmin/Ut)) / 0.787.
+#  5. The best use of the error budget is Iout(0.9) = 1.10 Iref (a +10 % mirror ratio). Then
+#     1 - exp(-Vmin/Ut) >= 0.95/1.10 * 0.787 = 0.680  =>  Vmin >= Ut * ln(1/0.320) = 1.139 Ut = 29.4 mV
+#     (30.6 mV with the measured 42 mV Vdsat). The limit 0.027 V is 8 % below this floor.
+#
+# How close the designs get (TT): golden hard_1_low_vmin (+8 % skewed LV cascode, every device >= 100 mV into
+# saturation) 0.054 V at +8.2 %. frontier_probe below (regulated cascode, bottom devices at Vds = 71 mV, only
+# 24 mV above Vdsat, output side W x 1.09, so not a golden): 0.043 V at +9.0 %, n_triode 0 -- on the bound for
+# its Vds and error (43.8 mV). Bottom devices at Vdsat with +10 % would give ~33 mV; 27 mV stays out of reach.
+#
+# Caveat: the bound needs the gate drive of M to be independent of Vo. A loop that senses 'out' itself and
+# forces the reference transistor's drain to Vo (active Vds-replica / triode mirror) is outside this argument.
+profile: infeasible_1_vmin
+description: 'INFEASIBLE: Vmin <= 27 mV at |err| <= 10 %; weak-inversion bound with the bottom device at >= Vdsat and a +10 % ratio gives Vmin >= 29.4 mV.'
+circuit: cm_simple
+dut_ports: in out
+testbenches:
+  mirror_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA into 'in', Vo swept 0..VDD (metrics at Vo = 0.9 V)
+infeasible: true
+limits:
+  iout_err_pct:
+    op: 'abs<='
+    limit: 10.0
+    rule: "as spec.yaml"
+  rout_kohm:
+    op: '>='
+    limit: 1000.0
+    rule: "as hard_1_low_vmin"
+  vmin_V:
+    op: '<='
+    limit: 0.027
+    rule: "infeasible point; bound 29.4 mV (see header)"
+  n_triode:
+    op: '<='
+    limit: 0
+    rule: "no transistor out of saturation at Vo = 0.9 V"
+frontier_probe: |
+  .subckt dut in out
+  R1 in nb 3.5k
+  XM3 nb in nc 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=1 nf=1 m=8
+  XM1 nc nb 0 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=4 nf=1 m=8
+  XM4 out vg4 nd 0 sky130_fd_pr__nfet_01v8_lvt W=109 L=0.5 nf=1 m=8
+  XM2 nd nb 0 0 sky130_fd_pr__nfet_01v8_lvt W=109 L=4 nf=1 m=8
+  XMb0 vpb nb 0 0 sky130_fd_pr__nfet_01v8_lvt W=100 L=4 nf=1 m=1
+  XMpd vpb vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=2 nf=1 m=1
+  XMt ts vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMpa p1 nd ts vdd sky130_fd_pr__pfet_01v8_lvt W=40 L=1 nf=1 m=1
+  XMpb p2 nc ts vdd sky130_fd_pr__pfet_01v8_lvt W=40 L=1 nf=1 m=1
+  XMna p1 p1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMnb p2 p1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMn2 vg4 p2 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+  XMp2 vg4 vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=2 nf=1 m=1
+  .ends dut
+constraints:
+- "The output current must be set by transistors whose gates are driven only by the reference branch: no amplifier or feedback loop may sense `out`."

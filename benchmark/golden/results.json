@@ -1,0 +1,868 @@
+{
+  "cascode_bias_1v2": {
+    "circuit": "cascode_bias",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "vb1_V": 0.6649,
+      "vb2_V": 0.6649,
+      "vb3_V": 0.5415,
+      "vb4_V": 0.4215,
+      "mismatch_0v9_nA": 9.3,
+      "match_lo_V": 0.11,
+      "match_hi_V": 1.07,
+      "match_width_V": 0.96,
+      "isink_err_pct": 0.17,
+      "isource_err_pct": 0.21,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "mismatch_0v9_nA",
+        "value": 9.3,
+        "op": "abs<=",
+        "limit": 1000.0,
+        "pass": true
+      },
+      {
+        "metric": "match_width_V",
+        "value": 0.96,
+        "op": ">=",
+        "limit": 0.96,
+        "pass": true
+      },
+      {
+        "metric": "isink_err_pct",
+        "value": 0.17,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "isource_err_pct",
+        "value": 0.21,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 1,
+        "pass": true
+      }
+    ]
+  },
+  "cascode_bias_1v8": {
+    "circuit": "cascode_bias",
+    "vdd": 1.8,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "vb1_V": 1.1998,
+      "vb2_V": 0.8997,
+      "vb3_V": 0.8455,
+      "vb4_V": 0.5455,
+      "mismatch_0v9_nA": 10.1,
+      "match_lo_V": 0.15,
+      "match_hi_V": 1.58,
+      "match_width_V": 1.43,
+      "isink_err_pct": 0.02,
+      "isource_err_pct": 0.08,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "mismatch_0v9_nA",
+        "value": 10.1,
+        "op": "abs<=",
+        "limit": 1000.0,
+        "pass": true
+      },
+      {
+        "metric": "match_width_V",
+        "value": 1.43,
+        "op": ">=",
+        "limit": 0.96,
+        "pass": true
+      },
+      {
+        "metric": "isink_err_pct",
+        "value": 0.02,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "isource_err_pct",
+        "value": 0.08,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 1,
+        "pass": true
+      }
+    ]
+  },
+  "cm_cascode_1v2": {
+    "circuit": "cm_cascode",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "iout_0v9_uA": 20.005,
+      "iout_vdd_uA": 20.009,
+      "iout_err_pct": 0.03,
+      "rout_kohm": 74074.1,
+      "vmin_V": 0.143,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "iout_err_pct",
+        "value": 0.03,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "rout_kohm",
+        "value": 74074.1,
+        "op": ">=",
+        "limit": 8591.0,
+        "pass": true
+      },
+      {
+        "metric": "vmin_V",
+        "value": 0.143,
+        "op": "<=",
+        "limit": 0.434,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ]
+  },
+  "cm_cascode_1v8": {
+    "circuit": "cm_cascode",
+    "vdd": 1.8,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "iout_0v9_uA": 20.005,
+      "iout_vdd_uA": 20.017,
+      "iout_err_pct": 0.03,
+      "rout_kohm": 74074.1,
+      "vmin_V": 0.143,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "iout_err_pct",
+        "value": 0.03,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "rout_kohm",
+        "value": 74074.1,
+        "op": ">=",
+        "limit": 8591.0,
+        "pass": true
+      },
+      {
+        "metric": "vmin_V",
+        "value": 0.143,
+        "op": "<=",
+        "limit": 0.434,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ]
+  },
+  "cm_simple_1v2": {
+    "circuit": "cm_simple",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "iout_0v9_uA": 20.435,
+      "iout_vdd_uA": 20.789,
+      "iout_err_pct": 2.17,
+      "rout_kohm": 839.1,
+      "vmin_V": 0.153,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "iout_err_pct",
+        "value": 2.17,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "rout_kohm",
+        "value": 839.1,
+        "op": ">=",
+        "limit": 138.2,
+        "pass": true
+      },
+      {
+        "metric": "vmin_V",
+        "value": 0.153,
+        "op": "<=",
+        "limit": 0.421,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ]
+  },
+  "cm_simple_1v8": {
+    "circuit": "cm_simple",
+    "vdd": 1.8,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "iout_0v9_uA": 20.435,
+      "iout_vdd_uA": 21.506,
+      "iout_err_pct": 2.17,
+      "rout_kohm": 839.1,
+      "vmin_V": 0.153,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "iout_err_pct",
+        "value": 2.17,
+        "op": "abs<=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "rout_kohm",
+        "value": 839.1,
+        "op": ">=",
+        "limit": 138.2,
+        "pass": true
+      },
+      {
+        "metric": "vmin_V",
+        "value": 0.153,
+        "op": "<=",
+        "limit": 0.421,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ]
+  },
+  "opamp_2stg_1v2": {
+    "circuit": "opamp_2stg",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 74.06,
+      "ugf_Hz": 69316155.29634409,
+      "pm_deg": 64.6,
+      "gm_dB": 11.6,
+      "power_uW": 219.28,
+      "rise_settle_ns": 11.27,
+      "rise_overshoot_pct": 0.14,
+      "rise_slew_V_per_us": 29.3,
+      "fall_settle_ns": 15.74,
+      "fall_overshoot_pct": 2.88,
+      "fall_slew_V_per_us": 28.4,
+      "n_triode": 2
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 74.06,
+        "op": ">=",
+        "limit": 72.71,
+        "pass": true
+      },
+      {
+        "metric": "ugf_Hz",
+        "value": 69316155.29634409,
+        "op": ">=",
+        "limit": 66590000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 64.6,
+        "op": ">=",
+        "limit": 55.0,
+        "pass": true
+      },
+      {
+        "metric": "gm_dB",
+        "value": 11.6,
+        "op": ">=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 219.28,
+        "op": "<=",
+        "limit": 296.4,
+        "pass": true
+      },
+      {
+        "metric": "rise_settle_ns",
+        "value": 11.27,
+        "op": "<=",
+        "limit": 12.24,
+        "pass": true
+      },
+      {
+        "metric": "fall_settle_ns",
+        "value": 15.74,
+        "op": "<=",
+        "limit": 26.73,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 2,
+        "op": "<=",
+        "limit": 2,
+        "pass": true
+      }
+    ]
+  },
+  "opamp_2stg_1v8": {
+    "circuit": "opamp_2stg",
+    "vdd": 1.8,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 76.65,
+      "ugf_Hz": 68324982.32350287,
+      "pm_deg": 58.3,
+      "gm_dB": 10.6,
+      "power_uW": 293.09,
+      "rise_settle_ns": 11.49,
+      "rise_overshoot_pct": 0.11,
+      "rise_slew_V_per_us": 33.0,
+      "fall_settle_ns": 15.3,
+      "fall_overshoot_pct": 13.27,
+      "fall_slew_V_per_us": 27.5,
+      "n_triode": 1
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 76.65,
+        "op": ">=",
+        "limit": 72.71,
+        "pass": true
+      },
+      {
+        "metric": "ugf_Hz",
+        "value": 68324982.32350287,
+        "op": ">=",
+        "limit": 66590000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 58.3,
+        "op": ">=",
+        "limit": 55.0,
+        "pass": true
+      },
+      {
+        "metric": "gm_dB",
+        "value": 10.6,
+        "op": ">=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 293.09,
+        "op": "<=",
+        "limit": 296.4,
+        "pass": true
+      },
+      {
+        "metric": "rise_settle_ns",
+        "value": 11.49,
+        "op": "<=",
+        "limit": 12.24,
+        "pass": true
+      },
+      {
+        "metric": "fall_settle_ns",
+        "value": 15.3,
+        "op": "<=",
+        "limit": 26.73,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 1,
+        "op": "<=",
+        "limit": 2,
+        "pass": true
+      }
+    ]
+  },
+  "ota_5t_1v2": {
+    "circuit": "ota_5t",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 36.93,
+      "f3db_Hz": 395787.8341884757,
+      "ugb_Hz": 27813027.2256758,
+      "pm_deg": 77.2,
+      "vout_dc_V": 0.6716,
+      "power_uW": 59.89,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 36.93,
+        "op": ">=",
+        "limit": 31.47,
+        "pass": true
+      },
+      {
+        "metric": "ugb_Hz",
+        "value": 27813027.2256758,
+        "op": ">=",
+        "limit": 16160000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 77.2,
+        "op": ">=",
+        "limit": 55.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 59.89,
+        "op": "<=",
+        "limit": 112.8,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 2,
+        "pass": true
+      }
+    ]
+  },
+  "ota_5t_1v8": {
+    "circuit": "ota_5t",
+    "vdd": 1.8,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 37.97,
+      "f3db_Hz": 471213.5410317592,
+      "ugb_Hz": 37336864.10597796,
+      "pm_deg": 76.9,
+      "vout_dc_V": 0.7078,
+      "power_uW": 105.61,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 37.97,
+        "op": ">=",
+        "limit": 31.47,
+        "pass": true
+      },
+      {
+        "metric": "ugb_Hz",
+        "value": 37336864.10597796,
+        "op": ">=",
+        "limit": 16160000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 76.9,
+        "op": ">=",
+        "limit": 55.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 105.61,
+        "op": "<=",
+        "limit": 112.8,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 2,
+        "pass": true
+      }
+    ]
+  },
+  "ota_tele_p0_as_source": {
+    "circuit": "ota_tele",
+    "profile": "p0_as_source",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 72.01,
+      "ugf_Hz": 49332800.50974621,
+      "pm_deg": 63.7,
+      "gm_dB": 14.4,
+      "power_uW": 255.7,
+      "rise_settle_ns": 10.91,
+      "rise_overshoot_pct": 0.0,
+      "rise_slew_V_per_us": 29.0,
+      "fall_settle_ns": 14.81,
+      "fall_overshoot_pct": 11.54,
+      "fall_slew_V_per_us": 27.6,
+      "swing_V": 0.795,
+      "swing_lo_V": 0.185,
+      "swing_hi_V": 0.98,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 72.01,
+        "op": ">=",
+        "limit": 66.84,
+        "pass": true
+      },
+      {
+        "metric": "ugf_Hz",
+        "value": 49332800.50974621,
+        "op": ">=",
+        "limit": 44560000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 63.7,
+        "op": ">=",
+        "limit": 55.0,
+        "pass": true
+      },
+      {
+        "metric": "gm_dB",
+        "value": 14.4,
+        "op": ">=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 255.7,
+        "op": "<=",
+        "limit": 267.2,
+        "pass": true
+      },
+      {
+        "metric": "rise_settle_ns",
+        "value": 10.91,
+        "op": "<=",
+        "limit": 19.17,
+        "pass": true
+      },
+      {
+        "metric": "fall_settle_ns",
+        "value": 14.81,
+        "op": "<=",
+        "limit": 19.42,
+        "pass": true
+      },
+      {
+        "metric": "swing_V",
+        "value": 0.795,
+        "op": ">=",
+        "limit": 0.4288,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ],
+    "other_profiles": {
+      "p1_swing_lowpower": {
+        "pass": false,
+        "fails": [
+          "power_uW"
+        ]
+      },
+      "p2_speed": {
+        "pass": false,
+        "fails": [
+          "ugf_Hz",
+          "fall_settle_ns"
+        ]
+      }
+    }
+  },
+  "ota_tele_p1_swing_lowpower": {
+    "circuit": "ota_tele",
+    "profile": "p1_swing_lowpower",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 65.18,
+      "ugf_Hz": 21813835.748036996,
+      "pm_deg": 72.2,
+      "gm_dB": 16.2,
+      "power_uW": 115.52,
+      "rise_settle_ns": 22.1,
+      "rise_overshoot_pct": 0.24,
+      "rise_slew_V_per_us": 11.7,
+      "fall_settle_ns": 27.08,
+      "fall_overshoot_pct": 0.0,
+      "fall_slew_V_per_us": 12.8,
+      "swing_V": 0.832,
+      "swing_lo_V": 0.148,
+      "swing_hi_V": 0.98,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 65.18,
+        "op": ">=",
+        "limit": 60.0,
+        "pass": true
+      },
+      {
+        "metric": "ugf_Hz",
+        "value": 21813835.748036996,
+        "op": ">=",
+        "limit": 20000000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 72.2,
+        "op": ">=",
+        "limit": 60.0,
+        "pass": true
+      },
+      {
+        "metric": "gm_dB",
+        "value": 16.2,
+        "op": ">=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 115.52,
+        "op": "<=",
+        "limit": 160.0,
+        "pass": true
+      },
+      {
+        "metric": "swing_V",
+        "value": 0.832,
+        "op": ">=",
+        "limit": 0.75,
+        "pass": true
+      },
+      {
+        "metric": "rise_settle_ns",
+        "value": 22.1,
+        "op": "<=",
+        "limit": 60.0,
+        "pass": true
+      },
+      {
+        "metric": "fall_settle_ns",
+        "value": 27.08,
+        "op": "<=",
+        "limit": 60.0,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ],
+    "other_profiles": {
+      "p0_as_source": {
+        "pass": false,
+        "fails": [
+          "dc_gain_dB",
+          "ugf_Hz",
+          "rise_settle_ns",
+          "fall_settle_ns"
+        ]
+      },
+      "p2_speed": {
+        "pass": false,
+        "fails": [
+          "ugf_Hz",
+          "rise_settle_ns",
+          "fall_settle_ns"
+        ]
+      }
+    }
+  },
+  "ota_tele_p2_speed": {
+    "circuit": "ota_tele",
+    "profile": "p2_speed",
+    "vdd": 1.2,
+    "pass": true,
+    "rule_violations": [],
+    "metrics": {
+      "dc_gain_dB": 49.33,
+      "ugf_Hz": 78926911.8957881,
+      "pm_deg": 71.0,
+      "gm_dB": 34.1,
+      "power_uW": 241.79,
+      "rise_settle_ns": 6.82,
+      "rise_overshoot_pct": 0.2,
+      "rise_slew_V_per_us": 41.8,
+      "fall_settle_ns": 10.38,
+      "fall_overshoot_pct": 6.82,
+      "fall_slew_V_per_us": 41.2,
+      "swing_V": 0.362,
+      "swing_lo_V": 0.435,
+      "swing_hi_V": 0.797,
+      "n_triode": 0
+    },
+    "checks": [
+      {
+        "metric": "dc_gain_dB",
+        "value": 49.33,
+        "op": ">=",
+        "limit": 45.0,
+        "pass": true
+      },
+      {
+        "metric": "ugf_Hz",
+        "value": 78926911.8957881,
+        "op": ">=",
+        "limit": 60000000.0,
+        "pass": true
+      },
+      {
+        "metric": "pm_deg",
+        "value": 71.0,
+        "op": ">=",
+        "limit": 60.0,
+        "pass": true
+      },
+      {
+        "metric": "gm_dB",
+        "value": 34.1,
+        "op": ">=",
+        "limit": 10.0,
+        "pass": true
+      },
+      {
+        "metric": "power_uW",
+        "value": 241.79,
+        "op": "<=",
+        "limit": 267.2,
+        "pass": true
+      },
+      {
+        "metric": "swing_V",
+        "value": 0.362,
+        "op": ">=",
+        "limit": 0.3,
+        "pass": true
+      },
+      {
+        "metric": "rise_settle_ns",
+        "value": 6.82,
+        "op": "<=",
+        "limit": 12.0,
+        "pass": true
+      },
+      {
+        "metric": "fall_settle_ns",
+        "value": 10.38,
+        "op": "<=",
+        "limit": 12.0,
+        "pass": true
+      },
+      {
+        "metric": "n_triode",
+        "value": 0,
+        "op": "<=",
+        "limit": 0,
+        "pass": true
+      }
+    ],
+    "other_profiles": {
+      "p0_as_source": {
+        "pass": false,
+        "fails": [
+          "dc_gain_dB",
+          "swing_V"
+        ]
+      },
+      "p1_swing_lowpower": {
+        "pass": false,
+        "fails": [
+          "dc_gain_dB",
+          "power_uW",
+          "swing_V"
+        ]
+      }
+    }
+  }
+}

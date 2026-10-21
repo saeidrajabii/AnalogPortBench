@@ -1,0 +1,48 @@
+{
+ "task": "T2__ota_tele__p0_as_source",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p0_as_source.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@low_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 38.39,
+  "ugf_Hz": 67428081.4869712,
+  "pm_deg": 82.8,
+  "gm_dB": 40.9,
+  "power_uW": 128.91,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 12.15,
+  "rise_overshoot_pct": 2.39,
+  "rise_slew_V_per_us": 31.5,
+  "fall_settle_ns": 25.32,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 15.0,
+  "swing_V": 0.353,
+  "swing_lo_V": 0.511,
+  "swing_hi_V": 0.864,
+  "n_triode": 6
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

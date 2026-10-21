@@ -1,0 +1,38 @@
+{
+ "task": "T3__ota_5t__hard_2_lowpower",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@low_s1",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "low",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 27.49,
+  "f3db_Hz": 563972.3914515877,
+  "ugb_Hz": 13371344.428714704,
+  "pm_deg": 88.8,
+  "vout_dc_V": 0.716,
+  "power_uW": 32.72,
+  "input_current_uA": 0.0,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz"
+ ]
+}

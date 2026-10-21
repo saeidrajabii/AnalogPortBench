@@ -1,0 +1,48 @@
+{
+ "task": "T2__ota_tele__p2_speed",
+ "tier": "T2",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/p2_speed.yaml",
+ "vdd": 1.2,
+ "run": "claude-haiku55@medium_s3",
+ "meta": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 39.68,
+  "ugf_Hz": 47689142.84964972,
+  "pm_deg": 78.3,
+  "gm_dB": 30.3,
+  "power_uW": 117.41,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 11.77,
+  "rise_overshoot_pct": 0.74,
+  "rise_slew_V_per_us": 19.4,
+  "fall_settle_ns": 20.4,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 16.3,
+  "swing_V": 0.362,
+  "swing_lo_V": 0.497,
+  "swing_hi_V": 0.859,
+  "n_triode": 4
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "fall_settle_ns",
+  "n_triode"
+ ]
+}

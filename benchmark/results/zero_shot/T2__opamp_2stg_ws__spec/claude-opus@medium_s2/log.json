@@ -1,0 +1,42 @@
+{
+ "task": "T2__opamp_2stg_ws__spec",
+ "tier": "T2",
+ "circuit": "opamp_2stg_ws",
+ "spec": "circuits/opamp_2stg_ws/spec.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 63.22,
+  "ugf_Hz": 92538302.69368245,
+  "pm_deg": 77.7,
+  "gm_dB": 20.3,
+  "power_uW": 325.4,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 6.56,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 44.5,
+  "fall_settle_ns": 8.07,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 39.0,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB"
+ ]
+}

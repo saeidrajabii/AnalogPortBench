@@ -1,0 +1,49 @@
+{
+ "task": "T3__ota_fc_ws__hard_3_gain",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_3_gain.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s3",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 46.48,
+  "f3db_Hz": 113763.20887886504,
+  "ugb_Hz": 23996090.001200218,
+  "pm_deg": 82.6,
+  "vout_dc_V": 0.5588,
+  "power_uW": 135.71,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 24.2,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 13.0,
+  "fall_settle_ns": 44.07,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 6.2,
+  "swing_V": 0.457,
+  "swing_lo_V": 0.277,
+  "swing_hi_V": 0.734,
+  "n_triode": 3
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

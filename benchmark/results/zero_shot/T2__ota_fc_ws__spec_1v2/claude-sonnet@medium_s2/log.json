@@ -1,0 +1,48 @@
+{
+ "task": "T2__ota_fc_ws__spec_1v2",
+ "tier": "T2",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/spec_1v2.yaml",
+ "vdd": 1.2,
+ "run": "claude-sonnet@medium_s2",
+ "meta": {
+  "model": "claude-sonnet",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 38.87,
+  "f3db_Hz": 730855.5640490559,
+  "ugb_Hz": 64364191.63046803,
+  "pm_deg": 78.4,
+  "vout_dc_V": 0.6736,
+  "power_uW": 239.67,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 9.65,
+  "rise_overshoot_pct": 0.0,
+  "rise_slew_V_per_us": 31.6,
+  "fall_settle_ns": 21.48,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 16.5,
+  "swing_V": 0.505,
+  "swing_lo_V": 0.268,
+  "swing_hi_V": 0.772,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "swing_V",
+  "n_triode"
+ ]
+}

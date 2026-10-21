@@ -1,0 +1,37 @@
+{
+ "task": "T3__ota_5t__hard_2_lowpower",
+ "tier": "T3",
+ "circuit": "ota_5t",
+ "spec": "circuits/ota_5t/profiles/hard_2_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-luna@medium_s2",
+ "meta": {
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 33.94,
+  "f3db_Hz": 283948.6717970107,
+  "ugb_Hz": 12428037.099563166,
+  "pm_deg": 67.3,
+  "vout_dc_V": 0.7413,
+  "power_uW": 33.56,
+  "input_current_uA": 0.0,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "ugb_Hz"
+ ]
+}

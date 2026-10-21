@@ -1,0 +1,47 @@
+{
+ "task": "T2__opamp_2stg__spec",
+ "tier": "T2",
+ "circuit": "opamp_2stg",
+ "spec": "circuits/opamp_2stg/spec.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6-sol@low_s3",
+ "meta": {
+  "model": "gpt-6-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 60.07,
+  "ugf_Hz": 61155063.389652304,
+  "pm_deg": 10.9,
+  "gm_dB": 3.3,
+  "power_uW": 170.72,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 49.48,
+  "rise_overshoot_pct": 35.81,
+  "rise_slew_V_per_us": 36.1,
+  "fall_settle_ns": 49.83,
+  "fall_overshoot_pct": 58.31,
+  "fall_slew_V_per_us": 30.2,
+  "n_triode": 0
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugf_Hz",
+  "pm_deg",
+  "gm_dB",
+  "rise_settle_ns",
+  "fall_settle_ns"
+ ]
+}

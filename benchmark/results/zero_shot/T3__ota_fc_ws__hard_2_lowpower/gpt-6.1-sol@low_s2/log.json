@@ -1,0 +1,51 @@
+{
+ "task": "T3__ota_fc_ws__hard_2_lowpower",
+ "tier": "T3",
+ "circuit": "ota_fc_ws",
+ "spec": "circuits/ota_fc_ws/profiles/hard_2_lowpower.yaml",
+ "vdd": 1.2,
+ "run": "gpt-6.1-sol@low_s2",
+ "meta": {
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "access": "OpenAI API",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 17.84,
+  "f3db_Hz": 135618.28923998348,
+  "ugb_Hz": 1051530.9955955548,
+  "pm_deg": 94.5,
+  "vout_dc_V": 0.0147,
+  "power_uW": 85.79,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 49.09,
+  "rise_overshoot_pct": 35.57,
+  "rise_slew_V_per_us": 8.9,
+  "fall_settle_ns": 48.56,
+  "fall_overshoot_pct": 16.08,
+  "fall_slew_V_per_us": 8.9,
+  "swing_V": 0.807,
+  "swing_lo_V": 0.157,
+  "swing_hi_V": 0.964,
+  "n_triode": 1
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "ugb_Hz",
+  "rise_settle_ns",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}

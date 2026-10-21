@@ -1,0 +1,52 @@
+# INFEASIBLE TASK: no cascode bias generator + PMOS cascode source + NMOS cascode sink can meet this spec at VDD = 1.2 V.
+#
+# Physical argument (27 C, Vt = kT/q = 25.85 mV). The circuit is a bias generator whose outputs vb1..vb4 drive the gates
+# of the source and sink stacks; it does not see `out`, so all gate voltages stay fixed while the testbench sweeps Vo.
+#  1. For a MOS stack with fixed gates the channel current is I = I_F - I_R, and the reverse part is at least
+#     I_F * exp(-V/Vt), V = voltage across the stack. In weak inversion this is exact for the whole stack,
+#     I(V) = Isat * (1 - exp(-V/Vt)), whatever the cascode bias; moderate/strong inversion, DIBL and CLM only make the
+#     current at small V lower still relative to Vo = 0.9 V. So Isink(lo) <= Isink(0.9) * (1 - exp(-lo/Vt)) and
+#     Isource(hi) <= Isource(0.9) * (1 - exp(-(VDD - hi)/Vt)).
+#  2. The other stack's current does not fall when its own |V| grows: Isource(lo) >= Isource(0.9), Isink(hi) >= Isink(0.9).
+#  3. "Matched" means |Isource - Isink| < 1 uA. With m = mismatch at 0.9 V, the two ends need
+#     Isink(0.9) * exp(-lo/Vt) < 1 uA - m  and  Isource(0.9) * exp(-(VDD-hi)/Vt) < 1 uA + m;  multiplying,
+#     Isink * Isource * exp(-(VDD - W)/Vt) < (1 uA)^2 - m^2 <= (1 uA)^2, W = hi - lo.
+#  4. The current-error limits (|err| <= 10 %) force Isink, Isource >= 18 uA, so
+#     VDD - W > Vt * ln(18 * 18) = 25.85 mV * 5.78 = 149.5 mV  ->  W < 1.0505 V (W <= 1.05 V on the 10 mV sweep grid).
+#  The limit below, 1.06 V, is 10 mV beyond that bound: just past the frontier, not absurd (spec.yaml asks 0.96 V).
+#  Excluded by the circuit definition: sinks/sources whose gates are driven from `out` (regulation loops), or designs whose
+#  currents collapse together near the rails; they are not cascode bias generators.
+# How far the best golden is: golden/cascode_bias_hard_1_range.sp reaches 1.02 V at all five corners (0.04 V = 3.8 %
+# short). Its NMOS end is already at the bound: 0.92 uA deficit at Vo = 0.08 V, against 20 uA * exp(-0.08/Vt) = 0.90 uA
+# ideal; the PMOS end loses 1.09 uA at 1.11 V (ideal 0.27 uA) through residual DIBL even at L = 8 um.
+# golden/cascode_bias_1v2.sp reaches 0.96 V, the naive port fails at 1.2 V.
+profile: infeasible_1_range
+description: 'INFEASIBLE: matched range >= 1.06 V at VDD = 1.2 V (physical bound 1.05 V for any fixed-gate cascode source/sink pair).'
+circuit: cascode_bias
+dut_ports: iin out vb1 vb2 vb3 vb4
+testbenches:
+  cascode_bias_dc:
+    IREF_uA: 20
+vdd: 1.2
+conditions: TT, 27 C, VDD = 1.2 V, Iref = 20 uA
+limits:
+  mismatch_0v9_nA:
+    op: abs<=
+    limit: 1000.0
+    rule: '|mismatch| <= 1 uA at Vo = 0.9 V (spec.yaml)'
+  match_width_V:
+    op: '>='
+    limit: 1.06
+    rule: '>= 1.06 V; bound VDD - Vt*ln((18 uA / 1 uA)^2) = 1.0505 V'
+  isink_err_pct:
+    op: abs<=
+    limit: 10.0
+    rule: '|Isink - Iref| <= 10 % at Vo = 0.9 V (spec.yaml)'
+  isource_err_pct:
+    op: abs<=
+    limit: 10.0
+    rule: '|Isource - Iref| <= 10 % at Vo = 0.9 V (spec.yaml)'
+  n_triode:
+    op: <=
+    limit: 0
+    rule: no transistor out of saturation

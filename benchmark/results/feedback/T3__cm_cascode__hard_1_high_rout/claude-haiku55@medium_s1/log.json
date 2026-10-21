@@ -1,0 +1,372 @@
+{
+ "task": "T3__cm_cascode__hard_1_high_rout",
+ "tier": "T3",
+ "circuit": "cm_cascode",
+ "spec": "circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+ "vdd": 1.2,
+ "model": "claude-haiku55@medium",
+ "mode": "feedback (v2)",
+ "settings": {
+  "model": "claude-haiku55",
+  "effort": "medium",
+  "max_attempts": 3,
+  "access": "command-line client, tools disabled"
+ },
+ "prompt": "v2 (frozen)",
+ "prompt_sha256": "1409ee0fa7aecdda5b6bed686f74d5d17c0c2443d596b9bb91c1be9bbc075f75",
+ "feedback_template_sha256": "e908b593ed8af59a9e3872fee3342a936a3d9c11ab3857962593a556d12df8a5",
+ "turns": [
+  {
+   "turn": 1,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_cascode",
+    "netlist": "turn1_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 19.989,
+     "iout_vdd_uA": 19.998,
+     "iout_err_pct": -0.05,
+     "rout_kohm": 26007.8,
+     "vmin_V": 0.303,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.19,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.675,
+       "vds_V": 0.674,
+       "vdsat_V": 0.125,
+       "margin_V": 0.55
+      },
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.net1",
+       "id_uA": 20.0,
+       "vgs_V": 0.586,
+       "vds_V": 0.586,
+       "vdsat_V": 0.115,
+       "margin_V": 0.471
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 19.989,
+       "vgs_V": 0.678,
+       "vds_V": 0.317,
+       "vdsat_V": 0.128,
+       "margin_V": 0.19
+      },
+      {
+       "device": "m.xdut.xm0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.net2",
+       "id_uA": 19.989,
+       "vgs_V": 0.586,
+       "vds_V": 0.582,
+       "vdsat_V": 0.115,
+       "margin_V": 0.468
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": -0.05,
+      "op": "abs<=",
+      "limit": 0.02,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 26007.8,
+      "op": ">=",
+      "limit": 1000000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.303,
+      "op": "<=",
+      "limit": 0.16,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_cascode/v2iter/clC/T3__cm_cascode__hard_1_high_rout/claude-haiku55@medium_t1"
+   },
+   "valid": true,
+   "counted_as": "design attempt 1",
+   "pass": false
+  },
+  {
+   "turn": 2,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_cascode",
+    "netlist": "turn2_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 19.999,
+     "iout_vdd_uA": 20.002,
+     "iout_err_pct": -0.0,
+     "rout_kohm": 118343.2,
+     "vmin_V": 0.128,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.371,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.0,
+       "vgs_V": 0.542,
+       "vds_V": 0.542,
+       "vdsat_V": 0.073,
+       "margin_V": 0.469
+      },
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.net1",
+       "id_uA": 20.0,
+       "vgs_V": 0.456,
+       "vds_V": 0.456,
+       "vdsat_V": 0.07,
+       "margin_V": 0.386
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 20.0,
+       "vgs_V": 0.542,
+       "vds_V": 0.444,
+       "vdsat_V": 0.073,
+       "margin_V": 0.371
+      },
+      {
+       "device": "m.xdut.xm0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.net2",
+       "id_uA": 19.999,
+       "vgs_V": 0.456,
+       "vds_V": 0.456,
+       "vdsat_V": 0.07,
+       "margin_V": 0.386
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": -0.0,
+      "op": "abs<=",
+      "limit": 0.02,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 118343.2,
+      "op": ">=",
+      "limit": 1000000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.128,
+      "op": "<=",
+      "limit": 0.16,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_cascode/v2iter/clC/T3__cm_cascode__hard_1_high_rout/claude-haiku55@medium_t2"
+   },
+   "valid": true,
+   "counted_as": "design attempt 2",
+   "pass": false
+  },
+  {
+   "turn": 3,
+   "extraction": {
+    "n_code_blocks": 1,
+    "block_language": "spice"
+   },
+   "netlist_check": {
+    "unsafe": [],
+    "violations": [],
+    "notes": []
+   },
+   "evaluation": {
+    "circuit": "cm_cascode",
+    "netlist": "turn3_netlist.sp",
+    "tech": "sky130_lvt",
+    "vdd": 1.2,
+    "corner": "tt",
+    "metrics": {
+     "iout_0v9_uA": 19.999,
+     "iout_vdd_uA": 20.001,
+     "iout_err_pct": -0.0,
+     "rout_kohm": 131578.9,
+     "vmin_V": 0.128,
+     "n_triode": 0
+    },
+    "errors": [],
+    "warnings": [],
+    "headroom": {
+     "n_triode": 0,
+     "min_sat_margin_V": 0.359,
+     "triode_devices": [],
+     "devices": [
+      {
+       "device": "m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nin",
+       "id_uA": 20.001,
+       "vgs_V": 0.549,
+       "vds_V": 0.549,
+       "vdsat_V": 0.078,
+       "margin_V": 0.472
+      },
+      {
+       "device": "m.xdut.xm1.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.net1",
+       "id_uA": 20.0,
+       "vgs_V": 0.463,
+       "vds_V": 0.463,
+       "vdsat_V": 0.075,
+       "margin_V": 0.389
+      },
+      {
+       "device": "m.xdut.xm2.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "nout",
+       "id_uA": 20.001,
+       "vgs_V": 0.55,
+       "vds_V": 0.437,
+       "vdsat_V": 0.078,
+       "margin_V": 0.359
+      },
+      {
+       "device": "m.xdut.xm0.msky130_fd_pr__nfet_01v8_lvt",
+       "type": "n",
+       "drain": "xdut.net2",
+       "id_uA": 19.999,
+       "vgs_V": 0.463,
+       "vds_V": 0.463,
+       "vdsat_V": 0.075,
+       "margin_V": 0.388
+      }
+     ]
+    },
+    "spec": "<repo>/benchmark/circuits/cm_cascode/profiles/hard_1_high_rout.yaml",
+    "checks": [
+     {
+      "metric": "iout_err_pct",
+      "value": -0.0,
+      "op": "abs<=",
+      "limit": 0.02,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "rout_kohm",
+      "value": 131578.9,
+      "op": ">=",
+      "limit": 1000000.0,
+      "source": null,
+      "pass": false
+     },
+     {
+      "metric": "vmin_V",
+      "value": 0.128,
+      "op": "<=",
+      "limit": 0.16,
+      "source": null,
+      "pass": true
+     },
+     {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 0,
+      "source": null,
+      "pass": true
+     }
+    ],
+    "pass": false,
+    "out_dir": "<repo>/build/eval/cm_cascode/v2iter/clC/T3__cm_cascode__hard_1_high_rout/claude-haiku55@medium_t3"
+   },
+   "valid": true,
+   "counted_as": "design attempt 3",
+   "pass": false
+  }
+ ],
+ "design_attempts": 3,
+ "syntax_retries_used": 0,
+ "passed": false,
+ "passed_at_attempt": null
+}

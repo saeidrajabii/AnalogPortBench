@@ -1,0 +1,48 @@
+{
+ "task": "T3__ota_tele__hard_5_allround_power",
+ "tier": "T3",
+ "circuit": "ota_tele",
+ "spec": "circuits/ota_tele/profiles/hard_5_allround_power.yaml",
+ "vdd": 1.2,
+ "run": "claude-opus@medium_s2",
+ "meta": {
+  "model": "claude-opus",
+  "effort": "medium",
+  "access": "command-line client, tools disabled",
+  "tool_uses": 0
+ },
+ "infeasible_flag": false,
+ "extraction": {
+  "n_code_blocks": 1,
+  "block_language": "spice"
+ },
+ "unsafe": [],
+ "violations": [],
+ "notes": [],
+ "errors": [],
+ "metrics": {
+  "dc_gain_dB": 44.6,
+  "ugf_Hz": 52186170.08683183,
+  "pm_deg": 78.3,
+  "gm_dB": 37.3,
+  "power_uW": 89.17,
+  "input_current_uA": 0.0,
+  "rise_settle_ns": 8.71,
+  "rise_overshoot_pct": 0.47,
+  "rise_slew_V_per_us": 30.9,
+  "fall_settle_ns": 25.13,
+  "fall_overshoot_pct": 0.0,
+  "fall_slew_V_per_us": 15.3,
+  "swing_V": 0.221,
+  "swing_lo_V": 0.589,
+  "swing_hi_V": 0.81,
+  "n_triode": 4
+ },
+ "passed": false,
+ "fails": [
+  "dc_gain_dB",
+  "fall_settle_ns",
+  "swing_V",
+  "n_triode"
+ ]
+}
