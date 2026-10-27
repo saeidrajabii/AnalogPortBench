@@ -1,103 +1,240 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AnalogPortBench</title>
-<meta name="description" content="AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting. 54 tasks porting 10 analog circuits from 0.18 µm to SKY130, scored by ngspice simulation.">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<style>
-  /* Minimal academic project page (Nerfies-style): one centered column, light only. */
-  :root { --ink: #363636; --strong: #222; --muted: #6b6b6b; --line: #e8e8e8; --link: #3273dc; --bg: #ffffff; --code: #f5f5f5;
-          color-scheme: light; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16.5px/1.6 "Noto Sans", "Helvetica Neue", Arial, sans-serif; }
-  main { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 56px 40px; }
-  h1, h2 { font-family: "Google Sans", "Noto Sans", Arial, sans-serif; color: var(--strong); text-align: center; text-wrap: balance; }
-  h1 { font-size: 2.6rem; font-weight: 500; line-height: 1.2; margin: 0; }
-  h2 { font-size: 1.8rem; font-weight: 500; margin: 56px 0 18px; }
-  a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
-  .authors { text-align: center; font-family: "Google Sans", Arial, sans-serif; font-size: 1.2rem; margin-top: 18px; }
-  .affil { text-align: center; color: var(--muted); font-size: 1rem; margin-top: 4px; }
-  .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
-  .btn { display: inline-flex; align-items: center; gap: 8px; background: #363636; color: #fff; border-radius: 999px;
-         padding: 7px 18px; font: 500 0.98rem "Google Sans", Arial, sans-serif; }
-  .btn:hover { background: #292929; text-decoration: none; }
-  .btn svg { width: 17px; height: 17px; fill: #fff; }
-  .btn.off { background: #b5b5b5; cursor: default; }
-  .btn:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-  figure { margin: 34px 0 0; }
-  figure img { display: block; width: 100%; height: auto; }
-  figcaption { color: var(--ink); text-align: center; font-size: 1rem; margin-top: 12px; }
-  .prose { max-width: 820px; margin: 0 auto; text-align: justify; hyphens: auto; }
-  .prose p { margin: 0 0 14px; }
-  .scroll { overflow-x: auto; }
-  table { border-collapse: collapse; margin: 0 auto; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
-  th, td { padding: 7px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
-  thead th { border-bottom: 2px solid #bdbdbd; font-weight: 600; color: var(--strong); }
-  td.num, th.num { text-align: center; }
-  td.model { text-align: left; }
-  td.model img { height: 15px; vertical-align: -2px; margin-right: 7px; }
-  tr.ref td { color: var(--muted); font-style: italic; }
-  td b { font-weight: 700; color: var(--strong); }
-  .u { text-decoration: underline; text-underline-offset: 3px; }
-  .note { color: var(--muted); font-size: 0.9rem; text-align: center; max-width: 820px; margin: 12px auto 0; }
-  pre { background: var(--code); border-radius: 6px; padding: 16px 18px; overflow-x: auto; font: 0.86rem/1.55 "JetBrains Mono", ui-monospace, Menlo, monospace; margin: 0; text-align: left; }
-  footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 22px; color: var(--muted); font-size: 0.88rem; text-align: center; }
-  @media (max-width: 640px) { h1 { font-size: 1.9rem; } h2 { font-size: 1.45rem; margin-top: 44px; } main { padding-block: 36px 32px; } }
-</style>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting. 54 tasks porting ten analog circuits from a 0.18 µm process to SKY130, scored by ngspice simulation.">
+  <meta name="keywords" content="AnalogPortBench, analog circuit porting, LLM, benchmark, SKY130, ngspice">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./assets/favicon.svg">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .publication-title .title-sub { display: inline-block; font-weight: 400; font-size: 2rem; line-height: 1.3; }
+        .figure-caption { margin-top: 1rem; }
+    .ud-logo { height: 56px; width: auto; }
+  </style>
 </head>
 <body>
-<main>
 
-  <h1>AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting</h1>
-  <div class="authors"><a href="https://github.com/saeidrajabii">Saeid Rajabi</a></div>
-  <div class="affil">Department of Electrical &amp; Computer Engineering, University of Delaware</div>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">AnalogPortBench<br>
+            <span class="title-sub">Benchmarking LLMs on Analog Circuit Porting</span></h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://saeidrajabii.github.io">Saeid Rajabi</a>,</span>
+            <span class="author-block">Aly Moussa,</span>
+            <span class="author-block">
+              <a href="https://www.ece.udel.edu/people/faculty/vishal-saxena/">Vishal Saxena</a>,</span>
+            <span class="author-block">
+              <a href="https://www.ece.udel.edu/people/faculty/chengmo/">Chengmo Yang</a>,</span>
+            <span class="author-block">
+              and <a href="https://www.ece.udel.edu/people/faculty/satwik-patnaik/">Satwik Patnaik</a></span>
+          </div>
 
-  <div class="buttons">
-    <span class="btn off" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6zM14 3.5V8h4.5z"/></svg>Paper (coming soon)</span>
-    <a class="btn" href="https://github.com/saeidrajabii/portbench_test"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>Code</a>
-    <a class="btn" href="https://github.com/saeidrajabii/portbench_test/tree/main/prompts"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v3H4zm0 6.5h16v3H4zM4 17h16v3H4z"/></svg>Tasks</a>
-    <a class="btn" href="https://github.com/saeidrajabii/portbench_test/tree/main/benchmark/results"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 2 3 3.6 3 5.5v13C3 20.4 7 22 12 22s9-1.6 9-3.5v-13C21 3.6 17 2 12 2zm0 2c4.4 0 7 1.3 7 1.5S16.4 7 12 7 5 5.7 5 5.5 7.6 4 12 4zm7 14.5c0 .2-2.6 1.5-7 1.5s-7-1.3-7-1.5v-2.7C6.7 16.6 9.2 17 12 17s5.3-.4 7-1.2zm0-5c0 .2-2.6 1.5-7 1.5s-7-1.3-7-1.5v-2.7C6.7 11.6 9.2 12 12 12s5.3-.4 7-1.2z"/></svg>Results</a>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Department of Electrical &amp; Computer Engineering,</span>
+            <span class="author-block">University of Delaware, Newark, DE, USA</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2610.33088"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2610.33088"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/saeidrajabii/AnalogPortBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Tasks Link. -->
+              <span class="link-block">
+                <a href="https://github.com/saeidrajabii/AnalogPortBench/tree/main/prompts"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-list"></i>
+                  </span>
+                  <span>Tasks</span>
+                  </a>
+              </span>
+              <!-- Results Link. -->
+              <span class="link-block">
+                <a href="https://github.com/saeidrajabii/AnalogPortBench/tree/main/benchmark/results"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <figure>
-    <img src="assets/flow.svg" alt="Benchmark flow: the porting task goes to an LLM; the returned SKY130 netlist is checked, simulated with ngspice and scored; INFEASIBLE answers are scored separately; simulation feedback allows up to three attempts.">
-    <figcaption><strong>AnalogPortBench</strong> gives an LLM a working 0.18&nbsp;µm design and a specification to meet in SKY130, then checks, simulates and scores the returned netlist. On infeasible tasks, the right answer is to say so.</figcaption>
-  </figure>
-
-  <h2>Abstract</h2>
-  <div class="prose">
-    <p>Analog circuit design still relies heavily on expert knowledge, and porting proven designs to new process nodes is a recurring bottleneck. A lower supply shrinks the headroom of every transistor, so a working topology may need re-design or may no longer meet its specifications at all. Large language models (LLMs) have begun to generate and size analog circuits, but existing benchmarks stay within one process node and use tasks that always have a solution.</p>
-    <p>We introduce AnalogPortBench, a benchmark of 54 tasks that port ten circuits, from current mirrors to telescopic amplifiers, from a 0.18&nbsp;µm process to the open SKY130 process. Tasks range from a direct port through a reduced supply and harder specifications to infeasible ones, and every feasible task has a reference design verified at five process corners. Evaluating six frontier LLMs at two reasoning levels, with and without simulation feedback, we find that models port simple circuits but rarely re-design headroom-sensitive amplifiers, seldom recognize infeasible specifications, and gain more from simulation feedback than from more samples or reasoning.</p>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./assets/flow.svg" width="100%"
+           alt="Benchmark flow: the porting task goes to an LLM; the returned SKY130 netlist is checked, simulated with ngspice and scored; INFEASIBLE answers are scored separately; simulation feedback allows up to three attempts.">
+      <h2 class="subtitle has-text-centered figure-caption">
+        <b>Overview of AnalogPortBench.</b> An LLM receives a working 0.18&nbsp;µm netlist and a target specification,
+        and returns a SKY130 netlist. Each answer is checked against the benchmark rules, simulated in ngspice, and
+        scored from a valid netlist up to every specification met. For infeasible specifications, the expected answer
+        is to declare the task <i>infeasible</i>.
+      </h2>
+    </div>
   </div>
+</section>
 
-  <h2>Benchmark</h2>
-  <div class="prose"><p>Ten circuits form three grades by how much of the supply the topology consumes and how much design effort it requires. Each circuit is ported in up to four tiers, and each tier adds one difficulty, so a failure can be traced to its cause.</p></div>
-  <figure><img src="assets/readme/grid.svg" alt="54 tasks: three circuit grades by four task tiers, with task counts per cell."></figure>
-  <figure><img src="assets/readme/circuits.png" alt="Simplified schematics of the seven circuit topologies in the benchmark."></figure>
-
-  <h2>Results</h2>
-  <div class="scroll">
-    <table>
-      <thead><tr><th>Model</th><th class="num">T1</th><th class="num">T2</th><th class="num">T3</th><th class="num">T1–T3</th><th class="num">T4 flagged ↑</th><th class="num">False alarms ↓</th><th class="num">Resampling</th><th class="num">Sim. feedback</th></tr></thead>
-      <tbody>
-        <tr><td class="model"><img src="assets/icons/claude.svg" alt="">Opus 5.5</td><td class="num"><b>53.3</b></td><td class="num"><b>33.3</b></td><td class="num"><span class="u">6.0</span></td><td class="num"><b>22.0</b></td><td class="num"><b>10/12</b></td><td class="num"><b>0/150</b></td><td class="num"><b>32</b></td><td class="num"><span class="u">52</span></td></tr>
-        <tr><td class="model"><img src="assets/icons/openai.svg" alt="">GPT-6.1-sol</td><td class="num"><span class="u">40.0</span></td><td class="num"><span class="u">25.0</span></td><td class="num"><b>8.3</b></td><td class="num"><span class="u">18.7</span></td><td class="num">2/12</td><td class="num"><b>0/150</b></td><td class="num"><span class="u">30</span></td><td class="num"><b>56</b></td></tr>
-        <tr><td class="model"><img src="assets/icons/openai.svg" alt="">GPT-6-sol</td><td class="num"><span class="u">40.0</span></td><td class="num">22.2</td><td class="num">0.0</td><td class="num">13.3</td><td class="num">6/12</td><td class="num"><b>0/150</b></td><td class="num">20</td><td class="num">34</td></tr>
-        <tr><td class="model"><img src="assets/icons/claude.svg" alt="">Sonnet 5.5</td><td class="num">30.0</td><td class="num">16.7</td><td class="num">0.0</td><td class="num">10.0</td><td class="num">5/12</td><td class="num">4/150</td><td class="num">12</td><td class="num">26</td></tr>
-        <tr><td class="model"><img src="assets/icons/openai.svg" alt="">GPT-6-luna</td><td class="num">20.0</td><td class="num">19.4</td><td class="num">0.0</td><td class="num">8.7</td><td class="num">2/12</td><td class="num"><span class="u">1/150</span></td><td class="num">12</td><td class="num">12</td></tr>
-        <tr><td class="model"><img src="assets/icons/claude.svg" alt="">Haiku 5.5</td><td class="num">13.3</td><td class="num">13.9</td><td class="num">0.0</td><td class="num">6.0</td><td class="num"><span class="u">9/12</span></td><td class="num">20/150</td><td class="num">8</td><td class="num">18</td></tr>
-        <tr class="ref"><td class="model">Reference designs</td><td class="num">100</td><td class="num">100</td><td class="num">100</td><td class="num">100</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">–</td></tr>
-      </tbody>
-    </table>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Analog circuit design still relies heavily on expert knowledge, and porting proven designs to new
+            process nodes is a recurring bottleneck. As a lower supply reduces available voltage headroom, a
+            working topology may require redesign or fail to meet specifications. While large language models
+            (LLMs) have begun to generate and optimize analog circuits, existing benchmarks focus on one process
+            node and assume feasible specifications.
+          </p>
+          <p>
+            To bridge this gap, we introduce AnalogPortBench, a benchmark of 54 tasks for porting ten circuits,
+            from current mirrors to telescopic amplifiers, from a 0.18&nbsp;µm process to the open-source SKY130
+            PDK. Tasks range from a direct port through a reduced supply and harder specifications to infeasible
+            ones, and every feasible task has a reference design verified at five process corners. Evaluating six
+            frontier LLMs at two reasoning levels, with and without simulation feedback, we find that models port
+            simple circuits but rarely re-design headroom-sensitive amplifiers, seldom recognize infeasible
+            specifications, and gain more from simulation feedback than from more samples or reasoning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
   </div>
-  <p class="note">Medium reasoning effort, 3 samples per task. Zero-shot pass rate (%) per tier and pooled over T1–T3; INFEASIBLE declared on the 12 answers to T4 tasks and on the 150 feasible answers; share (%) of the 50 feasible tasks solved in three tries by resampling or by simulation feedback. Best in bold, second underlined.</p>
+</section>
 
-  <footer>This page is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page template. Code and data are released under the MIT License.</footer>
-</main>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <img src="./assets/readme/leaderboard.svg" width="100%"
+             alt="Pass rate at low and medium reasoning effort, and feasible tasks solved within three tries by resampling or with simulation feedback.">
+        <div class="content has-text-justified figure-caption">
+          <p>
+            Left: share of answers that meet every specification on the 50 feasible tasks, with one try, at low
+            and medium reasoning effort. Right: share of the 50 feasible tasks solved within three tries at medium
+            effort, by the best of 3 samples or with simulation feedback.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+
+    <!-- Capability per grade. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Capability per Circuit Grade</h2>
+        <img src="./static/images/grades_radar.png" width="100%"
+             alt="Radar charts for grades G1, G2 and G3: valid netlist, circuit functions, all FETs in saturation, gain/current-error spec met, stability spec met, all specs met, and no false INFEASIBLE, per model.">
+        <div class="content has-text-justified figure-caption">
+          <p>
+            Capability per circuit grade at medium effort (zero-shot, T1&ndash;T3; 63/45/42 answers per model),
+            with each axis scored independently on a square-root radial scale.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Capability per grade. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{rajabi2026analogportbench,
+  title         = {AnalogPortBench: Benchmarking {LLMs} on Analog Circuit Porting},
+  author        = {Rajabi, Saeid and Moussa, Aly and Saxena, Vishal and Yang, Chengmo and Patnaik, Satwik},
+  year          = {2026},
+  eprint        = {2610.33088},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AR},
+  url           = {https://arxiv.org/abs/2610.33088}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a href="https://www.udel.edu" aria-label="University of Delaware">
+        <img class="ud-logo" src="./static/images/ud_logo.png" alt="University of Delaware">
+      </a>
+    </div>
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/saeidrajabii/AnalogPortBench" aria-label="Code on GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a href="https://nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

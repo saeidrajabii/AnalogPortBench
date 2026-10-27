@@ -2,6 +2,7 @@
   <img src="docs/assets/readme/banner.svg" alt="AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting" width="100%">
 </p>
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.33088-b31b1b)](https://arxiv.org/abs/2610.33088)
 ![Task](https://img.shields.io/badge/Task-Analog_circuit_porting-orange)
 ![Task](https://img.shields.io/badge/Task-Infeasibility_detection-orange)
 ![Dataset](https://img.shields.io/badge/Dataset-AnalogPortBench-blue)
@@ -22,7 +23,12 @@ scored by open-source simulation (ngspice + SKY130), and some tasks have deliber
 specifications: there, the right answer is to declare the task infeasible. This repository contains the tasks, the
 evaluation flow and all model answers from the paper.
 
-[[📑 Paper (coming soon)]] [[📊 Results](#results)] [[🧪 Evaluation](#evaluation)]
+For further information, please refer to our [paper](https://arxiv.org/abs/2610.33088).
+
+[[🌐 Webpage](https://saeidrajabii.github.io/AnalogPortBench/)] [[📑 Paper](https://arxiv.org/abs/2610.33088)] [[📊 Results](#results)] [[🧪 Evaluation](#evaluation)]
+
+## 💥 News
+* **[2026.10.21]** The [arXiv paper](https://arxiv.org/abs/2610.33088) is online.
 
 ## About AnalogPortBench
 
@@ -111,6 +117,21 @@ benchmark/
   make_specs.py, make_scaled_specs.py                                 how the T1 and T2 limits were derived
 scripts/setup_env.sh         conda environment and pinned SKY130 PDK
 environment.yml
+```
+
+## Citation
+If you find AnalogPortBench useful in your work, please cite our paper.
+
+```bibtex
+@misc{rajabi2026analogportbench,
+  title         = {AnalogPortBench: Benchmarking {LLMs} on Analog Circuit Porting},
+  author        = {Rajabi, Saeid and Moussa, Aly and Saxena, Vishal and Yang, Chengmo and Patnaik, Satwik},
+  year          = {2026},
+  eprint        = {2610.33088},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AR},
+  url           = {https://arxiv.org/abs/2610.33088}
+}
 ```
 
 ## License
