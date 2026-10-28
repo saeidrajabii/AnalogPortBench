@@ -26,7 +26,7 @@
     .publication-title .title-sub { display: inline-block; font-weight: 400; font-size: 2rem; line-height: 1.3; }
         .figure-caption { margin-top: 1rem; }
     .tldr-line { display: block; }
-    @media (min-width: 1024px) { .tldr-line { text-align: justify; text-align-last: justify; } }
+    @media (min-width: 1024px) { .tldr-line { text-align: justify; text-align-last: justify; } .tldr-line.tldr-last { text-align-last: left; } }
     .ud-logo { height: 56px; width: auto; }
     .apb-block { margin-top: 3rem; }
     .apb-caption { margin-top: 0.75rem; font-size: 0.95rem; text-align: justify; }
@@ -144,9 +144,10 @@
            alt="Benchmark flow: the porting task goes to an LLM; the returned SKY130 netlist is checked, simulated with ngspice and scored; INFEASIBLE answers are scored separately; simulation feedback allows up to three attempts.">
       <h2 class="subtitle has-text-centered figure-caption">
         <span class="tldr-line"><b>TL;DR:</b> Existing LLM benchmarks for analog circuit design all stay within a single technology node.</span>
-        <span class="tldr-line"><b>AnalogPortBench</b> studies how well state-of-the-art LLMs port a working design
+        <span class="tldr-line tldr-last"><b>AnalogPortBench</b> studies how well state-of-the-art LLMs port a working design
         from 0.18&nbsp;µm to SKY130 (0.13&nbsp;µm) under a target specification, scored by simulation, and whether they
-        recognize infeasible ones, with and without simulation feedback and at different levels of LLM reasoning.</span>
+        recognize infeasible ones. It also studies the impact of different reasoning efforts of LLMs and simulation
+        feedback on this task.</span>
       </h2>
     </div>
   </div>
