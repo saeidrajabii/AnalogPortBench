@@ -144,8 +144,9 @@
            alt="Benchmark flow: the porting task goes to an LLM; the returned SKY130 netlist is checked, simulated with ngspice and scored; INFEASIBLE answers are scored separately; simulation feedback allows up to three attempts.">
       <h2 class="subtitle has-text-centered figure-caption">
         <span class="tldr-line"><b>TL;DR:</b> Existing LLM benchmarks for analog circuit design all stay within a single technology node.</span>
-        <span class="tldr-line"><b>AnalogPortBench</b> uses simulation to study how well state-of-the-art LLMs port a working design
-        from 0.18&nbsp;µm to SKY130 (0.13&nbsp;µm) under a target specification, and whether they flag infeasible ones.</span>
+        <span class="tldr-line"><b>AnalogPortBench</b> studies how well state-of-the-art LLMs port a working analog design
+        from 0.18&nbsp;µm to SKY130 (0.13&nbsp;µm) under a target specification, with every answer scored by ngspice simulation,
+        and whether they recognize infeasible specifications instead of silently missing an unreachable limit.</span>
       </h2>
     </div>
   </div>
