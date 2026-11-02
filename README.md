@@ -123,14 +123,11 @@ environment.yml
 If you find AnalogPortBench useful in your work, please cite our paper.
 
 ```bibtex
-@misc{rajabi2026analogportbench,
-  title         = {AnalogPortBench: Benchmarking {LLMs} on Analog Circuit Porting},
-  author        = {Rajabi, Saeid and Moussa, Aly and Saxena, Vishal and Yang, Chengmo and Patnaik, Satwik},
-  year          = {2026},
-  eprint        = {2610.33088},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AR},
-  url           = {https://arxiv.org/abs/2610.33088}
+@article{rajabi2026analogportbench,
+  title={AnalogPortBench: Benchmarking LLMs on Analog Circuit Porting},
+  author={Rajabi, Saeid and Moussa, Aly and Saxena, Vishal and Yang, Chengmo and Patnaik, Satwik},
+  journal={arXiv preprint arXiv:2610.33088},
+  year={2026}
 }
 ```
 
